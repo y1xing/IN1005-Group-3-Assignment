@@ -5,7 +5,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 -->
 <html lang = "en">
     <head>
-        <!--jQuery script-->
+        <!--jQuery script test-->
         <script defer
                 src ="https://code.jquery.com/jquery-3.4.1.min.js"
                 integrity = "sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
