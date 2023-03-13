@@ -62,7 +62,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <p>Cubing have been around since 1974 and CubeLand is established to boost the multiple benefits of cubig such as:</p>
                 
                 <div class="row justify-content-center">
-                    <article class="col-4 col-md-3">
+                    <article class="col-4 col-sm-3">
                         <figure>
                             <img class="w-100" src="images/whyCubing/reflexes.png" 
                                 alt="Reflexes & Agility" 
@@ -71,7 +71,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <p>Reflexes & Agility</p>
                     </article>
                     
-                    <article class="col-4 col-md-3">
+                    <article class="col-4 col-sm-3">
                         <figure>
                             <img class="w-100" src="images/whyCubing/concentration.png" 
                                 alt="Concentration & Configuration" 
@@ -80,7 +80,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <p>Concentration & Configuration</p>
                     </article>
                     
-                    <article class="col-4 col-md-3">
+                    <article class="col-4 col-sm-3">
                         <figure>
                             <img class="w-100" src="images/whyCubing/patience.png" 
                                 alt="Patience" 
@@ -89,7 +89,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <p>Patience</p>
                     </article>
                                         
-                    <article class="col-4 col-md-3">
+                    <article class="col-4 col-sm-3">
                         <figure>
                             <img class="w-100" src="images/whyCubing/problem.png" 
                                 alt="Problem Solving Skills" 
@@ -98,7 +98,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <p>Problem Solving Skills</p>
                     </article>
                                         
-                    <article class="col-4 col-md-3">
+                    <article class="col-4 col-sm-3">
                         <figure>
                             <img class="w-100" src="images/whyCubing/determination.png" 
                                 alt="Determination & Focus" 
@@ -107,7 +107,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <p>Determination & Focus</p>
                     </article>
                     
-                    <article class="col-4 col-md-3">
+                    <article class="col-4 col-sm-3">
                         <figure>
                             <img class="w-100" src="images/whyCubing/memory.png" 
                                 alt="Memory" 
@@ -116,7 +116,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <p>Memory</p>
                     </article>
                                         
-                    <article class="col-4 col-md-3">
+                    <article class="col-4 col-sm-3">
                         <figure>
                             <img class="w-100" src="images/whyCubing/reduced.png" 
                                 alt="Reduced Screen Time" 
@@ -125,7 +125,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <p>Reduced Screen Time</p>
                     </article>
                     
-                    <article class="col-4 col-md-3">
+                    <article class="col-4 col-sm-3">
                         <figure>
                             <img class="w-100" src="images/whyCubing/logical.png" 
                                 alt="Logical Understanding" 
@@ -136,69 +136,84 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
             </section>
 
-            <section id="expectations">
-                <h2>All About Cats!</h2>
-                <div class="row">
-                    <article class="col-sm">
-                        <h3>Tabby</h3>
-                        <figure>
-                            <img class="" src="images/tabby_small.jpg" 
-                                alt="Tabby" 
-                                title="tabby"/>
-                            <figcaption>Tabby</figcaption>
-                        </figure>
-                        <p>
-                            A tabby is any domestic cat with an 'M' on its 
-                            forehead, stripes by its eyes and across its cheeks.
-                        </p>
+            <section id="expectations" class="container text-center">
+                <h2>What You Can Expect</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+                <div class="row justify-content-center">
+                    <article class="col-sm-4">
+                        <p>Buy a package</p>
                     </article>
-                    <article class="col-sm">
-                        <h3>Calico</h3>
+                    
+                    <article class="col-sm-4">
                         <figure>
-                            <img class="img-thumbnail" src="images/calico_small.jpg" 
-                                alt="Calico" 
-                                title="calico"/>
-                            <figcaption>Calico</figcaption>
+                            <img class="w-100" src="images/whyCubing/concentration.png" 
+                                alt="Concentration & Configuration" 
+                                title="concentration"/>
                         </figure>
-                        <p>
-                            A calico ca is a domestic cat with a coat that is 
-                            typically 25% to 75% white and has large orange and 
-                            black patches.
-                        </p>
-                    </article>     
+                        <p>Concentration & Configuration</p>
+                    </article>
+                    
+                    <article class="col-sm-4">
+                        <figure>
+                            <img class="w-100" src="images/whyCubing/patience.png" 
+                                alt="Patience" 
+                                title="patience"/>
+                        </figure>
+                        <p>Patience</p>
+                    </article>   
                 </div>
             </section>
             
-            <section id="trainers">
-                <h2>All About Cats!</h2>
-                <div class="row">
+            <section id="trainers" class="container text-center">
+                <h2>Our Trainers</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+                <div class="row justify-content-center">
                     <article class="col-sm">
-                        <h3>Tabby</h3>
                         <figure>
-                            <img class="img-thumbnail" src="images/tabby_small.jpg" 
-                                alt="Tabby" 
-                                title="tabby"/>
-                            <figcaption>Tabby</figcaption>
+                            <img class="w-100" src="images/team/dave.png" 
+                                alt="Dave" 
+                                title="dave"/>
                         </figure>
-                        <p>
-                            A tabby is any domestic cat with an 'M' on its 
-                            forehead, stripes by its eyes and across its cheeks.
-                        </p>
+                        <p>Dave Bryan</p>
                     </article>
+                
                     <article class="col-sm">
-                        <h3>Calico</h3>
                         <figure>
-                            <img class="img-thumbnail" src="images/calico_small.jpg" 
-                                alt="Calico" 
-                                title="calico"/>
-                            <figcaption>Calico</figcaption>
+                            <img class="w-100" src="images/team/jiakai.png" 
+                                alt="Jia Kai" 
+                                title="jiakai"/>
                         </figure>
-                        <p>
-                            A calico ca is a domestic cat with a coat that is 
-                            typically 25% to 75% white and has large orange and 
-                            black patches.
-                        </p>
-                    </article>     
+                        <p>Wu Jia Kai</p>
+                    </article>
+                
+                    <article class="col-sm">
+                        <figure>
+                            <img class="w-100" src="images/team/jewel.png" 
+                                alt="Jewel" 
+                                title="jewel"/>
+                        </figure>
+                        <p>Jewel Lim</p>
+                    </article>
+                
+                    <article class="col-sm">
+                        <figure>
+                            <img class="w-100" src="images/team/yf.png" 
+                                alt="Yu Fei" 
+                                title="yufei"/>
+                        </figure>
+                        <p>Wong Yu Fei</p>
+                    </article>
+                    
+                    <article class="col-sm">
+                        <figure>
+                            <img class="w-100" src="images/team/yx.png" 
+                                alt="Yi Xing" 
+                                title="yixing"/>
+                        </figure>
+                        <p>Cheng Yi Xing</p>
+                    </article>   
                 </div>
             </section>
         </main>

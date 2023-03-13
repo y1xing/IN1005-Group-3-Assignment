@@ -1,3 +1,14 @@
-.bg-img-gradient {
-    background: linear-gradient(134.11deg, #7AE05A 5.9%, #E3F986 97.45%);
+section {
+    padding: 5em 10em 5em 10em;
+    margin: 5em;
+    border-radius: 5em;
+    background: linear-gradient(89.85deg, rgba(123, 249, 102, 0.04) 2.47%, rgba(174, 247, 55, 0.04) 96.86%);
 }
+
+.bg-img-gradient {
+    background: linear-gradient(to right,
+            hsla(106, 68%, 62%, 1),
+            hsla(71, 91%, 75%, 0.9)
+          );
+}
+
