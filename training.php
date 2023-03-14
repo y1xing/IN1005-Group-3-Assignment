@@ -18,8 +18,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- MDBootstap CSS -->
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
-          rel="stylesheet"
-        />
+          rel="stylesheet">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/training.css">
         <link rel="stylesheet" href="css/main.css">
