@@ -1,0 +1,70 @@
+h1, h2, h3, h4, p {
+    font-family: 'Changa';
+}
+
+#h2_title{
+
+    font-family: 'Changa';
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 87px;
+    text-align: center;
+    background: linear-gradient(89.97deg, #EB4D8D 16.81%, #F5BF43 83.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#border{
+    border-radius: 61px;
+    padding: 20px; 
+    padding-bottom: 100px;
+    background: #F5F5F5;
+    background: linear-gradient(90deg, rgba(239, 107, 124, 0.04) 0%, rgba(243, 146, 99, 0.04) 99.02%);
+}
+
+.btn {
+    border: transparent; 
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    font-family: 'Changa';
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+    background: linear-gradient(89.97deg, #EB4D8D 16.81%, #F5BF43 83.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 15px;
+    margin-bottom: 70px; 
+
+}
+
+h4{
+    font-family: 'Changa';
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 33px;
+    text-align: center;
+    background: linear-gradient(89.97deg, #EB4D8D 16.81%, #F5BF43 83.06%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-control{
+    border-radius: 10px;
+    font-family: 'Changa';
+}
+
+
+#parent {
+    width: calc(150px * 3);
+    height: 100%;
+    overflow: hidden; /* or any clear-fix snippet */
+}
+
+.child {
+    float: left;
+    width: 150px;
+    height: 100%;
+    background-color: pink;
+}
