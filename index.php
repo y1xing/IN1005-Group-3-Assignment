@@ -3,110 +3,175 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html lang = "en">
-    <head>
-        <!--jQuery script test-->
-        <script defer
-                src ="https://code.jquery.com/jquery-3.4.1.min.js"
-                integrity = "sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-                crossorigin = "anonymous">
-        </script>
-        <script defer
-            src = "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
-            integrity = "sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
-            crossorigin="anonymous">
-        </script>
-        <script defer src="js/main.js">
-        </script>
-        <title>World of Pets</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel ="stylesheet"
-              href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-              integrity ="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-              crossorigin="anonymous">
-        <link rel="stylesheet" href="css/main.css" type="text/css">
-    </head>
-    <body>
-        <?php 
-            include "nav.inc.php";
-        ?>
-        <div>
-        <header class = "jumbotron text-center bg-dark">
-            <section id ="home">
-            <h1 class = "display-4">Welcome to the World of Pets!</h1>
-            <h2>Home of Singapore's Pet Lovers</h2>
-            </section>
-        </header>
-        </div>
-        <main class = "container">
-            <div id ="pets">
-            <section id = "dogs">
-                        <h2 id="dog_title">All about Dogs!</h2>
-                        <div class="row">
-                        <article class = "col-sm">
-                            <h3>Poodles</h3>
-                            <figure>
-                                <img class="img-thumbnail" src="images/poodle_small.jpg" alt ="Poodle" id="poodle">
-                                <figcaption>Standard Poodle</figcaption>
-                            </figure>
-                            <p>
-                                Poodles are a group of formal dog breeds, the Standard Poodle, 
-                                Miniature Poodle and the Toy Poodle...
-                            </p>
-                        </article>
-                        <article class = "col-sm">
-                            <h3>Chihuahua</h3>
-                            <figure>
-                                    <img class = "img-thumbnail" src="images/chihuahua_small.jpg" alt="Chihuahua" 
-                                    id="chihuahua"    title ="View larger image....">
-                                <figcaption>Chihuahua</figcaption>
-                            </figure>
-                            <p>
-                                The Chihuahua is the smallest breed of dog and is named 
-                                after the Mexican state of Chihuahua
-                            </p>
-                        </article>
-                        </div>
-            </section>
-            <section id ="cats">
-                <h2 id = "cat_title">All About Cats!</h2>
-                <div class="row">
-                <article class="col-sm"> 
-                <h3>Tabby</h3>
-                <figure>
-                        <img class = "img-thumbnail" src="images/tabby_small.jpg" alt ="Tabby"
-                             id="tabby">
-                    <figcaption>Tabby Cat</figcaption>
-                </figure>
-              
-                <p>
-                   A tabby is any domestic cat with a distinctive 
-                   'M'-shaped marking on its forehead; stripes by its eyes and across its cheeks, 
-                   along its back, and around its legs and tail or swirled patterns on the body.
-                </p>
-                </article>
-                <article class = "col-sm"> 
-                <h3>Calico</h3>
-                <figure>
-                        <img  class = "img-thumbnail" src="images/calico_small.jpg" alt="Calico"
-                             id="calico" >
-                    <figcaption>Calico Cat</figcaption>
-                </figure>
-                <p>
-                    A calico cat is a domestic cat of any breed with a tri-color coat. 
-                    The calico cat is most commonly thought of as being 25% to 75% white with large orange and black patches
-                    Calicoes are almost exclusively female except under rare genetic conditions.
-                </p>
-                </article>
-                </div>
-            </section>
-                </div>
-            </main>
-    <?php 
-        include "footer.inc.php";
+<html lang="en">
+
+<?php
+include "head.inc.php";
+?>
+
+<body>
+    <?php
+    $color = "blue";
+
+    include "nav.inc.php";
     ?>
-    </body>
+
+
+    <div>
+        <?php
+
+        $text = "Discover a world of CUBING";
+        include "hero.inc.php";
+        ?>
+    </div>
+    <main id="main">
+        <div class="bordered-container"></div>
+        <div class="container-max-height ">
+
+            <div class="container-max-width">
+                <h1 class="header blue-text">Singapore’s FIRST Cubing Training Center</h1>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <img src="images/hero/kiddo.png" class="kid-img" alt="picture of a kid" />
+                    </div>
+                    <div class="col-md-6 right-container">
+                        <h1 class="blue-text">About Us</h3>
+                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <button class="button">
+                                <span class="button-content">Find out more </span>
+                            </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="container-max-height">
+            <div class="container-max-width alt-section-container">
+                <h1 class="header red-text">We have <u>MANY</u> students</h1>
+                <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="row stats-main mb-5">
+                    <div class="col-md-4">
+
+                        <div class="stats-container blue">
+                            <img src="/images/icons/cubeIcon.png" class="cube-icon" />
+                            <div class="number" id="number">
+                                <div class="left" id="left"></div>
+                                <div class="separator" id="separator">,</div>
+                                <div class="right" id="right">0</div>
+                            </div>
+                            <h3>Hours Trained</h3>
+
+
+                            <svg class="svgFilter" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                <defs>
+                                    <filter id="blurFilter">
+                                        <feGaussianBlur id="blurFilterItem" in="SourceGraphic" stdDeviation="13,0" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stats-container red">
+                            <img src="/images/icons/cubeIcon.png" class="cube-icon" />
+                            <div class="number" id="number2">
+                                <div class="left" id="left2"></div>
+                                <div class="separator" id="separator2">,</div>
+                                <div class="right" id="right2">0</div>
+                            </div>
+                            <h3>Hours Trained</h3>
+
+
+                            <svg class="svgFilter" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                <defs>
+                                    <filter id="blurFilter">
+                                        <feGaussianBlur id="blurFilterItem" in="SourceGraphic" stdDeviation="13,0" />
+                                    </filter>
+                                </defs>
+                            </svg>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stats-container green">
+                            <img src="/images/icons/cubeIcon.png" class="cube-icon" />
+                            <div class="number" id="number3">
+                                <div class="left" id="left3"></div>
+                                <div class="separator" id="separator3">,</div>
+                                <div class="right" id="right3">0</div>
+                            </div>
+                            <h3>Hours Trained</h3>
+
+
+                            <svg class="svgFilter" xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                <defs>
+                                    <filter id="blurFilter">
+                                        <feGaussianBlur id="blurFilterItem" in="SourceGraphic" stdDeviation="13,0" />
+                                    </filter>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="button-red mt-5">
+                    <span class="button-content-red">Find out more </span>
+                </button>
+
+            </div>
+        </div>
+        <div class="container-max-height">
+            <div class="container-max-width ">
+                <h1 class="header green-text">Our Products</h1>
+                <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="product-container blue">
+                            <img src="/images/products/cube1.png" alt="product 1" class="product-img" />
+                            <h1 class="product-name">Product 1</h1>
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+
+                        <div class="product-container red">
+                            <img src="/images/products/cube2.png" alt="product 2" class="product-img" />
+                            <h1 class="product-name">Product 2</h1>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="product-container orange">
+                            <img src="/images/products/cube3.png" alt="product 3" class="product-img" />
+                            <h1 class="product-name">Product 3</h1>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+
+                        <div class="product-container green">
+                            <img src="/images/products/cube4.png" alt="product 4" class="product-img" />
+                            <h1 class="product-name">Product 4</h1>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <button class="button-green mt-5">
+                    <span class="button-content-green">Browse Products </span>
+                </button>
+
+            </div>
+        </div>
+    </main>
+    <?php
+    // include "footer.inc.php";
+    ?>
+</body>
+
 </html>
 
 <!<!-- hi there -->

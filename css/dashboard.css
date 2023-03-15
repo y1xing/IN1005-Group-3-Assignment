@@ -1,0 +1,10 @@
+.bg-img-gradient {
+    background: linear-gradient(to right,
+            hsla(106, 68%, 62%, 1),
+            hsla(71, 91%, 75%, 0.9)
+          );
+}
+
+.banner {
+    height: 15em;
+}
