@@ -41,18 +41,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>
     
     <body>  
-        <?php
-            include "nav.inc.php";
-        ?>
-        
-        <header class="contain-fluid">
-            <div class="bg-image">
-                <img class="img-fluid w-100" src="images/hero/heroFrame.png" alt="Rubric Cubes Background">
-                <div class="mask text-light d-flex justify-content-center flex-column text-center bg-img-gradient">
-                    <h1>Learn CUBING from the <u>BEST</u></h1>
+        <header>
+            <?php
+                $color = "green";
+                $text = "Learn CUBING from the <u>BEST</u>";
 
-                </div>
-            </div>
+                include "nav.inc.php";
+
+                include "hero.inc.php";
+            ?>
         </header>
 
         <main class="container-fluid">
