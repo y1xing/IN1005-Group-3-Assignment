@@ -218,8 +218,8 @@
   }
   
   button:hover {
-    background: rgba(19, 168, 20, 1);
-    box-shadow: 0 0 30px 3px rgb(126, 238, 126);
+    background: rgb(113, 197, 225);
+    box-shadow: 0 0 30px 3px rgb(126, 208, 238);
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
