@@ -53,117 +53,125 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </header>
 
         <main class="container-fluid">
-            <section id="benefits" class="container text-center">
-                <h2>Why you should learn Cubing</h2>
-                <p>Cubing have been around since 1974 and CubeLand is established to boost the multiple benefits of cubig such as:</p>
-                
+            <div class="bordered-container"></div>
+            <section id="benefits" class="container">
+                <h1 class="header green-text">Why you should learn Cubing</h1>
+                <p class="subtitle">Cubing have been around since 1974 and CubeLand is established to boost the multiple benefits of cubig such as:</p>
+
                 <div class="row justify-content-center">
-                    <article class="col-4 col-sm-3">
-                        <figure>
-                            <img class="w-100" src="images/whyCubing/reflexes.png" 
+                    <article class="col-4 col-md-3">
+                        <div class="ability-container w-100">
+                            <img class="w-100 p-0 p-lg-4" src="images/whyCubing/reflexes.png" 
                                 alt="Reflexes & Agility" 
                                 title="reflexes"/>
-                        </figure>
-                        <p>Reflexes & Agility</p>
+                            <p class="ability-text-blue">Reflexes & Agility</p>                            
+                        </div>
                     </article>
-                    
-                    <article class="col-4 col-sm-3">
-                        <figure>
-                            <img class="w-100" src="images/whyCubing/concentration.png" 
+
+                    <article class="col-4 col-md-3">
+                        <div class="ability-container w-100">
+                            <img class="w-100 p-0 p-lg-4" src="images/whyCubing/concentration.png" 
                                 alt="Concentration & Configuration" 
                                 title="concentration"/>
-                        </figure>
-                        <p>Concentration & Configuration</p>
+                            <p class="ability-text-red">Concentration & Configuration</p>
+                        </div>
                     </article>
-                    
-                    <article class="col-4 col-sm-3">
-                        <figure>
-                            <img class="w-100" src="images/whyCubing/patience.png" 
+
+                    <article class="col-4 col-md-3">
+                        <div class="ability-container w-100">
+                            <img class="w-100 p-0 p-lg-4" src="images/whyCubing/patience.png" 
                                 alt="Patience" 
                                 title="patience"/>
-                        </figure>
-                        <p>Patience</p>
+                            <p class="ability-text-orange">Patience</p>
+                        </div>
                     </article>
-                                        
-                    <article class="col-4 col-sm-3">
-                        <figure>
-                            <img class="w-100" src="images/whyCubing/problem.png" 
+
+                    <article class="col-4 col-md-3">
+                        <div class="ability-container w-100">
+                            <img class="w-100 p-0 p-lg-4" src="images/whyCubing/problem.png" 
                                 alt="Problem Solving Skills" 
                                 title="problem"/>
-                        </figure>
-                        <p>Problem Solving Skills</p>
+                            <p class="ability-text-green">Problem Solving Skills</p>
+                        </div>
                     </article>
-                                        
-                    <article class="col-4 col-sm-3">
-                        <figure>
-                            <img class="w-100" src="images/whyCubing/determination.png" 
+
+                    <article class="col-4 col-md-3">
+                        <div class="ability-container w-100">
+                            <img class="w-100 p-0 p-lg-4" src="images/whyCubing/determination.png" 
                                 alt="Determination & Focus" 
                                 title="determination"/>
-                        </figure>
-                        <p>Determination & Focus</p>
+                            <p class="ability-text-orange">Determination & Focus</p>
+                        </div>
                     </article>
-                    
-                    <article class="col-4 col-sm-3">
-                        <figure>
-                            <img class="w-100" src="images/whyCubing/memory.png" 
+
+                    <article class="col-4 col-md-3">
+                        <div class="ability-container w-100">
+                            <img class="w-100 p-0 p-lg-4" src="images/whyCubing/memory.png" 
                                 alt="Memory" 
                                 title="memory"/>
-                        </figure>
-                        <p>Memory</p>
+                            <p class="ability-text-green">Memory</p>
+                        </div>
                     </article>
-                                        
-                    <article class="col-4 col-sm-3">
-                        <figure>
-                            <img class="w-100" src="images/whyCubing/reduced.png" 
+
+                    <article class="col-4 col-md-3">
+                        <div class="ability-container w-100">
+                            <img class="w-100 p-0 p-lg-4" src="images/whyCubing/reduced.png" 
                                 alt="Reduced Screen Time" 
                                 title="reduced"/>
-                        </figure>
-                        <p>Reduced Screen Time</p>
+                            <p class="ability-text-blue">Reduced Screen Time</p>
+                        </div>
                     </article>
-                    
-                    <article class="col-4 col-sm-3">
-                        <figure>
-                            <img class="w-100" src="images/whyCubing/logical.png" 
+
+                    <article class="col-4 col-md-3">
+                        <div class="ability-container w-100">
+                            <img class="w-100 p-0 p-lg-4" src="images/whyCubing/logical.png" 
                                 alt="Logical Understanding" 
                                 title="logical"/>
-                        </figure>
-                        <p>Logical Understanding</p>
+                            <p class="ability-text-red">Logical Understanding</p>
+                        </div>
                     </article>
                 </div>
             </section>
 
-            <section id="expectations" class="container text-center">
-                <h2>What You Can Expect</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                
-                <div class="row justify-content-center">
-                    <article class="col-sm-4">
-                        <p>Buy a package</p>
+            <section id="expectations" class="container container-gradient-biege">
+                <h1 class="header blue-text">What You Can Expect</h1>
+                <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <div class="row justify-content-center expect-row">
+                    <article class="col-md-4 expect-container">
+                        <div class="d-flex justify-content-center align-items-center square square-gradient-blue">
+                            <img class="wrapper-hexagon" 
+                                 src="images/wrapper/wrapper-hexagon.png"
+                                 alt="Hexagon Wrapper"/>
+                            <p class="expect-number">1</p>
+                            <p class="expect-text">Buy a package</p>
+                        </div>
                     </article>
-                    
-                    <article class="col-sm-4">
-                        <figure>
-                            <img class="w-100" src="images/whyCubing/concentration.png" 
-                                alt="Concentration & Configuration" 
-                                title="concentration"/>
-                        </figure>
-                        <p>Concentration & Configuration</p>
+
+                    <article class="col-md-4 expect-container">
+                        <div class="d-flex justify-content-center align-items-center square square-gradient-green">
+                            <img class="wrapper-hexagon"
+                                 src="images/wrapper/wrapper-hexagon.png"
+                                 alt="Hexagon Wrapper"/>
+                            <p class="expect-number">2</p>
+                            <p class="expect-text">Fill up form in <br>email</p>
+                        </div>
                     </article>
-                    
-                    <article class="col-sm-4">
-                        <figure>
-                            <img class="w-100" src="images/whyCubing/patience.png" 
-                                alt="Patience" 
-                                title="patience"/>
-                        </figure>
-                        <p>Patience</p>
-                    </article>   
+
+                    <article class="col-md-4 expect-container">
+                        <div class="d-flex justify-content-center align-items-center square square-gradient-red">
+                            <img class="wrapper-hexagon" src="images/wrapper/wrapper-hexagon.png"
+                                 alt="Hexagon Wrapper"/>
+                            <p class="expect-number">3</p>
+                            <p class="expect-text">Zoom lesson</p>
+                        </div>
+                    </article>                  
                 </div>
             </section>
             
             <section id="trainers" class="container text-center">
-                <h2>Our Trainers</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h1 class="header red-text">Our Trainers</h1>
+                <p class="subtitle debug">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 
                 <div class="row justify-content-center">
                     <article class="col-sm">
