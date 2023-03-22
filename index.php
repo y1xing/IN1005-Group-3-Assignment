@@ -36,10 +36,10 @@ include "head.inc.php";
                     </div>
                     <div class="col-md-6 right-container">
                         <h1 class="blue-text">About Us</h1>
-                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <button class="button">
-                                <span class="button-content">Find out more </span>
-                            </button>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button class="button">
+                            <span class="button-content">Find out more </span>
+                        </button>
                     </div>
                 </div>
             </div>

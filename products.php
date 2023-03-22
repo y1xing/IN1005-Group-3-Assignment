@@ -24,6 +24,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </script>
     <script src="js/swiper-bundle.min.js"></script>
     <script defer src="js/slider.js"></script>
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
 
 
 
