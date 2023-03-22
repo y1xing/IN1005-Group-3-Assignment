@@ -35,7 +35,7 @@ include "head.inc.php";
                         <img src="images/hero/kiddo.png" class="kid-img" alt="picture of a kid" />
                     </div>
                     <div class="col-md-6 right-container">
-                        <h1 class="blue-text">About Us</h3>
+                        <h1 class="blue-text">About Us</h1>
                             <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <button class="button">
                                 <span class="button-content">Find out more </span>

@@ -54,10 +54,7 @@ echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto pt-5 pb-5 px-4'
             <a class="nav-link" href="contact.php">Contact</a>
         </li>
     </ul>
-    <form class="form-inline">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 my-2 my-lg-0 icon-nav">
-            <li class="nav-item">
-                <a class="icon-container">
+
                     <img src="images/icons/cart.png" alt="Cart" class="icon" />
                 </a>
             </li>
