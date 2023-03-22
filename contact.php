@@ -16,9 +16,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             integrity = "sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
             crossorigin="anonymous">
         </script>
-        <script defer src="js/main.js">
+            <!--<script defer src="js/main.js">-->
+            <script defer src="js/nav.js">
         </script>
-        <title>World of Pets</title>
+        <title>Contact Us</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet"
@@ -27,41 +28,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
               crossorigin="anonymous">
         <link href='https://fonts.googleapis.com/css?family=Changa' rel='stylesheet'>
         <link rel="stylesheet" href="css/contact.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
     </head>
     <body>
-        <?php 
+        <?php
+            $color = "orange";
+
             include "nav.inc.php";
         ?>
+
+
         <div>
-        <header class = "jumbotron text-center bg-dark">
-            <section id ="home">
-            <h1 id="heading_title">Contact Us</h1>
-            <h2>Home of Singapore's Pet Lovers</h2>
-            </section>
-        </header>
+        <?php
+            $text = "Contact Us";
+            include "hero.inc.php";
+        ?>
         </div>
         <main class = "container">
             <div id ="pets">
                 <section>
-                    <h2 id="h2_title">Ask Us <u>Anything</u></h2>
+                    <h1 class="header">Ask Us Anything</h1>
                     <form>
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="firstName">First Name</label>
+                            <div class="form-group col-md-6 fillform">
+                                <label for="fname">First Name</label>
                                 <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="lastName">Last Name</label>
+                            <div class="form-group col-md-6 fillform">
+                                <label for="lname">Last Name</label>
                                 <input type="text" class="form-control" id="lastName" placeholder="Last Name">
                             </div>
                         </div>
-                        <div class = "form-group"> 
+                        <div class = "form-group fillform"> 
                             <label for ="email">Email:</label>
-                            <input class="form-control" id="email" name ="email" type ="email" placeholder="example@gmail.com">
+                            <input class="form-control" id="email" name ="email" type ="email" placeholder="example@gmail.com" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group fillform">
                             <label for="message">Message</label>
-                            <input type="text" class="form-control" id="message" placeholder="Let us know your questions!">
+                            <input type="text" class="form-control box" id="message" placeholder="Let us know your questions!" required>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary">Send Message</button>
@@ -75,7 +79,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     </p>
                     <div class="container">
                         <div class="row">
-                            <form class="form-inline">
+                            <div class="col">
                                 <h4>
                                     Is there a free trial available
                                 </h4>
@@ -85,6 +89,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
+                            </div>
+                            <div class="col">
                                 <h4>
                                     Is there a free trial available
                                 </h4>
@@ -94,6 +100,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col">
                                 <h4>
                                     Is there a free trial available
                                 </h4>
@@ -103,6 +112,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
+                            </div>
+                            <div class="col">
                                 <h4>
                                     Is there a free trial available
                                 </h4>
@@ -112,12 +123,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 </p>
-                            </form>
+                            </div>
                         </div>
-                    </div> 
-
+                    </div>
                 </section>
-            </div>      
+            </div> 
         </main>
     <?php 
         include "footer.inc.php";

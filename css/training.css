@@ -1,14 +1,130 @@
-section {
-    padding: 5em 10em 5em 10em;
-    margin: 5em;
-    border-radius: 5em;
-    background: linear-gradient(89.85deg, rgba(123, 249, 102, 0.04) 2.47%, rgba(174, 247, 55, 0.04) 96.86%);
+.debug {
+      outline: 1px solid red;
 }
 
-.bg-img-gradient {
-    background: linear-gradient(to right,
-            hsla(106, 68%, 62%, 1),
-            hsla(71, 91%, 75%, 0.9)
-          );
+body {
+    font-family: 'Changa';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 91%;
+    text-align: center;
 }
+
+section {
+    margin: 5%;
+    padding: 5%;
+    border-radius: 60px;
+}
+
+.expect-row {
+    margin: 5%;
+}
+
+.ability-container, .expect-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.ability-container {
+    padding: 5%;
+}
+
+.expect-container {
+    padding: 2%;
+}
+
+.ability-text-blue, .ability-text-red, .ability-text-orange, .ability-text-green {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.ability-text-blue {
+    color: #48A6FF;
+}
+
+.ability-text-red {
+    color: #FF363E;
+}
+
+.ability-text-orange {
+    color: #FF9F29;
+}
+
+.ability-text-green {
+    color: #1BCF2D;
+}
+
+.container-gradient-biege {
+    background: linear-gradient(89.5deg, rgba(108, 208, 41, 0.05) 0.46%, rgba(176, 222, 48, 0.05) 93.87%);
+}
+
+.square-gradient-blue {
+    background: linear-gradient(135.16deg, #9185F8 8.84%, #6AB7F9 95.86%);
+}
+
+.square-gradient-red {
+    background: linear-gradient(133.76deg, #EE5B87 6.56%, #F3975F 96.88%);
+}
+
+.square-gradient-green {
+    background: linear-gradient(134.11deg, #7AE05A 5.9%, #E3F986 97.45%);
+}
+
+.text-gradient-blue {
+    background: linear-gradient(89.97deg, #8F88F8 16.81%, #6CB5F9 83.06%);
+}
+
+.overlap-padding-top {
+    padding-top: 3rem;
+}
+
+.square {
+    position: relative;
+    width: 100%;
+    border-radius: 25%;
+}
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper-hexagon {
+    position: absolute;
+    top: -15%;
+    width: 35%;
+}
+
+.expect-number {
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    position: absolute;
+    top: -2%;
+    
+}
+
+.expect-text {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 100%;
+    color: white;
+    text-align: center;
+}
+
+/*@media screen and (max-width: 768px)*/
 
