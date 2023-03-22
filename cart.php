@@ -42,81 +42,76 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     ?>
 
     <main id="cart">
-        <!--        <div class="container-max-width">-->
-        <!--            <div class="container-review">-->
-        <!--                <h3>Review Item and Shipping</h3>-->
-        <!--            </div>-->
-        <!--            <div class="container-delivery">-->
-        <!--                <h3>Delivery Information</h3>-->
-        <!--            </div>-->
-        <!--            <div class="container-summary">-->
-        <!--                <h3>Order Summary</h3>-->
-        <!--            </div>-->
-        <!--        </div>-->
+
         <div class="shopping-cart-container">
+            <div class="shopping-cart-container-left">
 
-            <div class="cart-container">
-                <h1>Review Item and Shipping</h1>
-                <!-- Here goes the list of products added to the cart -->
-                <ul>
-                    <li>Product 1</li>
-                    <li>Product 2</li>
-                    <li>Product 3</li>
-                    <li>Product 4</li>
-                    <li>Product 5</li>
-                </ul>
+                <div class="cart-container">
+                    <h1>Review Item and Shipping</h1>
+                    <!-- Here goes the list of products added to the cart -->
+                    <ul>
+                        <li>Product 1</li>
+                        <li>Product 2</li>
+                        <li>Product 3</li>
+                        <li>Product 4</li>
+                        <li>Product 5</li>
+                    </ul>
+                </div>
+
+                <div class="checkbox-container">
+                    <form>
+                        <div>
+
+                            <input type="checkbox" id="returning customer" name="returning customer">Returning Customer?
+                        </div>
+                    </form>
+                </div>
+
+                <div class="delivery-container">
+                    <h1>Delivery Information</h1>
+                    <!-- Here goes the form for delivery information -->
+                    <!-- add First Name, Last Name, Address, City, State, Zip Code, Phone Number, Email Address -->
+                    <form>
+                        <div class="container-form-half">
+                            <label for="fname">First name:*</label>
+                            <input type="text" id="fname" required name="fname" placeholder="First Name">
+                        </div>
+                        <div class="container-form-half">
+                            <label for="lname">Last name:*</label>
+                            <input type="text" id="lname" required name="lname" placeholder="Last Name">
+                        </div>
+                        <div class="container-form">
+                            <label for="address">Address:*</label>
+                            <input type="text" id="address" required name="address" placeholder="Address">
+                        </div>
+                        <div class="container-form-half">
+                            <label for="city">City/State:*</label>
+                            <input type="text" id="city" required name="city" placeholder="City/State">
+                        </div>
+                        <div class="container-form-half">
+                            <label for="state">Postal Code:*</label>
+                            <input type="text" id="postal" required maxlength="6" name="postal" placeholder="Postal Code">
+                        </div>
+                        <div class="container-form-half">
+                            <label for="phone">Mobile:*</label>
+                            <input type="text" id="mobile" required name="mobile" placeholder="Mobile">
+                        </div>
+                        <div class="container-form-half">
+                            <label for="email">Email:*</label>
+                            <input type="email" id="email" required name="email" placeholder="Email">
+                        </div>
+                    </form>
+                </div>
             </div>
 
-            <div class="summary-container">
-                <h1>Order Summary</h1>
-                <!-- Here goes the list of products and their prices, plus total amount -->
-                <!-- You can also include a button to proceed to checkout -->
+            <div class="shopping-cart-container-right">
+                <div class="summary-container">
+                    <h1>Order Summary</h1>
+                    <!-- Here goes the list of products and their prices, plus total amount -->
+                    <!-- You can also include a button to proceed to checkout -->
+                </div>
+
             </div>
-
-            <div class="cart-container">
-                <form>
-                    <div class="container-form">
-
-                        <input type="checkbox" id="returning customer" name="returning customer">Returning Customer?
-                    </div>
-                </form>
-            </div>
-
-            <div class="delivery-container">
-                <h1>Delivery Information</h1>
-                <!-- Here goes the form for delivery information -->
-                <!-- add First Name, Last Name, Address, City, State, Zip Code, Phone Number, Email Address -->
-                <form>
-                    <div class="container-form-half">
-                        <label for="fname">First name:*</label>
-                        <input type="text" id="fname" required name="fname" placeholder="First Name">
-                    </div>
-                    <div class="container-form-half">
-                        <label for="lname">Last name:*</label>
-                        <input type="text" id="lname" required name="lname" placeholder="Last Name">
-                    </div>
-                    <div class="container-form">
-                        <label for="address">Address:*</label>
-                        <input type="text" id="address" required name="address" placeholder="Address">
-                    </div>
-                    <div class="container-form-half">
-                        <label for="city">City/State:*</label>
-                        <input type="text" id="city" required name="city" placeholder="City/State">
-                    </div>
-                    <div class="container-form-half">
-                        <label for="state">Postal Code:*</label>
-                        <input type="text" id="postal" required maxlength="6" name="postal" placeholder="Postal Code">
-                    </div>
-                    <div class="container-form-half">
-                        <label for="phone">Mobile:*</label>
-                        <input type="text" id="mobile" required name="mobile" placeholder="Mobile">
-                    </div>
-                    <div class="container-form-half">
-                        <label for="email">Email:*</label>
-                        <input type="email" id="email" required name="email" placeholder="Email">
-                </form>
-            </div>
-
         </div>
     </main>
     <?php
