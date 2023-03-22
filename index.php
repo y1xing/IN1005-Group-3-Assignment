@@ -36,10 +36,10 @@ include "head.inc.php";
                     </div>
                     <div class="col-md-6 right-container">
                         <h1 class="blue-text">About Us</h1>
-                            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <button class="button">
-                                <span class="button-content">Find out more </span>
-                            </button>
+                        <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button class="button">
+                            <span class="button-content">Find out more </span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@ include "head.inc.php";
                                 <div class="separator" id="separator">,</div>
                                 <div class="right" id="right">0</div>
                             </div>
-                            <h3>Hours Trained</h3>
+                            <h3 class="stats-subtitle">Hours Trained</h3>
 
 
                             <svg class="svgFilter" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -72,7 +72,7 @@ include "head.inc.php";
                             </svg>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 ">
                         <div class="stats-container red">
                             <img src="/images/icons/cubeIcon.png" class="cube-icon" />
                             <div class="number" id="number2">
@@ -80,7 +80,7 @@ include "head.inc.php";
                                 <div class="separator" id="separator2">,</div>
                                 <div class="right" id="right2">0</div>
                             </div>
-                            <h3>Hours Trained</h3>
+                            <h3 class="stats-subtitle">Hours Trained</h3>
 
 
                             <svg class="svgFilter" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -101,7 +101,7 @@ include "head.inc.php";
                                 <div class="separator" id="separator3">,</div>
                                 <div class="right" id="right3">0</div>
                             </div>
-                            <h3>Hours Trained</h3>
+                            <h3 class="stats-subtitle">Hours Trained</h3>
 
 
                             <svg class="svgFilter" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -142,8 +142,8 @@ include "head.inc.php";
 
                         </div>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="product-container orange">
+                    <div class="col-lg-3 col-sm-6 ">
+                        <div class=" product-container orange">
                             <img src="/images/products/cube3.png" alt="product 3" class="product-img" />
                             <h1 class="product-name">Product 3</h1>
 
@@ -163,6 +163,8 @@ include "head.inc.php";
                 <button class="button-green mt-5">
                     <span class="button-content-green">Browse Products </span>
                 </button>
+
+
 
             </div>
         </div>

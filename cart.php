@@ -30,8 +30,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
 
 </head>
+
 <body>
     <?php
     $color = "blue";
@@ -40,6 +42,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     ?>
 
     <main id="cart">
+
         <div class="shopping-cart-container">
             <div class="shopping-cart-container-left">
 
