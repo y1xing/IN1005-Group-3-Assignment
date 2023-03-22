@@ -1,0 +1,41 @@
+h1, h2, h3, h4, p {
+    font-family: 'Changa';
+}
+.register-img {
+ width: 90%;
+position: relative;
+top: 0px;
+border-radius: 60px;
+}
+div.row{
+    padding-top: 6rem;
+}
+div.col-md-6.left-container{
+padding: 3rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 2rem;
+}
+div.col-md-6.right-container{
+    
+}
+
+
+input.form-control {
+    border-radius: 46px;
+    border: 2px solid #000000;
+    background: #fff;
+}
+
+button.btn-block {
+    border-radius: 46px;
+    
+}
+button.btn-primary {
+    background:linear-gradient(93.61deg, #64ADFA 6.48%, #9A2DF7 98.96%);
+    border-color: #F38B66;
+}
+p1{
+    margin-top: -3rem;
+}
