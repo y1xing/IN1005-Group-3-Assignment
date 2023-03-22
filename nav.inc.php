@@ -19,7 +19,7 @@ switch ($color) {
         // Do nothing
 }
 
-echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto p-5' 
+echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto pt-5 pb-5 px-4' 
     style='$backgroundColor'
     id='navbar'>";
 
@@ -28,7 +28,7 @@ echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto p-5'
 
 
 <!-- <nav class="navbar navbar-expand-lg fixed-top mx-auto p-5" id="navbar"> -->
-<a class=" navbar-brand" href="#">
+<a class="navbar-brand" href="#">
 
     <img src="/images/logo/logoWhite.png" alt="logo" class="logo" />
 </a>
@@ -54,9 +54,9 @@ echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto p-5'
             <a class="nav-link" href="contact.php">Contact</a>
         </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 my-2 my-lg-0">
-            <li class="nav-item active">
+    <form class="form-inline">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 my-2 my-lg-0 icon-nav">
+            <li class="nav-item">
                 <a class="icon-container">
                     <img src="images/icons/cart.png" alt="Cart" class="icon" />
                 </a>
