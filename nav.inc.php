@@ -57,7 +57,7 @@ echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto p-5'
     <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 my-2 my-lg-0">
             <li class="nav-item active">
-                <a class="icon-container">
+                <a class="icon-container" href="cart.php">
                     <img src="images/icons/cart.png" alt="Cart" class="icon" />
                 </a>
             </li>
