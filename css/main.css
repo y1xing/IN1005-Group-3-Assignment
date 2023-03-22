@@ -11,6 +11,12 @@ h1 {
     font-family: 'Changa', sans-serif;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
 
 
 nav {
@@ -23,11 +29,21 @@ nav {
     border-bottom-right-radius: 4rem;
     box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.15);
     
+    
 
     
     
     
 }
+
+.icon-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+
 
 
 #navbar.top {
@@ -115,6 +131,23 @@ body {
 }
 
 .green {
+    
+    background: linear-gradient(90deg, #69D028 0.31%, #B1DF30 97.83%);
+}
+
+.orange-text {
+    background: linear-gradient(90deg, #EEAB5C 0.31%, #F3C75F 97.83%);
+}
+
+.blue-text {
+    background: linear-gradient(90deg, #65A8F9 0.31%, #9731F6 97.83%);
+}
+
+.red-text {
+    background: linear-gradient(90deg, #F06B7C 0.31%, #F39362 97.83%);
+}
+
+.green-text {
     
     background: linear-gradient(90deg, #69D028 0.31%, #B1DF30 97.83%);
 }
@@ -273,7 +306,8 @@ body {
     background-clip: text;
     text-fill-color: transparent;
     padding: 2rem 4rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
     
   }
 
@@ -286,8 +320,10 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    
     padding: 2rem 4rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
     
   }
 
@@ -300,9 +336,10 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    padding: 2rem 4rem;
-    font-size: 1.5rem;
     
+    padding: 2rem 3.5rem;
+    font-size: 1rem;
+    text-align: center;
   }
 
 
@@ -404,32 +441,13 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
-    .header {
-        font-size: 2rem;
-    }
-
-    .right-container {
-        gap: 0;
-        padding: 2rem;
-    }
-
-    .button-content {
-        padding: 0;
-        font-size: 1rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-        width: 100%;
-    }
-
-    .stats-container {
-        height: 144px;
-        width: 144px;
-    }
-
+.col-md-4 {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
+
 
 
 
@@ -468,6 +486,10 @@ body {
     display: none;
   }
   
+  .stats-subtitle {
+    font-size: 2rem;
+    text-align: center;
+  }
 
   .product-container {
     position: relative;
@@ -478,13 +500,67 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 2rem;
-    
+    height: 90%;
     border-radius: 10%;
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+    
+    
   }
   
  .product-img {
     width: 100%;
-    translate: 0rem 3rem;
+    margin-bottom: 4rem;
     top: 0;
  }
+
+ .product-name {
+    color: white;
+    position: absolute;
+    bottom: 0;
+
+}
+
+ @media screen and (max-width: 768px) {
+    .header {
+        font-size: 2rem;
+    }
+
+    .right-container {
+        gap: 0;
+        padding: 2rem;
+    }
+
+    .button-content {
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .stats-container {
+        height: 144px;
+        width: 144px;
+    }
+
+    .number {
+        font-size: 3rem;
+    }
+
+    .stats-subtitle {
+        font-size: 1rem;
+    }
+
+    .icon-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .icon-container {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+}
