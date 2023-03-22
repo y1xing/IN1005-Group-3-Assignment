@@ -134,29 +134,6 @@ body {
     text-fill-color: transparent;
 }
 
-.right-container {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.kid-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: drop-shadow(0px 20px 60px rgba(0, 0, 0, 0.15));
-}
-
-.text {
-    font-family: 'Work Sans', sans-serif;
-    font-size: min(1.5rem, calc(2vw + 10px));
-
-
-
-}
-
 .button, .button-red, .button-green {
     position: relative;
     overflow: hidden;
@@ -283,53 +260,6 @@ body {
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (max-width: 768px) {
-    .header {
-        font-size: 2rem;
-    }
-
-    .right-container {
-        gap: 0;
-        padding: 2rem;
-    }
-
-    .button-content {
-        padding: 0;
-        font-size: 1rem;
-    }
-
-    .subtitle {
-        font-size: 1rem;
-        width: 100%;
-    }
-
-    .stats-container {
-        height: 144px;
-        width: 144px;
-    }
-
-}
-
-.product-container {
-    position: relative;
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem;
-
-    border-radius: 10%;
-    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
-}
-
-.product-img {
-    width: 100%;
-    translate: 0rem 3rem;
-    top: 0;
-}
-
 /*<!------------------------------------------ for cart.css ---------------------------------------------->*/
 /* Set the width and height of the shopping cart container */
 .shopping-cart-container {
@@ -345,9 +275,35 @@ body {
     align-items: flex-start;
 }
 
+.shopping-cart-container-left {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    flex: 50%;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    position: relative;
+    align-items: flex-start;
+}
+
+.shopping-cart-container-right {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    flex: 40%;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    position: relative;
+    align-items: flex-start;
+}
+
 /* Style the product container */
 .cart-container {
-    width: 55%;
+    width: 100%;
     margin: 1rem;
     padding: 1rem;
     justify-content: left;
@@ -357,9 +313,16 @@ body {
     border-radius: 20px;
 }
 
+.checkbox-container {
+    width: 100%;
+    margin: 1rem;
+    justify-content: left;
+    align-items: flex-start;
+}
+
 /* Style the delivery container */
 .delivery-container {
-    width: 55%;
+    width: 100%;
     margin: 1rem;
     padding: 1rem;
     justify-content: left;
@@ -371,7 +334,7 @@ body {
 
 /* Style the summary container */
 .summary-container {
-    width: 40%;
+    width: 100%;
     margin: 1rem;
     padding: 1rem;
     justify-content: left;
@@ -379,6 +342,12 @@ body {
 
     border: 1px solid #ddd;
     border-radius: 20px;
+}
+
+@media screen and (max-width: 991px) {
+    .shopping-cart-container {
+        flex-direction: column;
+    }
 }
 
 /* Style the headings */
