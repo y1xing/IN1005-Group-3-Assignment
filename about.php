@@ -16,9 +16,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             integrity = "sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
             crossorigin="anonymous">
         </script>
-        <script defer src="js/main.js">
+            <!--<script defer src="js/main.js">-->
+            <script defer src="js/nav.js">
         </script>
-        <title>World of Pets</title>
+        <title>About Us</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet"
@@ -27,23 +28,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
               crossorigin="anonymous">
         <link href='https://fonts.googleapis.com/css?family=Changa' rel='stylesheet'>
         <link rel="stylesheet" href="css/about.css" type="text/css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
     </head>
     <body>
-        <?php 
+        <?php
+            $color = "red";
             include "nav.inc.php";
         ?>
+
         <div>
-        <header class = "jumbotron text-center bg-dark">
-            <section id ="home">
-            <h1 id="heading_title">About Us</h1>
-            <h2>Home of Singapore's Pet Lovers</h2>
-            </section>
-        </header>
+            <?php
+            $text = "About Us";
+            
+            include "hero.inc.php";
+            ?>
         </div>
         <main class = "container">
             <div id ="pets">
                 <section>
-                    <h2 id="h2_title">Our Story</h2>
+                    <h1 class="header">Our Story</h1>
                     <div class="container">
                         <div class="image">
                             <img src="images/team/dave.png" alt="Our Story">
