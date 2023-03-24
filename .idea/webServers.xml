@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="814e6162-7723-4b0e-9fd7-571eaff490c4" name="Cubeworld" url="http://35.212.178.126/CubeWorld/index.php">
+      <webServer id="814e6162-7723-4b0e-9fd7-571eaff490c4" name="Cubeworld" url="https://35.212.178.126/CubeWorld/index.php">
         <fileTransfer rootFolder="/var/www/html/CubeWorld" accessType="SFTP" host="35.212.178.126" port="22" sshConfigId="bbfdf4be-0bd4-41a9-b92c-cb9a38bdc853" sshConfig="dev@35.212.178.126:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
