@@ -10,6 +10,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <!<!-- Google API Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" 
               href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
@@ -22,12 +28,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/training.css">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+       
         
         <!-- jQuery -->
         <script defer 
@@ -47,12 +48,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>
     
     <body>  
+        
+        <?php
+            $color = "green";        
+            
+            include "nav.inc.php";
+        ?>
+        
         <header>
             <?php
-                $color = "green";
                 $text = "Learn CUBING from the <u>BEST</u>";
-
-                include "nav.inc.php";
 
                 include "hero.inc.php";
             ?>
@@ -65,7 +70,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <main>
             <div class="bordered-container"></div>
             <section id="benefits" class="container-max-height">
-                <div class="container-max-width debug">
+                <div class="container-max-width">
                     <h1 class="header green-text">Why you should learn Cubing</h1>
                     <p class="subtitle training-subtitle">Cubing have been around since 1974 and CubeLand is established to boost the multiple benefits of cubig such as:</p>
 
@@ -146,13 +151,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </section>
 
             <section id="expectations" class="container-max-height">
-                <div class="container-max-width alt-section-container debug">
+                <div class="container-max-width alt-section-container">
                     <h1 class="header blue-text">What You Can Expect</h1>
                     <p class="subtitle training-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-                    <div class="row justify-content-center expect-row debug">
+                    <div class="row justify-content-center expect-row">
                         <article class="col-md-4 expect-container debug">
-                            <div class="d-flex justify-content-center align-items-center square square-gradient-blue debug">
+                            <div class="d-flex justify-content-center align-items-center square square-gradient-blue">
                                 <img class="wrapper-hexagon" 
                                      src="images/wrapper/wrapper-hexagon.png"
                                      alt="Hexagon Wrapper"/>
