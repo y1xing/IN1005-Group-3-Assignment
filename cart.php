@@ -187,6 +187,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                         <span class="button-content">Pay {Amount}</span>
                                     </button>
                                 </div>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -28,7 +28,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
 
-    <title>World of Pets</title>
+    <title>Cube World</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -81,7 +81,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <div id="swiper" class="swiper-wrapper row flex-nowrap flex-xl-wrap justify-center">
                         <div class="swiper-slide col-xl-3 col-auto">
                             <div class="slide_card light-blue">
-                                <img src="../images/products/cube1.png" alt="cube image" class="store-img" />
+                                <a href="product_info.php"><img src="../images/products/cube1.png" alt="cube image" class="store-img"/></a>
                             </div>
                             <div class="product-info-container">
                                 <div class="product-info">
