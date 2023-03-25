@@ -59,7 +59,7 @@ include "head.inc.php";
     
         <div class="col-md-6 left-container">
             <h1 class = "blue-text"> Login</h1>
-    <form action ="process_register.php" method="post" > 
+    <form action ="process_login.php" method="post" > 
     
     <div class = "form-group"> 
         <label for ="email">Email:</label>

@@ -107,6 +107,8 @@ footer {
     .footer-column {
         padding: 15px 5px;
         width:50%;
+                text-align: center;
+
     }
     .footer-column3 {
         padding: 15px 5px;
