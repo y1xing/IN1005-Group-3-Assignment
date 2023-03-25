@@ -86,7 +86,7 @@ include "head.inc.php";
         <a href ="/register.php"> Create an Account</a>.
     </p1>
     </div>
-        <div class="col-md-6">
+        <div class="col-md-6 hide-on-mobile">
                         <img src="images/hero/loginPic.png" class="register-img" alt="Cubeworld Login pic" />
                     </div>
 

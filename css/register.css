@@ -21,7 +21,16 @@ input.form-control {
     border: 2px solid #000000;
     background: #fff;
 }
+.hide-on-mobile {
+  display: none;
+}
 
+/* Show the image on devices with a screen width of 768px or larger */
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: block;
+  }
+}
 button.btn-block {
     border-radius: 46px;
     

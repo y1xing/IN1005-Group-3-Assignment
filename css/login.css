@@ -20,7 +20,16 @@ gap: 2rem;
 div.col-md-6.right-container{
     
 }
+.hide-on-mobile {
+  display: none;
+}
 
+/* Show the image on devices with a screen width of 768px or larger */
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: block;
+  }
+}
 
 input.form-control {
     border-radius: 46px;
