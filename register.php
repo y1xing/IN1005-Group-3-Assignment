@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang = "en">
     <head>
         <title>Register</title>
@@ -36,14 +37,14 @@
     </head>
     
     <body>
-<?php
-include "head.inc.php";
-?>
+
     <?php
     $color = "blue";
     include "nav.inc.php";
     ?>
-    
+    <?php
+include "head.inc.php";
+?>
 
 <main class ="reg-container">
     
@@ -95,8 +96,8 @@ include "head.inc.php";
     </div>  
     </form>
             <p1>
-        Already have an account?
-        <a href ="/login.php"> Login</a>.
+        Already have an account?<a href ="/login.php"> Login</a>
+        
     </p1>
     </div>
             </div>

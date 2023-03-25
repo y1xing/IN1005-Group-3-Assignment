@@ -13,6 +13,9 @@ margin-top: 0px;
 border-radius: 60px;
 
 }
+p1 a {
+        display: inline;
+    }
 div.row{
     padding-top: 6rem;
 }
@@ -41,7 +44,7 @@ button.btn-primary {
 }
 
 p1{
-    margin-top: -3rem;
+    margin-top: -2rem;
 }
 
 .right-containerreg{

@@ -11,8 +11,8 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: white;
-  width: 50px; /* Set a fixed width for the circle */
-  height: 50px; /* Set a fixed height for the circle */
+  width: 35px; /* Set a fixed width for the circle */
+  height: 35px; /* Set a fixed height for the circle */
   font-size: 24px;
   border-radius: 50%;
   text-decoration: none;
@@ -20,16 +20,18 @@ footer {
   background-color: white;
   
 }
+
 .footericon-container{
     display: flex;
   justify-content: space-evenly;
   align-items: center;
+   flex-wrap: wrap;
 }
 .fa:hover {
   opacity: 0.7;
 }
 .footer-column-logo {
-     width: 30%;
+    width: 30%;
     padding: 15px;
     margin-top: 2rem;
     
@@ -47,31 +49,28 @@ footer {
     flex-wrap: wrap;
 }
 
-.footer-column {
+.footer-column, .footer-column3 {
     width: 100%;
     padding: 15px;
 }
 
-@media (min-width: 576px) {
-    .footer-column {
-        width: 50%;
-    }
-}
-
 @media (min-width: 768px) {
-    .footer-column {
+    .footer-column, .footer-column3 {
         width: 20%;
         padding-left: 6rem;
         padding-top: 2rem;
     }
 }
 
+
+
+
 .footer-column h3 {
     margin-top: 0;
     margin-bottom: 15px;
 }
 
-.footer-column a {
+.footer-column a, .footer-column3 a {
     color: #fff;
     text-decoration: none;
     display: block;
@@ -88,3 +87,42 @@ footer {
     margin-top: 2rem;
 } 
 
+
+/* Additional mobile-friendly styles */
+@media (max-width: 575px) {
+    .footer-container {
+        padding: 25px 15px;
+    }
+
+    .footericon-container {
+        margin-top: 10px;
+    }
+
+    .footer-column-logo {
+        margin-top: 1rem;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .footer-column {
+        padding: 15px 5px;
+        width:50%;
+    }
+    .footer-column3 {
+        padding: 15px 5px;
+        width:100%;
+        text-align: center;
+    }
+
+    .footer-column-logo p {
+        margin-top: 3rem;
+    }
+    footer {
+    background-color: #333;
+    background: url('../footerblue.png');
+    color: #fff;
+    padding: 30px 0;
+    border-radius: 30px 30px 0px 0px;
+    background-size:cover;
+}
+}

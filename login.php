@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang = "en">
     <head>
         <title>Register</title>
@@ -36,9 +37,7 @@
     </head>
     
     <body>
-<?php
-include "head.inc.php";
-?>
+
 
 
     <?php
@@ -46,7 +45,9 @@ include "head.inc.php";
 
     include "nav.inc.php";
     ?>
-    
+    <?php
+include "head.inc.php";
+?>
 
 <main class ="reg-container">
     
