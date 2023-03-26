@@ -43,6 +43,7 @@
 .sorting-container {
     width: 100%;
     padding: 0 2rem;
+    max-width: 1260px;
 }
 
 .banner-header {
@@ -148,6 +149,11 @@
 .product-info-container p {
     font-size: 0.8rem;
     font-weight: 200;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
     
 }
 
