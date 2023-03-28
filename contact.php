@@ -44,16 +44,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <h1 class="header">Ask Us Anything</h1>
         </div>
         <div class="container">
-            <form>
+            <form method="POST" action="customer_email.php" id="contact-form">
                 <div class="form-row">
                     <div class="form-group col-md-6 fillform">
                         <label for="fname">First Name</label>
-                        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
-                    </div>
+                        <input type="text" name="fname" class="form-control" id="firstName" placeholder="First Name" required>                    </div>
                     <div class="form-group col-md-6 fillform">
                         <label for="lname">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-                    </div>
+                        <input type="text" name="lname" class="form-control" id="lastName" placeholder="Last Name" required>                    </div>
                 </div>
                 <div class="form-group fillform">
                     <label for="email">Email:</label>
@@ -61,10 +59,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
                 <div class="form-group fillform">
                   <label for="message">Message</label>
-                  <input type="text" class="form-control box" id="message" placeholder="Let us know your questions!" required>
-                </div>
+                  <input type="message" name="message" class="form-control box" id="message" placeholder="Let us know your questions!" required>                </div>
                 <div class="text-center">
-                    <button type="submit" class="button-red mt-5">
+                    <button type="submit" class="button-red mt-5" name="send">
                         <span class="button-content-red">Send Message</span>
                     </button>
                 </div>
@@ -124,10 +121,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             </p>
                         </div>
             </div>
-        </div>
-                    </div>
-                </div>
-            </section>
         </div>
     </main>
     <?php

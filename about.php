@@ -68,73 +68,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
                 
             <div class="container-width">
-                <div class="container-max-width border">
+                <div class="container-max-width section-container">
                     <h1 class="header blue-text">The ALL-STAR Team</h1>     
                     <p class="text1">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                     <div class="container">
-                        <div class="captioned-image">
-                            <figure>
-                                <img src="images/team/dave.png" alt="Dave" id="all_star_img" />
-                                <figcaption id="figcaption_dave">Dave</figcaption>
-                            </figure>
-                        </div>
-                        <div class="captioned-image">
-                            <figure>
-                                <img src="images/team/jiakai.png" alt="JiaKai" id="all_star_img" />
-                                <figcaption id="figcaption_jiakai">Jia Kai</figcaption>
-                            </figure>
-                        </div>
-                        <div class="captioned-image">
-                            <figure>
-                                <img src="images/team/jewel.png" alt="Jewel" id="all_star_img" />
-                                <figcaption id="figcaption_jewel">Jewel</figcaption>
-                            </figure>
-                        </div>
-                        <div class="captioned-image">
-                            <figure>
-                                <img src="images/team/yf.png" alt="Yu Fei" id="all_star_img" />
-                                <figcaption id="figcaption_yf">Yu Fei</figcaption>
-                            </figure>
-                        </div>
-                        <div class="captioned-image">
-                            <figure>
-                                <img src="images/team/yx.png" alt="Yi Xing" id="all_star_img" />
-                                <figcaption id="figcaption_yx">Yi Xing</figcaption>
-                            </figure>
-                        </div>
-<!--                        <div class="col col-lg-2">
-                            <figure>
-                                <img src="images/team/dave.png" alt="Dave" id="all_star_img" />
-                                <figcaption id="figcaption_dave">Dave</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col col-lg-2">
-                            <figure>
-                                <img src="images/team/jiakai.png" alt="Jia kai" id="all_star_img" />
-                                <figcaption id="figcaption_jiakai">Jia kai</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col col-lg-3">
-                            <figure>
-                                <img src="images/team/jewel.png" alt="Jewel" id="all_star_img" />
-                                <figcaption id="figcaption_jewel">Jewel</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col col-lg-2">
-                            <figure>
-                                <img src="images/team/yf.png" alt="Yu Fei" id="all_star_img" />
-                                <figcaption id="figcaption_yf">Yu Fei</figcaption>
-                            </figure>
-                        </div>
-                        <div class="col col-lg-2">
-                            <figure>
-                                <img src="images/team/yx.png" alt="Yi Xing" id="all_star_img" />
-                                <figcaption id="figcaption_yx">Yi Xing</figcaption>
-                            </figure>
-                        </div>-->
+                        <div class ="row">
+                            <div class="col image_width">
+                                <figure>
+                                    <img src="images/team/dave.png" alt="Dave" id="all_star_img" />
+                                    <figcaption id="figcaption_dave">Dave</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col image_width">
+                                <figure>
+                                    <img src="images/team/jiakai.png" alt="JiaKai" id="all_star_img" />
+                                    <figcaption id="figcaption_jiakai">Jia Kai</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col image_width">
+                                <figure>
+                                    <img src="images/team/jewel.png" alt="Jewel" id="all_star_img" />
+                                    <figcaption id="figcaption_jewel">Jewel</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col image_width">
+                                <figure>
+                                    <img src="images/team/yf.png" alt="Yu Fei" id="all_star_img" />
+                                    <figcaption id="figcaption_yf">Yu Fei</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col image_width">
+                                <figure>
+                                    <img src="images/team/yx.png" alt="Yi Xing" id="all_star_img" />
+                                    <figcaption id="figcaption_yx">Yi Xing</figcaption>
+                                </figure>
+                            </div>
                     </div>
             </div>
         </div>
