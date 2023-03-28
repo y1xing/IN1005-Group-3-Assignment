@@ -1,3 +1,13 @@
+
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -339,7 +349,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
     </main>
 
-
+<?php
+    echo "User ID: " . $_SESSION['user_id'] . "<br>";
+    echo "Email: " . $_SESSION['email'] . "<br>";
+    ?>
 </body>
 
 </html>

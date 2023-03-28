@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang = "en">
     <head>
         <title>Register</title>
@@ -36,9 +37,7 @@
     </head>
     
     <body>
-<?php
-include "head.inc.php";
-?>
+
 
 
     <?php
@@ -46,7 +45,9 @@ include "head.inc.php";
 
     include "nav.inc.php";
     ?>
-    
+    <?php
+include "head.inc.php";
+?>
 
 <main class ="reg-container">
     
@@ -58,7 +59,7 @@ include "head.inc.php";
     
         <div class="col-md-6 left-container">
             <h1 class = "blue-text"> Login</h1>
-    <form action ="process_register.php" method="post" > 
+    <form action ="process_login.php" method="post" > 
     
     <div class = "form-group"> 
         <label for ="email">Email:</label>
@@ -86,7 +87,7 @@ include "head.inc.php";
         <a href ="/register.php"> Create an Account</a>.
     </p1>
     </div>
-        <div class="col-md-6">
+        <div class="col-md-6 hide-on-mobile">
                         <img src="images/hero/loginPic.png" class="register-img" alt="Cubeworld Login pic" />
                     </div>
 

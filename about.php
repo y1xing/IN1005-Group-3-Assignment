@@ -21,6 +21,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <link href='https://fonts.googleapis.com/css?family=Changa' rel='stylesheet'>
     <link rel="stylesheet" href="css/about.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
 </head>
 
 <body>
