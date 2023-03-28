@@ -1,53 +1,43 @@
-$(document).ready(function(){
-    console.log("hello");
-    $('.swiper').html(make_skeleton());
+var addToCartButtons = document.querySelectorAll('.add-to-cart');
 
+for (var i = 0; i < addToCartButtons.length; i++) {
+    var button = addToCartButtons[i];
+    button.addEventListener('click', addToCartClicked);
+}
 
-    setTimeout(function(){
-        load_content(5);
-    }, 3000);
+function addToCartClicked(event) {
+    var button = event.target;
+    var productId = button.getAttribute('data-product-id');
+    var productName = button.getAttribute('data-product-name');
+    var productPrice = button.getAttribute('data-product-price');
+    var productQuantity = button.getAttribute('data-product-quantity');
+    var productImage = button.getAttribute('data-product-image');
+    var productColor = button.getAttribute('data-product-color');
 
+    var cartItem = {
+        id: productId,
+        name: productName,
+        price: productPrice,
+        quantity: productQuantity,
+        image: productImage,
+        color: productColor,
 
+    }
 
-    function make_skeleton()
-    {
-        var output = '';
+    console.log(cartItem);
 
+    var quantity = 1;
 
-        for(var count = 0; count < 5; count++)
-        {
-            output += '<div class="swiper-wrapper row flex-nowrap flex-xl-wrap justify-center">';
-            output += '<div class="ph-item" style="border: none !important; padding: 0 !important;" >';
-            output += '<div class="ph-col-12">';
-            output += '<div class="ph-picture"></div>';
-            output += '<div class="ph-row">';
-            output += '<div class="ph-col-6 big"></div>';
-            output += '<div class="ph-col-4 empty big"></div>';
-            output += '<div class="ph-col-2 big"></div>';
-            output += '<div class="ph-col-6"></div>';
-            output += '<div class="ph-col-6 empty"></div>';
-            output += '<div class="ph-col-6"></div>';
-            output += '<div class="ph-col-6 empty"></div>';
-            output += '<div class="ph-col-6 big"></div>';
-            output += '</div>';
-            output += '</div>';
-            output += '</div>';
-            output += '</div>';
+    // Send AJAX request to server to store product in session
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'add_to_cart.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            console.log(xhr.responseText);
         }
-        return output;
-    }
+    };
+    xhr.send('product_id=' + productId + '&quantity=' + quantity);
 
-    function load_content(limit)
-    {
-        $.ajax({
-            url:"get_products.php",
-            method:"POST",
-            data:{limit:limit},
-            success:function(data)
-            {
-                $('.swiper').html(data);
-            }
-        })
-    }
 
-});
+}

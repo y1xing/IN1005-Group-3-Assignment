@@ -300,7 +300,16 @@ body {
     width: 100%;
     height: auto;
     display: flex;
+    position: relative;
+    align-items: flex-start;
+    max-width: 1260px;
+    width: 100%;
+    height: 100%;
+    display: flex;
 
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
     flex-wrap: wrap;
     flex-direction: row;
 
@@ -314,7 +323,7 @@ body {
     height: auto;
     display: flex;
 
-    flex: 50%;
+    flex: 40%;
     flex-wrap: wrap;
     flex-direction: row;
 
@@ -428,56 +437,22 @@ body {
     margin: 1em auto 0;
 }
 
-.coupon:before {
-    content:"";
-    display:block;
-    width: 100%;
-    max-width:100%;
-    margin: 1em auto 0;
+.coupon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
 }
 
-.coupon:after {
-    content:"";
-    display:block;
-    width: 100%;
-    max-width:100%;
-    margin: 2.5em auto 0;
+
+
+.align-button {
+    border: 2px solid #ddd;
 }
 
-@media screen and (max-width: 991px) {
-    .shopping-cart-container {
-        flex-direction: column;
-        font-size: 10px;
-    }
 
-    .button span {
-        font-size: 10px;
-    }
-
-    .button-coupon span {
-        font-size: 10px;
-    }
-
-    .align-button button {
-        margin: 0 auto;
-    }
-
-    .container-form label {
-        font-size: 10px;
-    }
-
-    .container-form-half label {
-        font-size: 10px;
-    }
-
-    .payment-check label {
-        font-size: 10px;
-    }
-
-    .shopping-cart-container-right {
-        font-size: 10px;
-    }
-}
 
 /* Style the headings */
 h2 {
@@ -551,10 +526,11 @@ input[type="submit"]:hover {
 }
 
 .button-coupon {
-    position: relative;
+    position: absolute;
     overflow: hidden;
     height: 2.5rem;
-    padding: 0 2rem;
+    top: 5px;
+    right: 5px;
     border-radius: 1.5rem;
     background: linear-gradient(93.61deg, #64ADFA 6.48%, #9A2DF7 98.96%);
     background-size: 100%;
@@ -562,36 +538,38 @@ input[type="submit"]:hover {
     border: 0;
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
 
-    margin-left: -180px;
 }
 
-.align-button {
+.container-two-forms {
     display: flex;
-    flex-wrap: wrap;
+    width: 100%;
     flex-direction: row;
-    padding-top: 5px;
+    gap: 5px;
+    margin-bottom: 2rem;
 }
+
+
 
 .container-form-half {
     position: relative;
-    width: 50%;
+    flex: 1;
 
     display: flex;
     flex-direction: column;
 
     align-items: flex-start;
-    padding: 1rem;
+
 }
 
 .container-form {
     position: relative;
     width: 100%;
-
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
 
     align-items: flex-start;
-    padding: 1rem;
+
 }
 
 .payment-mode {
@@ -635,3 +613,119 @@ input[type="submit"]:hover {
 span {
     color:  #6929ff;
 }
+
+
+/*CART CSS HERE*/
+.cart-item {
+    display: flex;
+    flex-direction: row;
+
+
+    align-items: center;
+
+
+}
+
+.cart-item-left {
+    background: #fbfbfb;
+    padding: 0.5rem;
+    width: 127px;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.2;
+    width: 100%;
+}
+
+.cart-item-left img {
+    width: 100%;
+
+    object-fit: cover;
+
+}
+
+.cart-item-middle {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 1rem;
+    width: 100%;
+    flex: 0.6;
+}
+
+.cart-item-middle h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cart-item-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 1rem;
+    flex: 0.2;
+}
+
+.cart-item-right h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: "Changa", san-serif;
+}
+
+.cart-item-right p {
+    font-size: 1.2rem;
+
+    margin: 0;
+
+}
+
+@media (max-width: 800px) {
+    .shopping-cart-container {
+        flex-direction: column;
+        font-size: 10px;
+    }
+
+    .button span {
+        font-size: 10px;
+    }
+
+    .button-coupon span {
+        font-size: 10px;
+    }
+
+    .container-two-forms {
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .container-form {
+        margin-bottom: 1rem;
+    }
+
+
+
+    .container-form label {
+        font-size: 10px;
+    }
+
+    .container-form-half label {
+        font-size: 10px;
+    }
+
+    .payment-check label {
+        font-size: 10px;
+    }
+
+    .shopping-cart-container-right {
+        font-size: 10px;
+    }
+}
+
