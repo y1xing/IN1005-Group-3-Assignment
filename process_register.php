@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="css/footer.css" type="text/css">
     </head>
 <?php
-//session_start();
+session_start();
+
 
 $fname = $lname = $email = $errorMsg = "";
 $success = true;
@@ -65,9 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($success) {
         
         saveMember();
-         
-
-       
+      
         echo "<div class='success'>";
         echo "<div class='success'>";
         echo "<h1>Your registration is successful</h1>";
@@ -76,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<br><button class='btn btn-success'><a href='login.php' alt='Sign in'>Login</a></button>";
         echo "</div>";
       
-       
+        
         
         
     } else {
@@ -113,13 +112,39 @@ function saveMember()
             $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
             $success = false;
         }
+        else{ $_SESSION['user_id'] = $conn->insert_id;
+            $_SESSION['session_id'] = session_id();}
 
         $stmt->close();
     }
   $conn->close();
   
 }
+function checkAndDisplaySuccess()
+    {
+        $config = parse_ini_file('../private/db-config.ini');
+        $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
 
+        $stmt = $conn->prepare("SELECT * FROM user_info WHERE email = ?");
+        $stmt->bind_param("s", $this->email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $_SESSION["user_id"] = $row["user_id"];
+
+            echo "<div class='success'>";
+            echo "<h1>Your registration is successful</h1>";
+            echo "<h3><p>Your registered Email: ", $this->email;
+            echo "<h4><p>Thank you for signing up: ", $this->lname;
+            echo "<br><button class='btn btn-success'><a href='login.php' alt='Sign in'>Login</a></button>";
+            echo "</div>";
+        }
+
+        $stmt->close();
+        $conn->close();
+    }
 function displayError()
 {
     global $errorMsg;
@@ -131,5 +156,6 @@ function displayError()
     echo "<button class='btn btn-danger'><a href='register.php' alt='retry'>Return to Sign up</a></button></header>";
     echo "</div><br>";
 }
+
 
 include 'footer.inc.php';
