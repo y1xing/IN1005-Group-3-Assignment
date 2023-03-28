@@ -1,4 +1,3 @@
-
 <?php
 $fname = $lname = $email = $errorMsg = "";
 $success = true;
@@ -30,40 +29,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $success = false;
         }
     }
-
-    if (empty($_POST["pwd"])) {
-        $errorMsg .= "Password is required.<br>";
+    if (empty($_POST["message"])) {
+        $errorMsg .= "Message is required.<br>";
         $success = false;
     } else {
-        $pwd = password_hash($_POST["pwd"], PASSWORD_DEFAULT);
+        $lname = sanitize_input($_POST["message"]);
     }
-
-    if (empty($_POST["pwd_confirm"])) {
-        $errorMsg .= "Password confirmation is required.<br>";
-        $success = false;
-    } else {
-        $pwd_confirm = $_POST["pwd_confirm"];
-        if (!password_verify($pwd_confirm, $pwd)) {
-            $errorMsg .= "Passwords do not match.<br>";
-            $success = false;
-        }
-    }
-
     include 'nav.inc.php';
 
     if ($success) {
         saveMember();
         echo "<div class='success'>";
-        echo "<h1>Your registration is successful</h1>";
-        echo "<h3><p>Your registered Email: ", $email;
-        echo "<h4><p>Thank you for signing up: ", $lname;
-        echo "<br><button class='btn btn-success'><a href='login.php' alt='Sign in'>Login</a></button>";
+        echo "<h1>Thank you for your contacting us.</h1>";
+        echo "<br><button class='btn btn-success'><a href='contact.php' alt='Contact Us'>Contact Us</a></button>";
         echo "</div>";
     } else {
         displayError();
     }
 } else {
-    header("Location: register.php");
+    header("Location: contact.php");
     exit;
 }
 
@@ -77,7 +61,7 @@ function sanitize_input($data)
 
 function saveMember()
 {
-    global $fname, $lname, $email, $pwd, $errorMsg, $success;
+    global $fname, $lname, $email, $message, $errorMsg, $success;
 
     $config = parse_ini_file('../../private/db-config.ini');
     $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
@@ -86,8 +70,8 @@ function saveMember()
         $errorMsg = "Connection failed: " . $conn->connect_error;
         $success = false;
     } else {
-        $stmt = $conn->prepare("INSERT INTO user_info(fname, lname, email, password) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $fname, $lname, $email, $pwd);
+        $stmt = $conn->prepare("INSERT INTO world_of_pets_members(fname, lname, email, message) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $fname, $lname, $email, $message);
 
         if (!$stmt->execute()) {
             $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
@@ -108,7 +92,7 @@ function displayError()
     echo "<h1>Oops!</h1>";
     echo "<h2>The following errors were detected: </h2>";
     echo "<p>", $errorMsg, "</p>";
-    echo "<button class='btn btn-danger'><a href='register.php' alt='retry'>Return to Sign up</a></button></header>";
+    echo "<button class='btn btn-danger'><a href='contact.php' alt='retry'>Return to Contact Us</a></button></header>";
     echo "</div><br>";
 }
 

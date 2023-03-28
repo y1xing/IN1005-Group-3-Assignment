@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -10,6 +14,9 @@ include "head.inc.php";
 ?>
 
 <body>
+
+
+
     <?php
     $color = "blue";
 
@@ -25,6 +32,7 @@ include "head.inc.php";
         ?>
     </div>
     <main id="main">
+
         <div class="bordered-container"></div>
         <div class="container-max-height ">
 
@@ -43,12 +51,55 @@ include "head.inc.php";
                     </div>
                 </div>
             </div>
+            <?php
+
+            // Initalise variables
+            $email = $errorMsg = "";
+            $success = true;
+
+
+            $config = parse_ini_file('../../private/db-config.ini');
+            $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
+
+            if ($conn->connect_error) {
+                $errorMsg = "Connection failed: " . $conn->connect_error;
+                $success = false;
+            } else {
+                $stmt = $conn->prepare("SELECT * FROM enquiries");
+
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    $email = $row["email"];
+                    $title = $row["title"];
+
+
+
+                } else {
+                    $errorMsg = "Invalid email or password.";
+                    $success = false;
+                }
+
+                $stmt->close();
+            }
+
+            $conn->close();
+
+            echo "<h1>$email</h1>";
+
+
+            echo "<h1>$errorMsg</h1>";
+
+
+            ?>
 
 
         </div>
         <div class="container-max-height">
             <div class="container-max-width alt-section-container">
-                <h1 class="header red-text">We have <u>MANY</u> students</h1>
+                <h1 class="header red-text">We have<u>MANY</u> students</h1>
                 <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="row stats-main mb-5">
                     <div class="col-md-4">

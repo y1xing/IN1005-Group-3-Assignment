@@ -33,7 +33,7 @@
                     <a href="#">Services</a>
                     <a href="#">Contact</a>
             </div>
-            <div class="footer-column">
+            <div class="footer-column3">
                 <h3>Social Media</h3>
                 <a href="#">Home</a>
                     <a href="#">About</a>

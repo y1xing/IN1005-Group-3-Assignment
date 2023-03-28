@@ -32,8 +32,6 @@ if (strlen($text) > 2) {
     $fontSize = "font-size: min(30rem, calc(10vw + 3rem));";
 }
 
-
-
 echo "
     <div class='hero-container $color'>
         <img class='heroImg' src='$src' alt='Hero Frame'>
@@ -42,8 +40,7 @@ echo "
             
         </div>
     
-    "
-
+    ";
 ?>
 
 

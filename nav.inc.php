@@ -28,7 +28,7 @@ echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto pt-5 pb-5 px-4'
 
 
 <!-- <nav class="navbar navbar-expand-lg fixed-top mx-auto p-5" id="navbar"> -->
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="/CubeWorld/index.php">
 
     <img src="/images/logo/logoWhite.png" alt="logo" class="logo" />
 </a>
@@ -42,16 +42,16 @@ echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto pt-5 pb-5 px-4'
 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="gap: 2rem;">
         <li class="nav-item">
-            <a class="nav-link" href="about.php">About Us <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/CubeWorld/about.php">About Us <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Products</a>
+            <a class="nav-link" href="/CubeWorld/products.php">Products</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Training</a>
+            <a class="nav-link" href="/CubeWorld/training.php">Training</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
+            <a class="nav-link" href="/CubeWorld/contact.php">Contact</a>
         </li>
     </ul>
     <form class="form-inline">
