@@ -157,7 +157,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <p class="subtitle training-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
                     <div class="row justify-content-center expect-row">
-                        <article class="col-md-4 expect-container debug">
+                        <article class="col-md-4 expect-container">
                             <div class="d-flex justify-content-center align-items-center square square-gradient-blue">
                                 <img class="wrapper-hexagon" 
                                      src="images/wrapper/wrapper-hexagon.png"
@@ -187,7 +187,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         </article>                  
                     </div>
                     
-                    <button class="button">
+                    <button
+                            onclick="window.location.href='/products.php'"
+                            class="button">
                         <span class="button-content progress-text">Book a lesson now!</span>
                     </button>
                 </div>
@@ -203,9 +205,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     </button>
 
                     <div class="row justify-content-center trainer-row">
-                        <article class="col-md debug">
-                            <div class="trainer-container debug">
-                                <div class="flip-card debug">
+                        <article class="col-md">
+                            <div class="trainer-container">
+                                <div class="flip-card">
                                     <div class="flip-card-inner" 
                                          onclick="if (this.style['transform'] === 'rotateY(0deg)') {this.style['transform'] = 'rotateY(180deg)';} else {this.style['transform'] = 'rotateY(0deg)';}">
                                         <div class="flip-card-front w-100">
@@ -214,7 +216,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                 title="dave"/>                                    
                                         </div>
                                         <div class="flip-card-back">
-                                            <p>test</p>
+                                            <img class="w-100" src="images/backPics/dave.png"
+                                                 alt="Dave"
+                                                 title="dave"/>
                                         </div>
                                     </div>
                                 </div>
@@ -222,9 +226,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             </div>
                         </article>
                         
-                        <article class="col-md debug">
-                            <div class="trainer-container debug">
-                                <div class="flip-card debug">
+                        <article class="col-md">
+                            <div class="trainer-container">
+                                <div class="flip-card">
                                     <div class="flip-card-inner" 
                                          onclick="if (this.style['transform'] === 'rotateY(0deg)') {this.style['transform'] = 'rotateY(180deg)';} else {this.style['transform'] = 'rotateY(0deg)';}">
                                         <div class="flip-card-front w-100">
@@ -233,7 +237,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                 title="jiakai"/>                                    
                                         </div>
                                         <div class="flip-card-back">
-                                            <p>test</p>
+                                            <img class="w-100" src="images/backPics/jk.png"
+                                                 alt="Jia Kai"
+                                                 title="jiakai"/>
                                         </div>
                                     </div>
                                 </div>
@@ -252,7 +258,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                 title="jewel"/>                             
                                         </div>
                                         <div class="flip-card-back">
-                                            <p>test</p>
+                                            <img class="w-100" src="images/backPics/jewel.png"
+                                                 alt="Jewel"
+                                                 title="jewel"/>
                                         </div>
                                     </div>
                                 </div>
@@ -271,7 +279,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                 title="yufei"/>                               
                                         </div>
                                         <div class="flip-card-back">
-                                            <p>test</p>
+                                            <img class="w-100" src="images/backPics/yf.png"
+                                                 alt="Yu Fei"
+                                                 title="yufei"/>
                                         </div>
                                     </div>
                                 </div>
@@ -290,7 +300,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                 title="yixing"/>                                
                                         </div>
                                         <div class="flip-card-back">
-                                            <p>test</p>
+                                            <img class="w-100" src="images/products/yx.png"
+                                                 alt="Yi Xing"
+                                                 title="yixing"/>
                                         </div>
                                     </div>
                                 </div>

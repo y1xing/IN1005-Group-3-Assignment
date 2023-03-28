@@ -1,13 +1,13 @@
 <?php
 session_start();
-unset($_SESSION['user_id']);
+//unset($_SESSION['user_id']);
 ?>
 
 
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this templatee
 -->
 <html lang="en">
 
@@ -45,7 +45,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <body>
     <?php
     $color = "blue";
-
+    // TEST
     include "navWhite.inc.php";
     ?>
 

@@ -1,4 +1,8 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
+
 <html lang = "en">
     <head>
         <title>Process_register</title>
@@ -14,7 +18,7 @@
 error_reporting(E_ALL); // Enable error reporting
 ini_set('display_errors', 1);
 
-session_start();
+
 
 ob_start(); // Start output buffering
 
@@ -32,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($success) {
         $_SESSION['email'] = $email;
-        header("Location: products.php");
+        header("Location: login.php");
         ob_end_clean(); // Discard output buffer and stop buffering
         exit;
     } else {
