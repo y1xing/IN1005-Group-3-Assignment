@@ -32,6 +32,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/products.css">
         <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="css/footer.css">
         
         <!-- jQuery -->
         <script defer 

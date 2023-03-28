@@ -220,7 +220,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
     </main>
 
+
 </body>
+
+<?php include 'footer.inc.php'; ?>
 
 
 </html>

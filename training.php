@@ -28,6 +28,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/training.css">
+        <link rel="stylesheet" href="css/footer.css">
        
         
         <!-- jQuery -->
