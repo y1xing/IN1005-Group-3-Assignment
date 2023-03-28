@@ -19,6 +19,9 @@ include "head.inc.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    if (!empty($_POST["fname"])) {
+    $fname = sanitize_input($_POST["fname"]);
+}
     if (empty($_POST["lname"])) {
         $errorMsg .= "Last name is required.<br>";
         $success = false;

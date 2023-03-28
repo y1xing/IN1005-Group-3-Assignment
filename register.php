@@ -139,7 +139,8 @@ include "head.inc.php";
 <?php
     include "footer.inc.php";
 ?>
+        <script src="js/passforms.js"></script>
 <script src="js/form_validation.js"></script>
-<script src="js/toggle.js"></script>
+
 </body>
 </html>
