@@ -28,6 +28,8 @@
                 integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" 
                 crossorigin="anonymous">
         </script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+        
         <!-- Custom JS -->
        <!-- Custom CSS -->
         
@@ -39,8 +41,8 @@
     <body>
 
     <?php
-    $color = "blue";
-    include "nav.inc.php";
+ 
+    include "navWhite.inc.php";
     ?>
     <?php
 include "head.inc.php";
@@ -58,7 +60,9 @@ include "head.inc.php";
                         </div>
                         <div class="col-md-6 right-containerreg">
                             <h1 class = "red-text"> Register</h1>
-                            <form action ="process_register.php" method="post" novalidate > 
+                            
+                            
+                            <form action="process_register.php" method="post" id="registrationForm">
 
 
                                 <div class ="form-groupnames">
@@ -66,34 +70,57 @@ include "head.inc.php";
                                     <label for ="fname">First Name:</label>
                                     <input class="form-control" id="fname" name ="fname" type="text"
                                            placeholder="Enter First name">
+                                   
                                 </div>
                                 <div class = "form-group lname"> 
-                                    <label for ="lname">Last Name*:</label>
+                                    <label for ="lname">Last Name:</label>
                                     <input class="form-control" id="lname" maxlength = "45" name ="lname" type="text"
-                                           placeholder="Enter Last name">
+                                           placeholder="Enter Last name" >
+                                    <span id="lnameError" class="error-messagereg" style="display: none;"></span>
                                 </div>
                                 </div>
                                 <div class = "form-group"> 
-                                    <label for ="email">Email*:</label>
-                                    <input class="form-control" id="email" name ="email" type ="email" required
+                                    <label for ="email">Email:</label>
+                                    <input class="form-control" id="email" name ="email" type ="email"
                                            placeholder="Enter email">
                                     <span id="emailError" class="error-messagereg" style="display: none;"></span>
                                 </div>
+                                
+                                
                                 <div class="form-group">
-                                    <label for ="pwd">Password*:</label>
+                                    <label for ="pwd">Password:</label>
+                                    <div class ="input-container">
                                     <input class="form-control" id="pwd" name ="pwd" type="password"
                                            placeholder="Enter password">
+                                    <span class="show-pass">
+                <i class="far fa-eye" onmousedown="showPassword(); myFunction(this)" onmouseup="hidePassword(); myFunction(this)" onmouseleave="hidePassword()" ></i>
+            </span>
+                                    </div>
+                                     <span id="pwdError" class="error-messagereg" style="display: none;"></span>
+                                     
+            <span id="pwdError" class="error-messagereg" style="display: none;"></span>
+        </div>
+        <div id="popover-password">
+            <p><span id="result"></span></p>
+            <div class="progress">
+                <div id="password-strength" class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                </div>
+            </div>
+        
                                 </div>
                                 <div class = "form-group"> 
-                                    <label for ="pwd_confirm">Confirm password*:</label>
+                                    <label for ="pwd_confirm">Confirm password:</label>
                                     <input class="form-control" id="pwd_confirm" name ="pwd_confirm" type="password"
                                            placeholder="Confirm password">
+                                    <span id="pwdConfirmError" class="error-messagereg" style="display: none;"></span>
+                                    
                                 </div>
                                 <div class ="form-check">
                                     <label> 
                                         <input type="checkbox" name ="agree">
                                         Agree to terms and conditions.*
                                     </label>
+                                    <span id="agreeError" class="error-message" style="display: none;"></span>
                                 </div>
                                 <div class = "form-group"> 
                                     <button class="btn btn-primary btn-block" type = "submit"> Submit </button>
@@ -112,6 +139,7 @@ include "head.inc.php";
 <?php
     include "footer.inc.php";
 ?>
-<script src="validation.js"></script>
+<script src="js/form_validation.js"></script>
+<script src="js/toggle.js"></script>
 </body>
 </html>

@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Process_register</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="css/main.css" type="text/css">
+        <link rel="stylesheet" href="css/register.css" type="text/css">
+        <link rel="stylesheet" href="css/footer.css" type="text/css">
+    </head>
+
 <?php
 error_reporting(E_ALL); // Enable error reporting
 ini_set('display_errors', 1);
@@ -9,8 +21,9 @@ ob_start(); // Start output buffering
 $email = $errorMsg = "";
 $success = true;
 
-include 'head.inc.php';
-include 'nav.inc.php';
+include "navWhite.inc.php";
+include "head.inc.php";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = sanitize_input($_POST["email"]);
