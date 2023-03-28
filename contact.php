@@ -14,6 +14,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <!--<script defer src="js/main.js">-->
     <script defer src="js/nav.js">
     </script>
+    <script defer src="js/toast.js">
+    </script>
     <title>Contact Us</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +24,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <link rel="stylesheet" href="css/contact.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="stylesheet" href="css/toast.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
 <body>
@@ -34,6 +38,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
     <div>
         <?php
+        $toastMessage = "Enquiry sent successfully!";
+        include "helper/toast.php";
+        ?>
+
+        <?php
         $text = "Contact Us";
         include "hero.inc.php";
         ?>
@@ -41,6 +50,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <main id="main">
         <div class="bordered-container"></div>
         <div class="container-width">
+
+
             <h1 class="header">Ask Us Anything</h1>
         </div>
         <div class="container">
@@ -59,9 +70,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
                 <div class="form-group fillform">
                   <label for="message">Message</label>
-                  <input type="message" name="message" class="form-control box" id="message" placeholder="Let us know your questions!" required>                </div>
+                    <textarea type="message" name="message" rows="6" class="form-control box" id="message" placeholder="Let us know your questions!" required></textarea>
+                      </div>
                 <div class="text-center">
-                    <button type="submit" class="button-red mt-5" name="send">
+                    <button type="submit" class="open button-red mt-5" name="send">
                         <span class="button-content-red">Send Message</span>
                     </button>
                 </div>

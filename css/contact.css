@@ -45,7 +45,9 @@ h1, h2, h3, h4, p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 15px;
-    margin-bottom: 70px; 
+    margin-bottom: 70px;
+    /*// Align the text to the top of the box*/
+
 
 }
 
@@ -98,5 +100,9 @@ h4{
 }
 
 .box{
-    height: 200px; 
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
 }

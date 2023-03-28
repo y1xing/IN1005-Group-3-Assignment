@@ -80,40 +80,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </div>
         </div>
 
-        <div class="sorting-container">
-            <?php
-
-            echo "<h1>" . $_SESSION['user_id'] . "</h1>";
-
-            // Echo out stuff from session cart
-            if (isset($_SESSION['user_id'])) {
-                echo "<h1>Stuff exists in cart!</h1>";
-            }
-            else {
-                echo "<h1>Cart is empty!</h1>";
-            }
-            ?>
-
-
-            <select class="form-select red" aria-label="Default select example">
-                <option selected>Type</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            <select class="form-select orange" aria-label="Default select example">
-                <option selected>Product Type</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            <select class="form-select green" aria-label="Default select example">
-                <option selected>Brand</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-        </div>
+<!--        <div class="sorting-container">-->
+<!--            --><?php
+//
+//            echo "<h1>" . $_SESSION['user_id'] . "</h1>";
+//
+//            // Echo out stuff from session cart
+//            if (isset($_SESSION['user_id'])) {
+//                echo "<h1>Stuff exists in cart!</h1>";
+//            }
+//            else {
+//                echo "<h1>Cart is empty!</h1>";
+//            }
+//            ?>
+<!---->
+<!---->
+<!--            <select class="form-select red" aria-label="Default select example">-->
+<!--                <option selected>Type</option>-->
+<!--                <option value="1">One</option>-->
+<!--                <option value="2">Two</option>-->
+<!--                <option value="3">Three</option>-->
+<!--            </select>-->
+<!--            <select class="form-select orange" aria-label="Default select example">-->
+<!--                <option selected>Product Type</option>-->
+<!--                <option value="1">One</option>-->
+<!--                <option value="2">Two</option>-->
+<!--                <option value="3">Three</option>-->
+<!--            </select>-->
+<!--            <select class="form-select green" aria-label="Default select example">-->
+<!--                <option selected>Brand</option>-->
+<!--                <option value="1">One</option>-->
+<!--                <option value="2">Two</option>-->
+<!--                <option value="3">Three</option>-->
+<!--            </select>-->
+<!--        </div>-->
 
         <div class="products-main-container container-max-width">
             <h1>Cubing For You!</h1>
@@ -150,7 +150,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 "name" => $row['name'],
                                 "price" => $row['price'],
                                 "description" => $row['description'],
-                                "image" => $row['image'],
+                                "image" => $row['picture_path'],
                                 "type" => $row['type'],
                                 "brand" => $row['brand'],
                                 "rating" => $row['rating']
@@ -196,7 +196,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             $name = $product['name'];
                             $price = $product['price'];
                             $description = $product['description'];
-//                            $image = $product['picture_path'];
+                            $image = $product['image'];
                             $type = $product['type'];
                             $brand = $product['brand'];
                             $rating = $product['product_type'];
@@ -213,7 +213,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                             >
 
-                                <img src='./images/products/<?php echo $images[$i] ?>' alt="cube image" class="store-img" />
+                                <img src='<?php echo $image ?>' alt="cube image" class="store-img" />
                             </div>
                             <div class="product-info-container">
                                 <div class="product-info">

@@ -1,6 +1,6 @@
 <?php
 session_start();
-unset($_SESSION['cart']);
+unset($_SESSION['user_id']);
 ?>
 
 
@@ -156,9 +156,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <form class="coupon">
                             <input type="text" id="coupon" name="coupon" placeholder="Enter Coupon Code"/>
 
-                                <button class="button-coupon" id="coupon" name="coupon">
-                                    <span class="button-content">Apply Coupon</span>
-                                </button>
+<!--                                <button class="button-coupon" id="coupon" name="coupon">-->
+<!--                                    <span class="button-content">Apply Coupon</span>-->
+<!--                                </button>-->
 
                     </form>
                     <!-- payment details and payment type -->
