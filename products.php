@@ -16,7 +16,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <!--    <script defer src="js/main.js">-->
 <!--    </script>-->
     <script defer src="js/nav.js"></script>
-<!--    <script defer src="js/products.js"></script>-->
+    <script defer src="js/products.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
@@ -26,6 +26,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <script src="js/swiper-bundle.min.js"></script>
     <script defer src="js/slider.js"></script>
     <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="stylesheet" href="css/toast.css" type="text/css">
 
 
 
@@ -39,6 +40,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 
 </head>
@@ -50,14 +52,26 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     ?>
 
     <main id="main">
+
+
+
+
         <div class="container-max-width">
+            <?php
+            include "helper/toast.php";
+            ?>
+
+
+
             <div class="product-banner">
-                <h1 class="banner-header">Use promo code CUBEWORLD for 20% off!</h1>
+                <h1 class="banner-header">Use promo code CUBEWORLDDD for 20% off!</h1>
                 <p class="banner-subtitle">Only for first time users</p>
             </div>
         </div>
 
         <div class="sorting-container">
+            <button id="open" class="open btn btn-primary">Open Toast</button>
+
             <select class="form-select red" aria-label="Default select example">
                 <option selected>Type</option>
                 <option value="1">One</option>
