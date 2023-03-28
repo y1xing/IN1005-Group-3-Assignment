@@ -101,3 +101,14 @@ include "head.inc.php";
     include "footer.inc.php";
 ?>
 </html>
+
+$stmt = $conn->prepare("SELECT * FROM user_info WHERE email = ?"); // Fixed the SQL query
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        
+        if ($result -> num_rows > 0){
+            
+            $row = $result->fetch_assoc();
+            $_SESSION["user_id"]=$row["user_id"];
+            echo $_SESSION["user_id"];
