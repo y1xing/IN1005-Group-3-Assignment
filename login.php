@@ -33,6 +33,8 @@ session_start();
                 crossorigin="anonymous">
         </script>
         <!-- Custom JS -->
+        <script defer src="js/login-validation.js"></script>
+
        <!-- Custom CSS -->
         
         <link rel="stylesheet" href="css/main.css" type="text/css">
@@ -68,17 +70,20 @@ include "head.inc.php";
                         }
                         ?>
             
-    <form action ="process_login.php" method="post" > 
+    <form id="loginForm" action ="process_login.php" method="post" > 
     
     <div class = "form-group"> 
         <label for ="email">Email:</label>
         <input class="form-control" id="email" name ="email" type ="email"
                placeholder="Enter email">
+        <span id="emailError" style="display: none; color: red;"></span>
     </div>
     <div class="form-group">
         <label for ="pwd">Password:</label>
         <input class="form-control" id="pwd" name ="pwd" type="password"
                placeholder="Enter password">
+        <span id="pwdError" style="display: none; color: red;"></span>
+
     </div>
     
         <div class ="form-check">
@@ -88,7 +93,7 @@ include "head.inc.php";
         </label>
         </div>
     <div class = "form-group"> 
-        <button class="btn btn-primary btn-block" type = "login"> Login </button>
+        <button class="btn btn-primary btn-block" type = "submit"> Login </button>
     </div>  
     </form>
             <p1>
