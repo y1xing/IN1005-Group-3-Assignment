@@ -95,15 +95,19 @@ include "navWhite.inc.php";
                 <!-- payment details and payment type -->
                 <div>
                     <h2 class="payment-header">Choose quantity</h2>
-                    <!-- quantity add minus, havent add design -->
-                    <div class="quantity-container">
+                    <!-- combine the button and input together -->
+                    <form class="quantity-container">
                         <button class="quantity-btn">-</button>
                         <input class="quantity-input" type="text" value="1">
                         <button class="quantity-btn">+</button>
-                    </div>
+                    </form>
                 </div>
+
             </div>
         </div>
+        <!--add review section-->
+
+
     </div>
 </main>
 <?php

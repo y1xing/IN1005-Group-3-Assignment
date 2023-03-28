@@ -365,3 +365,27 @@ body {
     border-bottom: 0.1em solid rgba(189, 195, 199, 0.5);
     margin: 0.5em auto 0;
 }
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[type="text"], input[type="email"], select, textarea {
+    text-align: center;
+    width: 22%;
+    padding: 0.75rem;
+    border-radius: 35.5px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    padding-right: 10px;
+}
+/*quantity-btn css*/
+.quantity-btn {
+    width: 7.5%;
+    padding: 0.75rem;
+    border-radius: 35.5px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    padding-right: 10px;
+}
