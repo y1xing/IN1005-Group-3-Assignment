@@ -1,7 +1,12 @@
 
     <div class="toast-container" id="toast-container">
-        <i class="fas fa-exclamation-circle"></i>
-        <p class="toast-text">Oops, Wrong email or password!</p>
+
+        <p class="toast-text">
+            <?php
+            // display text from text variablee
+            echo $toastMessage;
+            ?>
+        </p>
         <i class="fas fa-close" id="close"></i>
     </div>
 

@@ -17,6 +17,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <!--    </script>-->
     <script defer src="js/nav.js"></script>
     <script defer src="js/products.js"></script>
+    <script defer src="js/toast.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
@@ -58,6 +59,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
         <div class="container-max-width">
             <?php
+            $toastMessage = "Item has been added to cart!";
+
             include "helper/toast.php";
             ?>
 
@@ -70,7 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
 
         <div class="sorting-container">
-            <button id="open" class="open btn btn-primary">Open Toast</button>
+
 
             <select class="form-select red" aria-label="Default select example">
                 <option selected>Type</option>
@@ -182,6 +185,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             $rating = $product['product_type'];
 
 
+
+
                         ?>
 
                         <div class="swiper-slide col-xl-3 col-auto">
@@ -214,12 +219,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     </svg>
 
                                 </div>
-                                <button>Add to cart</button>
+
+
+
+
+
+                                <button class="open" data-product-id="<?php echo $id ?>" data-product-name="<?php echo $name ?>" data-product-price="<?php echo $price ?>" data-product-quantity="1">Add to cart</button>
                             </div>
 
                         </div>
 
                         <?php
+
+
                         }
                         ?>
 
