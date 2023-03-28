@@ -20,7 +20,19 @@ gap: 2rem;
 div.col-md-6.right-container{
     
 }
+p1 a {
+        display: inline;
+    }
+.hide-on-mobile {
+  display: none;
+}
 
+/* Show the image on devices with a screen width of 768px or larger */
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: block;
+  }
+}
 
 input.form-control {
     border-radius: 46px;
@@ -34,8 +46,8 @@ button.btn-block {
 }
 button.btn-primary {
     background:linear-gradient(93.61deg, #64ADFA 6.48%, #9A2DF7 98.96%);
-    border-color: #F38B66;
+    
 }
 p1{
-    margin-top: -3rem;
+    margin-top: -2rem;
 }

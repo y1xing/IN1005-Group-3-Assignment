@@ -1,6 +1,4 @@
 
-
-
 <?php
 $fname = $lname = $email = $errorMsg = "";
 $success = true;
@@ -88,7 +86,7 @@ function saveMember()
         $errorMsg = "Connection failed: " . $conn->connect_error;
         $success = false;
     } else {
-        $stmt = $conn->prepare("INSERT INTO world_of_pets_members(fname, lname, email, password) VALUES (?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO user_info(fname, lname, email, password) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $fname, $lname, $email, $pwd);
 
         if (!$stmt->execute()) {

@@ -1,45 +1,37 @@
-
-           
 <?php
+error_reporting(E_ALL); // Enable error reporting
+ini_set('display_errors', 1);
+
 session_start();
+
+ob_start(); // Start output buffering
 
 $email = $errorMsg = "";
 $success = true;
 
 include 'head.inc.php';
+include 'nav.inc.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["email"])) {
-        $errorMsg .= "Email is required.<br>";
-        $success = false;
-    } else {
-        $email = sanitize_input($_POST["email"]);
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errorMsg .= "Invalid email format.<br>";
-            $success = false;
-        }
-    }
-
-    include 'nav.inc.php';
-
-    if ($success) {
-        authenticateUser();
-    }
-
+    $email = sanitize_input($_POST["email"]);
+    $pwd = sanitize_input($_POST["pwd"]);
+    authenticateUser();
+    
     if ($success) {
         $_SESSION['email'] = $email;
-        $_SESSION['fname'] = $fname;
-        $_SESSION['lname'] = $lname;
-        header("Location: welcome.php");
+        header("Location: products.php");
+        ob_end_clean(); // Discard output buffer and stop buffering
         exit;
     } else {
+        ob_end_flush(); // Flush the output buffer and stop buffering
         displayError();
     }
 } else {
     header("Location: login.php");
+    ob_end_clean(); // Discard output buffer and stop buffering
     exit;
 }
-
+    
 function sanitize_input($data)
 {
     $data = trim($data);
@@ -50,7 +42,7 @@ function sanitize_input($data)
 
 function authenticateUser()
 {
-    global $fname, $lname, $email, $pwd, $errorMsg, $success;
+    global $email, $pwd, $errorMsg, $success;
 
     $config = parse_ini_file('../../private/db-config.ini');
     $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
@@ -59,16 +51,15 @@ function authenticateUser()
         $errorMsg = "Connection failed: " . $conn->connect_error;
         $success = false;
     } else {
-        $stmt = $conn->prepare("SELECT * FROM world_of_pets_members WHERE email = ?");
+        $stmt = $conn->prepare("SELECT * FROM user_info WHERE email = ?"); // Fixed the SQL query
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            $fname = $row["fname"];
-            $lname = $row["lname"];
             $pwd = $row["password"];
+            $_SESSION['user_id'] = $row["user_id"]; // Store user_id in the session
 
             if (!password_verify($_POST["pwd"], $pwd)) {
                 $errorMsg = "Invalid email or password.";
@@ -90,7 +81,7 @@ function displayError()
     global $errorMsg;
 
     echo "<div class='failed'>";
-    echo "<h1>Oops!</h1>";
+    echo "<h1>NO!</h1>";
     echo "<h2>The following errors were detected: </h2>";
     echo "<p>", $errorMsg, "</p>";
     echo "<button class='btn btn-danger'><a href='login.php' alt='retry'>Retry Login</a></button></header>";
@@ -98,6 +89,4 @@ function displayError()
 }
 
 include 'footer.inc.php';
-
-    
-
+?>
