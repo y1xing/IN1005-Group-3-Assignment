@@ -13,7 +13,8 @@ function validateForm() {
   let pwd = document.getElementById("pwd");
   let pwd_confirm = document.getElementById("pwd_confirm");
   let agree = document.getElementById("agree");
- 
+  let strength = checkPasswordStrength(pwd.value);
+  
   let lnameError = document.getElementById("lnameError");
   let emailError = document.getElementById("emailError");
   let pwdError = document.getElementById("pwdError");
@@ -21,8 +22,14 @@ function validateForm() {
   let agreeError = document.getElementById("agreeError");
   
   let isValid = true;
-
-  
+  let result = document.getElementById("result");
+  if (strength < 5) {
+    result.innerText = "Password must be very strong.";
+    result.style.display = "block";
+    isValid = false;
+  } else {
+    result.style.display = "none";
+  }
 
   if (lname.value.trim() === "") {
     lnameError.innerText = "Last name is required.";
