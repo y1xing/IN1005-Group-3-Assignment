@@ -1,3 +1,9 @@
+<?php
+session_start();
+//unset($_SESSION['cart']);
+?>
+
+
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -43,6 +49,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     ?>
 
     <main id="cart">
+
+
         <!-- contain the entire shopping cart -->
         <div class="shopping-cart-container">
             <!-- contain the left side of the shopping cart -->
@@ -52,11 +60,36 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <h1>Review Item and Shipping</h1>
                     <!-- Here goes the list of products added to the cart -->
                     <ul>
-                        <li>Product 1</li>
-                        <li>Product 2</li>
-                        <li>Product 3</li>
-                        <li>Product 4</li>
-                        <li>Product 5</li>
+                    <?php
+
+                    // Get the cart from the session
+                    $cart = $_SESSION['cart'];
+
+                    if (empty($cart)) {
+                        echo '<h3>Your cart is empty!</h3>';
+                    } else {
+
+
+                        foreach ($cart as $product) {
+                            echo '<li>';
+                            echo '<div class="cart-item">';
+                            echo '<div class="cart-item-left">';
+                            echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
+                            echo '</div>';
+                            echo '<div class="cart-item-middle">';
+                            echo '<h2>' . $product['name'] . '</h2>';
+                            echo '</div>';
+                            echo '<div class="cart-item-right">';
+                            echo '<h2>Quantity: ' . $product['quantity'] . '</h2>';
+                            echo '<p>Price: $' . $product['price'] . '</p>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</li>';
+                        }
+                    }
+
+
+                       ?>
                     </ul>
                 </div>
                 <!-- contain the checkbox for returning customer -->

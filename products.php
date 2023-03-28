@@ -1,4 +1,8 @@
+<?php
 
+session_start()
+
+?>
 
 <!DOCTYPE html>
 <!--
@@ -57,12 +61,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
 
+
+
         <div class="container-max-width">
             <?php
             $toastMessage = "Item has been added to cart!";
 
             include "helper/toast.php";
             ?>
+
+
 
 
 
@@ -73,6 +81,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
 
         <div class="sorting-container">
+            <?php
+
+            echo "<h1>" . $_SESSION['user_id'] . "</h1>";
+
+            // Echo out stuff from session cart
+            if (isset($_SESSION['user_id'])) {
+                echo "<h1>Stuff exists in cart!</h1>";
+            }
+            else {
+                echo "<h1>Cart is empty!</h1>";
+            }
+            ?>
 
 
             <select class="form-select red" aria-label="Default select example">
@@ -104,9 +124,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 // Initialize a all product array
                 $products = array();
 
-
-
-
                 // Get the products from the database
                 $config = parse_ini_file('../private/db-config.ini');
                 $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
@@ -129,7 +146,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         while ($row = $result->fetch_assoc()) {
                             // Store the product data in an array
                             $individual_product = array(
-                                "id" => $row['id'],
+                                "id" => $row['product_id'],
                                 "name" => $row['name'],
                                 "price" => $row['price'],
                                 "description" => $row['description'],
@@ -224,7 +241,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
 
-                                <button class="open" data-product-id="<?php echo $id ?>" data-product-name="<?php echo $name ?>" data-product-price="<?php echo $price ?>" data-product-quantity="1">Add to cart</button>
+                                <button class="open add-to-cart"
+                                        data-product-id="<?php echo $id ?>"
+                                        data-product-name="<?php echo $name ?>"
+                                        data-product-price="<?php echo $price ?>"
+                                        data-product-quantity="1"
+                                        data-product-image="<?php echo $images[$i] ?>"
+                                        data-product-color="<?php echo $color[$i] ?>"
+                                >Add to cart</button>
                             </div>
 
                         </div>
@@ -245,7 +269,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
 
     </main>
-
 
 </body>
 

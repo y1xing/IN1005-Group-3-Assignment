@@ -635,3 +635,77 @@ input[type="submit"]:hover {
 span {
     color:  #6929ff;
 }
+
+
+/*CART CSS HERE*/
+.cart-item {
+    display: flex;
+    flex-direction: row;
+
+
+    align-items: center;
+
+
+}
+
+.cart-item-left {
+    background: #fbfbfb;
+    padding: 0.5rem;
+    width: 127px;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.2;
+    width: 100%;
+}
+
+.cart-item-left img {
+    width: 100%;
+
+    object-fit: cover;
+
+}
+
+.cart-item-middle {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 1rem;
+    width: 100%;
+    flex: 0.6;
+}
+
+.cart-item-middle h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cart-item-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 1rem;
+    flex: 0.2;
+}
+
+.cart-item-right h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: "Changa", san-serif;
+}
+
+.cart-item-right p {
+    font-size: 1.2rem;
+
+    margin: 0;
+
+}
+
