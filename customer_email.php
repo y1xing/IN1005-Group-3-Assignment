@@ -17,18 +17,18 @@ if(isset($_POST['send'])){
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'cubeworld979@gmail.com';
-    $mail->Password = 'wztnlairufpauikl';
+    $mail->Username = 'cubeworldddd@gmail.com';
+    $mail->Password = 'vujeyrggkbrtatwn';
     $mail->Port = 465;
     $mail->SMTPSecure = 'ssl';
     $mail->isHTML(true);
     $mail->setFrom($email, $fname, $lname);
     $mail->addAddress ($email);
     $mail->Subject = ("From: $email ($subject)");
-    $mail->Body = "Thank yqdqwou for your enquiry our administrator will be getting back to you shortly";
-    
-    $email_to = 'cubeworld979@gmail.com'; 
-    $email_from = 'cubeworld979@gmail.com'; 
+    $mail->Body = "Thank you for your enquiry our administrator will be getting back to you shortly";
+
+    $email_to = 'cubeworld979@gmail.com';
+    $email_from = 'cubeworld979@gmail.com';
     $mail2 = new PHPMailer(true);
     $mail2->isSMTP();
     $mail2->Host = 'smtp.gmail.com';
@@ -42,11 +42,11 @@ if(isset($_POST['send'])){
     $mail2->addAddress ('cubeworld979@gmail.com');
     $mail2->Subject = "From: 'cubeworld979@gmail.com', $subject";
     $mail2->Body = "Message from customer: , $message";
-    
-    if(!$mail->send()) { 
-        die("Message could not be sent: " . $mail->ErrorInfo); 
-    } 
-    
+
+    if(!$mail->send()) {
+        die("Message could not be sent: " . $mail->ErrorInfo);
+    }
+
     header("Location: ./contact.php");
 
 }
