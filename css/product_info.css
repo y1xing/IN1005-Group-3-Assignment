@@ -1,0 +1,367 @@
+h1 {
+    font-family: 'Changa', sans-serif;
+}
+
+
+
+nav {
+    /* background-color: white; */
+    /* width: 95%; */
+    position: sticky;
+    max-width: 1260px;
+    transition: top 0.5s;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.15);
+}
+
+
+#navbar.top {
+    background-color: transparent !important;
+    box-shadow: none;
+    transition: top 0.5s;
+}
+
+#navbar.hidden {
+    top: -200px;
+
+}
+
+
+body {
+    position: relative;
+    font-family: 'Work Sans', sans-serif;
+    padding-top: 15%;
+}
+
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+    margin-left: 1rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.icon-container:hover {
+    box-shadow: none;
+    translate: 0 2px;
+}
+
+.icon {
+    width: 100%;
+
+    object-fit: contain;
+}
+
+
+.logo {
+    height: 2rem;
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+.header {
+    font-family: 'Changa', sans-serif;
+    text-align: center;
+    font-size: min(6rem, calc(3vw + 3rem));
+    z-index: 2;
+
+}
+
+.subtitle {
+    color: #939292;
+    width: 80%;
+    font-size: 1.5rem;
+    text-align: center;
+
+
+
+}
+
+.orange {
+    background: linear-gradient(90deg, #EEAB5C 0.31%, #F3C75F 97.83%);
+}
+
+.blue {
+    background: linear-gradient(90deg, #65A8F9 0.31%, #9731F6 97.83%);
+}
+
+.red {
+    background: linear-gradient(90deg, #F06B7C 0.31%, #F39362 97.83%);
+}
+
+.green {
+    background: linear-gradient(90deg, #69D028 0.31%, #B1DF30 97.83%);
+}
+.orange-text {
+    background: linear-gradient(90deg, #EEAB5C 0.31%, #F3C75F 97.83%);
+}
+
+.blue-text {
+    background: linear-gradient(90deg, #65A8F9 0.31%, #9731F6 97.83%);
+}
+
+.red-text {
+    background: linear-gradient(90deg, #F06B7C 0.31%, #F39362 97.83%);
+}
+
+.green-text {
+
+    background: linear-gradient(90deg, #69D028 0.31%, #B1DF30 97.83%);
+}
+
+.blue-text, .orange-text, .red-text, .green-text {
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(93.61deg, #64ADFA 6.48%, #9A2DF7 98.96%);
+    background-size: 100%;
+    color: #fff;
+    border: 0;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.button-red {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(93.61deg, #F06B7C 6.48%, #F39362 98.96%);
+    background-size: 100%;
+    color: #fff;
+    border: 0;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.button-green {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(93.61deg, #69D028 6.48%, #B1DF30 98.96%);
+    background-size: 100%;
+    color: #fff;
+    border: 0;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover::before, .button-red:hover::before, .button-green:hover::before, .button-coupon:hover::before {
+    transform: scaleX(1);
+    background: #ffffff;
+}
+
+.button-content {
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    background: #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    /*padding: 2rem 4rem;*/
+    font-size: 1rem;
+}
+
+.button-content:hover, .button-content-red:hover, .button-content-green:hover, .button-coupon:hover {
+    background: linear-gradient(93.61deg, #64ADFA 6.48%, #9A2DF7 98.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    color: white !important;
+    transition: all 0.475s;
+}
+
+.button::before, .button-coupon::before {
+    content: '';
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+            82.3deg,
+            rgba(150, 93, 233, 1) 10.8%,
+            rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.button-red::before {
+    content: '';
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #F06B7C 0.31%, #F39362 97.83%);
+    transition: all 0.475s;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.button-green::before {
+    content: '';
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #69D028 0.31%, #B1DF30 97.83%);
+    transition: all 0.475s;
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+/*<!------------------------------------------ for product_info.css ---------------------------------------------->*/
+/* Set the width and height of the shopping cart container */
+.product-info-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    padding: 1rem 3rem;
+    position: relative;
+    align-items: flex-start;
+}
+
+.product-info-container-left {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 1rem 0 0 2rem;
+
+    flex: 35%;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    position: center;
+    align-items: flex-start;
+}
+
+.product-info-container-right {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0 3rem;
+
+    flex: 60%;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    position: relative;
+    align-items: flex-start;
+}
+
+/* Style the product container */
+.info-container {
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: left;
+    align-items: center;
+
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.info-img {
+    width: 400px;
+    height: auto;
+    padding: 1rem;
+    margin: 0 2rem;
+
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+/*.info-img-small-container {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    !*padding: 1rem;*!*/
+/*    !*margin: 0 2rem;*!*/
+
+/*    flex-wrap: wrap;*/
+/*    flex-direction: row;*/
+/*}*/
+
+.info-img-small {
+    width: 100px;
+    height: auto;
+    padding: 1rem;
+    margin: 2rem 0.5rem;
+
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.info-img-small img {
+    width: 65px;
+    height: 65px;
+}
+
+
+.stars-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.info-container h1 {
+    font-weight: 900;
+    font-family: 'Changa', sans-serif;
+}
+
+.info-container h1:after {
+    content:"";
+    display:block;
+    width: 100%;
+    max-width:100%;
+    border-bottom: 0.1em solid rgba(189, 195, 199, 0.5);
+    margin: 0.5em auto 0;
+}
