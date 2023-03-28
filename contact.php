@@ -81,14 +81,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <div class="container-width">
             <div class="container-max-width alt-section-container">
-                <h2 id="h2_title">Frequently Asked Questions</h2>
-                <p style="text-align: center; padding-bottom: 30px">
+                <h1 class="header">Frequently Asked Questions</h1>
+                <p class="text1">
                     Everything you need to know about the products and services
                 </p>
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h4>
+                            <h4 class="header_text">
                                 Is there a free trial available
                             </h4>
                             <p>

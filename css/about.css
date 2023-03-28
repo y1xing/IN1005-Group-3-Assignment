@@ -138,6 +138,7 @@ figcaption {
     -webkit-text-fill-color: transparent;
 }
 .text1{
+    font-family: 'Work Sans', sans-serif;
     text-align: center;
     padding-bottom: 30px;
 }

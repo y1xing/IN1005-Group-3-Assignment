@@ -24,8 +24,8 @@ if(isset($_POST['send'])){
     $mail->isHTML(true);
     $mail->setFrom($email, $fname, $lname);
     $mail->addAddress ($email);
-    $mail->Subject = ("From: $email ($subject)");
-    $mail->Body = "Thank yqdqwou for your enquiry our administrator will be getting back to you shortly";
+    $mail->Subject = ("In response to customer enquiry");
+    $mail->Body = "Thank you for your enquiry our administrator will be getting back to you shortly";
     
     $email_to = 'cubeworld979@gmail.com'; 
     $email_from = 'cubeworld979@gmail.com'; 
