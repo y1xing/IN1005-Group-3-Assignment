@@ -100,11 +100,23 @@ include "head.inc.php";
                                      
             <span id="pwdError" class="error-messagereg" style="display: none;"></span>
         </div>
+
         <div id="popover-password">
             <p><span id="result"></span></p>
             <div class="progress">
                 <div id="password-strength" class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">
                 </div>
+
+    <div class = "form-group"> 
+        <button class="btn btn-primary" type = "submit"> Submit </button>
+    </div>  
+    </form>
+            <p1>
+        Already have an account?<a href ="/login.php"> Login</a>
+        
+    </p1>
+    </div>
+
             </div>
         
                                 </div>

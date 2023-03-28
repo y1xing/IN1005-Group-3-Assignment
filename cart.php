@@ -1,3 +1,9 @@
+<?php
+session_start();
+unset($_SESSION['cart']);
+?>
+
+
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -32,6 +38,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
 
 </head>
 
@@ -43,6 +50,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     ?>
 
     <main id="cart">
+
+
         <!-- contain the entire shopping cart -->
         <div class="shopping-cart-container">
             <!-- contain the left side of the shopping cart -->
@@ -52,48 +61,72 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <h1>Review Item and Shipping</h1>
                     <!-- Here goes the list of products added to the cart -->
                     <ul>
-                        <li>Product 1</li>
-                        <li>Product 2</li>
-                        <li>Product 3</li>
-                        <li>Product 4</li>
-                        <li>Product 5</li>
+                    <?php
+
+                    // Get the cart from the session
+                    $cart = $_SESSION['cart'];
+
+                    if (empty($cart)) {
+                        echo '<h3>Your cart is empty!</h3>';
+                    } else {
+
+
+                        foreach ($cart as $product) {
+                            echo '<li>';
+                            echo '<div class="cart-item">';
+                            echo '<div class="cart-item-left">';
+                            echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
+                            echo '</div>';
+                            echo '<div class="cart-item-middle">';
+                            echo '<h2>' . $product['name'] . '</h2>';
+                            echo '</div>';
+                            echo '<div class="cart-item-right">';
+                            echo '<h2>Quantity: ' . $product['quantity'] . '</h2>';
+                            echo '<p>Price: $' . $product['price'] . '</p>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</li>';
+                        }
+                    }
+
+
+                       ?>
                     </ul>
                 </div>
                 <!-- contain the checkbox for returning customer -->
-                <div class="checkbox-container">
-                    <form>
-                        <div>
-                            <input type="checkbox" id="returning customer" name="returning customer">Returning Customer?
-                        </div>
-                    </form>
-                </div>
+
                 <!-- contain the delivery information -->
                 <div class="delivery-container">
                     <div class="saveinfo-container">
                         <div class="saveinfo-container-left">
                             <h1>Delivery Information</h1>
                         </div>
-                        <div class="saveinfo-container-right">
-                            <button class="button" id="save information" name="save information">
-                                <span class="button-content">Save Information</span>
-                            </button>
-                        </div>
+<!--                        <div class="saveinfo-container-right">-->
+<!--                            <button class="button" id="save information" name="save information">-->
+<!--                                <span class="button-content">Save Information</span>-->
+<!--                            </button>-->
+<!--                        </div>-->
                     </div>
                     <!-- Here goes the form for delivery information -->
                     <!-- add First Name, Last Name, Address, City, State, Zip Code, Phone Number, Email Address -->
-                    <form>
-                        <div class="container-form-half">
-                            <label for="fname">First name:*</label>
-                            <input type="text" id="fname" required name="fname" placeholder="First Name"/>
+                    <form >
+                        <div class="container-two-forms">
+                            <div class="container-form-half">
+                                <label for="fname">First name:*</label>
+                                <input type="text" id="fname" required name="fname" placeholder="First Name"/>
+                            </div>
+                            <div class="container-form-half">
+                                <label for="lname">Last name:*</label>
+                                <input type="text" id="lname" required name="lname" placeholder="Last Name"/>
+                            </div>
                         </div>
-                        <div class="container-form-half">
-                            <label for="lname">Last name:*</label>
-                            <input type="text" id="lname" required name="lname" placeholder="Last Name"/>
-                        </div>
+
+
                         <div class="container-form">
                             <label for="address">Address:*</label>
                             <input type="text" id="address" required name="address" placeholder="Address"/>
                         </div>
+                        <div class="container-two-forms">
                         <div class="container-form-half">
                             <label for="city">City/State:*</label>
                             <input type="text" id="city" required name="city" placeholder="City/State"/>
@@ -102,6 +135,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <label for="state">Postal Code:*</label>
                             <input type="text" id="postal" required maxlength="6" name="postal" placeholder="Postal Code"/>
                         </div>
+                        </div>
+                        <div class="container-two-forms">
                         <div class="container-form-half">
                             <label for="phone">Mobile:*</label>
                             <input type="text" id="mobile" required name="mobile" placeholder="Mobile"/>
@@ -109,6 +144,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <div class="container-form-half">
                             <label for="email">Email:*</label>
                             <input type="email" id="email" required name="email" placeholder="Email"/>
+                        </div>
                         </div>
                     </form>
                 </div>
@@ -119,11 +155,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <h1 class="summary-header">Order Summary</h1>
                     <form class="coupon">
                             <input type="text" id="coupon" name="coupon" placeholder="Enter Coupon Code"/>
-                            <div class="align-button">
+
                                 <button class="button-coupon" id="coupon" name="coupon">
                                     <span class="button-content">Apply Coupon</span>
                                 </button>
-                            </div>
+
                     </form>
                     <!-- payment details and payment type -->
                     <div>
@@ -160,6 +196,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     <label for="cardnumber">Card Number:*</label>
                                     <input class="fontAwesome" type="text" id="cardnumber" required name="cardnumber" placeholder="&#xf09d; **** **** **** ****"/>
                                 </div>
+                                <div class="container-two-forms">
                                 <div class="container-form-half">
                                     <label for="expdate">Expiry:*</label>
                                     <input type="text" id="expdate" required name="expdate" placeholder="MM/YY"/>
@@ -167,6 +204,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <div class="container-form-half">
                                     <label for="cvc">CVC:*</label>
                                     <input type="text" id="cvc" required name="cvc" placeholder="CVC"/>
+                                </div>
                                 </div>
                                 <!-- Sub Total, Coupon Discount, Shipping, Total -->
                                 <div class="container-form cost">
