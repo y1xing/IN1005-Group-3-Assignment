@@ -1,11 +1,7 @@
-
 <?php
-session_start();
 
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit;
-}
+session_start()
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +20,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <!--    <script defer src="js/main.js">-->
 <!--    </script>-->
     <script defer src="js/nav.js"></script>
-<!--    <script defer src="js/products.js"></script>-->
+    <script defer src="js/products.js"></script>
+    <script defer src="js/toast.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
@@ -34,10 +31,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <script src="js/swiper-bundle.min.js"></script>
     <script defer src="js/slider.js"></script>
     <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="stylesheet" href="css/toast.css" type="text/css">
 
 
 
-    <title>World of Pets</title>
+    <title>Cube World</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -47,6 +45,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 
 </head>
@@ -58,14 +57,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     ?>
 
     <main id="main">
+
+
+
+
+
+
         <div class="container-max-width">
+            <?php
+            $toastMessage = "Item has been added to cart!";
+
+            include "helper/toast.php";
+            ?>
+
+
+
+
+
             <div class="product-banner">
-                <h1 class="banner-header">Use promo code CUBEWORLD for 20% off!</h1>
+                <h1 class="banner-header">Use promo code CUBEWORLDDD for 20% off!</h1>
                 <p class="banner-subtitle">Only for first time users</p>
             </div>
         </div>
 
         <div class="sorting-container">
+            <?php
+
+            echo "<h1>" . $_SESSION['user_id'] . "</h1>";
+
+            // Echo out stuff from session cart
+            if (isset($_SESSION['user_id'])) {
+                echo "<h1>Stuff exists in cart!</h1>";
+            }
+            else {
+                echo "<h1>Cart is empty!</h1>";
+            }
+            ?>
+
+
             <select class="form-select red" aria-label="Default select example">
                 <option selected>Type</option>
                 <option value="1">One</option>
@@ -95,15 +124,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 // Initialize a all product array
                 $products = array();
 
-
-
                 // Get the products from the database
-                $config = parse_ini_file('../../private/db-config.ini');
+                $config = parse_ini_file('../private/db-config.ini');
                 $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
+
+
 
                 if ($conn->connect_error) {
                     $errorMsg = "Connection failed: " . $conn->connect_error;
                     $success = false;
+                    echo "<h1>Error</h1>";
                 } else {
                     $stmt = $conn->prepare("SELECT * FROM products");
 
@@ -116,7 +146,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         while ($row = $result->fetch_assoc()) {
                             // Store the product data in an array
                             $individual_product = array(
-                                "id" => $row['id'],
+                                "id" => $row['product_id'],
                                 "name" => $row['name'],
                                 "price" => $row['price'],
                                 "description" => $row['description'],
@@ -148,8 +178,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <!-- Swiper -->
                 <div class="swiper mySwiper">
                     <div id="swiper" class="swiper-wrapper row flex-nowrap flex-xl-wrap justify-center">
+
                         <?php
                         // Loop through the products array and display the products
+
 
                         $color = array("light-blue", "light-red", "light-orange", "light-green", "light-orange", "light-green", "light-red", "light-blue");
                         $images = array("cube1.png", "cube2.png", "cube3.png", "cube4.png", "cube1.png", "cube2.png", "cube4.png", "cube4.png");
@@ -170,19 +202,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             $rating = $product['product_type'];
 
 
+
+
                         ?>
-
-
-
 
                         <div class="swiper-slide col-xl-3 col-auto">
 
+                            <div class="slide_card <?php echo $color[$i] ?>"
+                            onclick="window.location.href='product_info.php?id=<?php echo $id ?>'"
 
-
-
-                            <div class="slide_card <?php echo $color[$i] ?>">
-
-
+                            >
 
                                 <img src='./images/products/<?php echo $images[$i] ?>' alt="cube image" class="store-img" />
                             </div>
@@ -210,12 +239,26 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     </svg>
 
                                 </div>
-                                <button>Add to cart</button>
+
+
+
+
+
+                                <button class="open add-to-cart"
+                                        data-product-id="<?php echo $id ?>"
+                                        data-product-name="<?php echo $name ?>"
+                                        data-product-price="<?php echo $price ?>"
+                                        data-product-quantity="1"
+                                        data-product-image="<?php echo $images[$i] ?>"
+                                        data-product-color="<?php echo $color[$i] ?>"
+                                >Add to cart</button>
                             </div>
 
                         </div>
 
                         <?php
+
+
                         }
                         ?>
 
@@ -230,11 +273,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
     </main>
 
-<?php
-    echo "User ID: " . $_SESSION['user_id'] . "<br>";
-    echo "Email: " . $_SESSION['email'] . "<br>";
-    ?>
 </body>
+
+<?php include 'footer.inc.php'; ?>
 
 
 </html>

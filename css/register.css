@@ -21,7 +21,7 @@ div.row{
 }
 input.form-control {
     border-radius: 46px;
-    border: 2px solid #000000;
+    border: 1px solid #949494;
     background: #fff;
 }
 .hide-on-mobile {
@@ -38,6 +38,9 @@ button.btn-block {
     border-radius: 46px;
     
 }
+.input-container{
+ position: relative;   
+}
 button.btn-primary {
     background:linear-gradient(93.61deg, #F17376 6.48%, #F38B66 98.96%);
     border-color: #F38B66;
@@ -46,13 +49,14 @@ button.btn-primary {
 p1{
     margin-top: -2rem;
 }
-
+#popover-password p{
+    margin-bottom: -1rem;
+}
 .right-containerreg{
-   
 display: flex;
 flex-direction: column;
 justify-content: center;
-gap: 2rem;
+gap: 1rem;
 }
 
 html {
@@ -69,7 +73,79 @@ body {
    overflow: auto;
 }
 
+.fname {
+    width: 48%;
+}
+.lname{
+    width: 48%;
+    margin-left: auto;
+}
 
+.form-groupnames{
+    display:flex;
+}
+#popover-password{
+    margin-top:-17px;
+}
+.failed{
+    margin-top: 10rem;
+}
+.success{
+    margin-top: 10rem;
+}
+.progress{
+    margin-top: 20px;
+}
+.show-pass {
+    position: absolute;
+    right: 2%;
+    top: 20%; 
+}
 
+ .progress-bar-very-weak {
+        background-color: #dc3545;
+    }
+    
+    .progress-bar-weak {
+        background-color: #ffc107;
+    }
+    
+    .progress-bar-moderate {
+        background-color: #17a2b8;
+    }
+    
+    .progress-bar-strong {
+        background-color: #007bff;
+    }
+    
+    .progress-bar-very-strong {
+        background-color: #28a745;
+    }
+    
+.progress-bar {
+    transition: width 0.2s ease;
+    
+}
+.fa-eye{    
+    cursor: pointer;
+    color: #022255;
+}
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: block;
+  }
+  
+}
+@media (max-width: 575px) {
+    .form-groupnames {
+        flex-direction: column;
+    }
+    .fname {
+    width: 100%;
+}
+    .lname{
+    width: 100%;
+    
+}
 
-
+}

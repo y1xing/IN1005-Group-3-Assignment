@@ -28,6 +28,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/training.css">
+        <link rel="stylesheet" href="css/footer.css">
        
         
         <!-- jQuery -->
@@ -62,7 +63,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 include "hero.inc.php";
             ?>
             
-            <button class="button m-5">
+            <button class="button m-5" onclick="window.location.href='dashboard.php';">
                 <span class="button-content progress-text">Check your progress here!</span>
             </button>
         </header>
