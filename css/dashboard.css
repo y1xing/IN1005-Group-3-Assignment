@@ -24,15 +24,23 @@
 }
 
 .dashboard-left-header {
-    align-self: start;
     margin-left: 1.25rem;
     
+}
+
+.profile-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: flex-start;
+    width: 100%;
+    gap: 2rem;
 }
 
 .profile-container {
     align-self: start;
     padding-right: 15rem;
-    margin: 2rem 3rem;
+    margin: 2rem 0rem;
     justify-content: left;
 }
 
@@ -40,7 +48,7 @@
     border-radius: 46px;
 }
 
-.update-button {
+.update-button, .logout-button {
     background:linear-gradient(93.61deg, #64ADFA 6.48%, #9A2DF7 98.96%);
     border-radius: 46px;
 }
@@ -55,6 +63,10 @@
         margin: 1rem 1rem;
     }
     
+    .logout-button-container {
+        margin-left: 1rem;
+    }
+
 }
 
 .card-title-container {
