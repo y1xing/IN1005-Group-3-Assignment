@@ -11,11 +11,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </script>
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous">
     </script>
-    <script defer src="js/main.js">
-    </script>
-    <script defer src="js/nav.js">
-
-    </script>
+<!--    <script defer src="js/main.js">-->
+<!--    </script>-->
+    <script defer src="js/nav.js"></script>
+<!--    <script defer src="js/products.js"></script>-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
@@ -35,6 +34,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <link href='https://fonts.googleapis.com/css?family=Changa' rel='stylesheet'>
     <link rel="stylesheet" href="css/products.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
+
 
 </head>
 
@@ -76,6 +79,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="products-main-container container-max-width">
             <h1>Cubing For You!</h1>
             <div class="products-container">
+
                 <?php
 
                 // Initialize a all product array
@@ -159,8 +163,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         ?>
 
 
+
+
                         <div class="swiper-slide col-xl-3 col-auto">
+
+
+
+
                             <div class="slide_card <?php echo $color[$i] ?>">
+
+
+
                                 <img src='./images/products/<?php echo $images[$i] ?>' alt="cube image" class="store-img" />
                             </div>
                             <div class="product-info-container">
@@ -210,6 +223,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 </body>
 
+
 </html>
+
+
+
+
 
 <!<!-- hi there -->

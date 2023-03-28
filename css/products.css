@@ -124,6 +124,16 @@
     
 }
 
+.store-img:hover {
+    transform: scale(1.2);
+
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    color: white;
+    cursor: pointer;
+}
+
 .product-info-container {
     margin-top: 1rem;
     
@@ -188,9 +198,23 @@
     width: 100%;
     aspect-ratio: 1;
     border-radius: 20px;
-    
-    
-  }
+    transition: box-shadow 0.5s;
+
+
+}
+
+
+.slide_card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 20px 30px rgba(0,0,0,0.2);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    color: white;
+    cursor: pointer;
+}
+
+
   @media (min-width: 1200px) {
     .swiper-wrapper {
       width: 100%;
