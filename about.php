@@ -37,71 +37,106 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         include "hero.inc.php";
         ?>
     </div>
-    <main class="container">
-        <div id="pets">
-            <section>
-                <h1 class="header">Our Story</h1>
-                <div class="container">
-                    <div class="image">
-                        <img src="images/team/dave.png" alt="Our Story">
+    <main id="main">
+        <div class="bordered-container"></div>
+        <div class="container-width">
+            <h1 class="header">Our Story</h1>           
+        </div>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <img src="images/team/dave.png" class="kid-img" alt="picture of a kid" />
+                </div>
+                <div class="col-md-6 right-container">
+                    <h1 class="red-text">Started with Dave</h1>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <br>
+                    <h1 class="red-text">About Us</h1>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+        </div>
+                
+            <div class="container-width">
+                <div class="container-max-width border">
+                    <h1 class="header blue-text">The ALL-STAR Team</h1>     
+                    <p class="text1">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="container">
+                        <div class="captioned-image">
+                            <figure>
+                                <img src="images/team/dave.png" alt="Dave" id="all_star_img" />
+                                <figcaption id="figcaption_dave">Dave</figcaption>
+                            </figure>
+                        </div>
+                        <div class="captioned-image">
+                            <figure>
+                                <img src="images/team/jiakai.png" alt="JiaKai" id="all_star_img" />
+                                <figcaption id="figcaption_jiakai">Jia Kai</figcaption>
+                            </figure>
+                        </div>
+                        <div class="captioned-image">
+                            <figure>
+                                <img src="images/team/jewel.png" alt="Jewel" id="all_star_img" />
+                                <figcaption id="figcaption_jewel">Jewel</figcaption>
+                            </figure>
+                        </div>
+                        <div class="captioned-image">
+                            <figure>
+                                <img src="images/team/yf.png" alt="Yu Fei" id="all_star_img" />
+                                <figcaption id="figcaption_yf">Yu Fei</figcaption>
+                            </figure>
+                        </div>
+                        <div class="captioned-image">
+                            <figure>
+                                <img src="images/team/yx.png" alt="Yi Xing" id="all_star_img" />
+                                <figcaption id="figcaption_yx">Yi Xing</figcaption>
+                            </figure>
+                        </div>
+<!--                        <div class="col col-lg-2">
+                            <figure>
+                                <img src="images/team/dave.png" alt="Dave" id="all_star_img" />
+                                <figcaption id="figcaption_dave">Dave</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col col-lg-2">
+                            <figure>
+                                <img src="images/team/jiakai.png" alt="Jia kai" id="all_star_img" />
+                                <figcaption id="figcaption_jiakai">Jia kai</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col col-lg-3">
+                            <figure>
+                                <img src="images/team/jewel.png" alt="Jewel" id="all_star_img" />
+                                <figcaption id="figcaption_jewel">Jewel</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col col-lg-2">
+                            <figure>
+                                <img src="images/team/yf.png" alt="Yu Fei" id="all_star_img" />
+                                <figcaption id="figcaption_yf">Yu Fei</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col col-lg-2">
+                            <figure>
+                                <img src="images/team/yx.png" alt="Yi Xing" id="all_star_img" />
+                                <figcaption id="figcaption_yx">Yi Xing</figcaption>
+                            </figure>
+                        </div>-->
                     </div>
-                    <div class="text">
-                        <h3>Started with Dave</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                        <br>
-                        <h3>About Us</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                    </div>
-            </section>
-            <section id="border">
-                <h2 id="all_star_title">The ALL-STAR Team</h2>
-                <p style="text-align: center; padding-bottom: 30px">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <div class="container">
-                    <div class="captioned-image">
-                        <figure>
-                            <img src="images/team/dave.png" alt="Dave" id="all_star_img" />
-                            <figcaption id="figcaption_dave">Dave</figcaption>
-                        </figure>
-                    </div>
-                    <div class="captioned-image">
-                        <figure>
-                            <img src="images/team/jiakai.png" alt="JiaKai" id="all_star_img" />
-                            <figcaption id="figcaption_jiakai">Jia Kai</figcaption>
-                        </figure>
-                    </div>
-                    <div class="captioned-image">
-                        <figure>
-                            <img src="images/team/jewel.png" alt="Jewel" id="all_star_img" />
-                            <figcaption id="figcaption_jewel">Jewel</figcaption>
-                        </figure>
-                    </div>
-                    <div class="captioned-image">
-                        <figure>
-                            <img src="images/team/yf.png" alt="Yu Fei" id="all_star_img" />
-                            <figcaption id="figcaption_yf">Yu Fei</figcaption>
-                        </figure>
-                    </div>
-                    <div class="captioned-image">
-                        <figure>
-                            <img src="images/team/yx.png" alt="Yi Xing" id="all_star_img" />
-                            <figcaption id="figcaption_yx">Yi Xing</figcaption>
-                        </figure>
-                    </div>
-
-            </section>
+            </div>
         </div>
     </main>
     <?php
