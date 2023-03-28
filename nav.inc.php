@@ -28,7 +28,7 @@ echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto pt-5 pb-5 px-4'
 
 
 <!-- <nav class="navbar navbar-expand-lg fixed-top mx-auto p-5" id="navbar"> -->
-<a class="navbar-brand" href="/CubeWorld/index.php">
+<a class="navbar-brand" href="/index.php">
 
     <img src="/images/logo/logoWhite.png" alt="logo" class="logo" />
 </a>
