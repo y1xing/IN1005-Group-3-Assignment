@@ -46,64 +46,68 @@
 include "head.inc.php";
 ?>
 
-<main class ="reg-container">
-    
-        <div class="container-max-height ">
-            <div class="container-max-width">
-                
-    
-    <div class="row mt-4">
-    <div class="col-md-6 hide-on-mobile">
-                        <img src="images/hero/registerPic.png" class="register-img" alt="Cubeworld Register pic" />
+        <main class ="reg-container">
+
+            <div class="container-max-height ">
+                <div class="container-max-width">
+
+
+                    <div class="row mt-4">
+                        <div class="col-md-6 hide-on-mobile">
+                            <img src="images/hero/registerPic.png" class="register-img" alt="Cubeworld Register pic" />
+                        </div>
+                        <div class="col-md-6 right-containerreg">
+                            <h1 class = "red-text"> Register</h1>
+                            <form action ="process_register.php" method="post" novalidate > 
+
+
+                                <div class ="form-groupnames">
+                                <div class = "form-group fname"> 
+                                    <label for ="fname">First Name:</label>
+                                    <input class="form-control" id="fname" name ="fname" type="text"
+                                           placeholder="Enter First name">
+                                </div>
+                                <div class = "form-group lname"> 
+                                    <label for ="lname">Last Name*:</label>
+                                    <input class="form-control" id="lname" maxlength = "45" name ="lname" type="text"
+                                           placeholder="Enter Last name">
+                                </div>
+                                </div>
+                                <div class = "form-group"> 
+                                    <label for ="email">Email*:</label>
+                                    <input class="form-control" id="email" name ="email" type ="email" required
+                                           placeholder="Enter email">
+                                    <span id="emailError" class="error-messagereg" style="display: none;"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for ="pwd">Password*:</label>
+                                    <input class="form-control" id="pwd" name ="pwd" type="password"
+                                           placeholder="Enter password">
+                                </div>
+                                <div class = "form-group"> 
+                                    <label for ="pwd_confirm">Confirm password*:</label>
+                                    <input class="form-control" id="pwd_confirm" name ="pwd_confirm" type="password"
+                                           placeholder="Confirm password">
+                                </div>
+                                <div class ="form-check">
+                                    <label> 
+                                        <input type="checkbox" name ="agree">
+                                        Agree to terms and conditions.*
+                                    </label>
+                                </div>
+                                <div class = "form-group"> 
+                                    <button class="btn btn-primary btn-block" type = "submit"> Submit </button>
+                                </div>  
+                            </form>
+                            <p1>
+                                Already have an account?<a href ="/login.php"> Login</a>
+
+                            </p1>
+                        </div>
                     </div>
-        <div class="col-md-6 right-containerreg">
-            <h1 class = "red-text"> Register</h1>
-    <form action ="process_register.php" method="post" novalidate > 
-    <div class = "form-group"> 
-        <label for ="fname">First Name:</label>
-        <input class="form-control" id="fname" name ="fname" type="text"
-               placeholder="Enter First name">
-    </div>
-    <div class = "form-group"> 
-        <label for ="lname">Last Name*:</label>
-        <input class="form-control" id="lname" maxlength = "45" name ="lname" type="text"
-               placeholder="Enter Last name">
-    </div>
-    <div class = "form-group"> 
-        <label for ="email">Email*:</label>
-        <input class="form-control" id="email" name ="email" type ="email" required
-               placeholder="Enter email">
-        <span id="emailError" class="error-messagereg" style="display: none;"></span>
-    </div>
-    <div class="form-group">
-        <label for ="pwd">Password*:</label>
-        <input class="form-control" id="pwd" name ="pwd" type="password"
-               placeholder="Enter password">
-    </div>
-    <div class = "form-group"> 
-        <label for ="pwd_confirm">Confirm password*:</label>
-        <input class="form-control" id="pwd_confirm" name ="pwd_confirm" type="password"
-               placeholder="Confirm password">
-    </div>
-        <div class ="form-check">
-        <label> 
-            <input type="checkbox" name ="agree">
-            Agree to terms and conditions.*
-        </label>
-        </div>
-    <div class = "form-group"> 
-        <button class="btn btn-primary btn-block" type = "submit"> Submit </button>
-    </div>  
-    </form>
-            <p1>
-        Already have an account?<a href ="/login.php"> Login</a>
-        
-    </p1>
-    </div>
+                </div>
             </div>
-            </div>
-        </div>
-</main>
+        </main>
        
 <?php
     include "footer.inc.php";

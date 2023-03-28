@@ -48,11 +48,10 @@ p1{
 }
 
 .right-containerreg{
-   
 display: flex;
 flex-direction: column;
 justify-content: center;
-gap: 2rem;
+gap: 1rem;
 }
 
 html {
@@ -69,7 +68,27 @@ body {
    overflow: auto;
 }
 
+.fname {
+    width: 48%;
+}
+.lname{
+    width: 48%;
+    margin-left: auto;
+}
 
+.form-groupnames{
+    display:flex;
+}
 
-
-
+@media (max-width: 575px) {
+    .form-groupnames {
+        flex-direction: column;
+    }
+    .fname {
+    width: 100%;
+}
+    .lname{
+    width: 100%;
+    margin-left: auto;
+}
+}
