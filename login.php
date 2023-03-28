@@ -1,5 +1,9 @@
 <!DOCTYPE html>
+<?php 
+session_start();
+?>
 <html lang = "en">
+    
     <head>
         <title>Register</title>
         
@@ -58,6 +62,12 @@ include "head.inc.php";
     
         <div class="col-md-6 left-container">
             <h1 class = "blue-text"> Login</h1>
+            <?php
+                        if (isset($_SESSION['user_id'])) {
+                            echo "<h2>User ID: " . $_SESSION['user_id'] . "</h2>";
+                        }
+                        ?>
+            
     <form action ="process_login.php" method="post" > 
     
     <div class = "form-group"> 
@@ -102,7 +112,7 @@ include "head.inc.php";
 ?>
 </html>
 
-$stmt = $conn->prepare("SELECT * FROM user_info WHERE email = ?"); // Fixed the SQL query
+<!--$stmt = $conn->prepare("SELECT * FROM user_info WHERE email = ?"); // Fixed the SQL query
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -111,4 +121,4 @@ $stmt = $conn->prepare("SELECT * FROM user_info WHERE email = ?"); // Fixed the 
             
             $row = $result->fetch_assoc();
             $_SESSION["user_id"]=$row["user_id"];
-            echo $_SESSION["user_id"];
+            echo $_SESSION["user_id"];-->
