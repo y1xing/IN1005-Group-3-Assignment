@@ -170,9 +170,9 @@ include "navWhite.inc.php";
                     <h2 class="payment-header">Choose quantity</h2>
                     <!-- quantity add minus, havent add design -->
                     <div class="input-group">
-                        <button class="input-button" id="decrement"><i class="fas fa-minus"></i></button>
+                        <button class="input-button" id="decrement"><i style="color: black;" class="fas fa-minus"></i></button>
                         <input  type="number" id="input" readonly value="1" min="1" max="100">
-                        <button class="input-button" id="increment"><i class="fas fa-plus"></i></button>
+                        <button class="input-button" id="increment"><i style="color: black;" class="fas fa-plus"></i></button>
                     </div>
 
                     <div class="button-container">
