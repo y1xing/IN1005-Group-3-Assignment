@@ -1,12 +1,4 @@
 
-<?php
-session_start();
-
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit;
-}
-?>
 
 <!DOCTYPE html>
 <!--
@@ -97,13 +89,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
 
+
                 // Get the products from the database
-                $config = parse_ini_file('../../private/db-config.ini');
+                $config = parse_ini_file('../private/db-config.ini');
                 $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
+
+
 
                 if ($conn->connect_error) {
                     $errorMsg = "Connection failed: " . $conn->connect_error;
                     $success = false;
+                    echo "<h1>Error</h1>";
                 } else {
                     $stmt = $conn->prepare("SELECT * FROM products");
 
@@ -174,17 +170,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                         ?>
 
-
-
-
                         <div class="swiper-slide col-xl-3 col-auto">
 
-
-
-
                             <div class="slide_card <?php echo $color[$i] ?>">
-
-
 
                                 <img src='./images/products/<?php echo $images[$i] ?>' alt="cube image" class="store-img" />
                             </div>
@@ -232,10 +220,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
     </main>
 
-<?php
-    echo "User ID: " . $_SESSION['user_id'] . "<br>";
-    echo "Email: " . $_SESSION['email'] . "<br>";
-    ?>
 </body>
 
 
