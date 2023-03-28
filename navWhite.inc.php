@@ -45,7 +45,7 @@ echo "<nav class='navbar bg-white navbar-expand-lg fixed-top mx-auto pt-5 pb-5 p
                 </a>
             </li>
             <li class="nav-item">
-                <a class="icon-container" href="/login.php">
+                <a class="icon-container" href="/profile.php">
                     <img src="images/icons/profile.png" alt="Profile" class="icon" />
                 </a>
             </li>

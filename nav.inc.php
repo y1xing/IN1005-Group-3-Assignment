@@ -62,7 +62,7 @@ echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto pt-5 pb-5 px-4'
                 </a>
             </li>
             <li class="nav-item">
-                <a class="icon-container" href="/login.php">
+                <a class="icon-container" href="/profile.php">
                     <img src="images/icons/profile.png" alt="Profile" class="icon" />
                 </a>
             </li>
