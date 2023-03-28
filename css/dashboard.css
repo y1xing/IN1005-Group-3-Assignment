@@ -10,8 +10,56 @@
     padding-top: 1rem;
 }
 
+@media (max-width: 768px) {
+    .welcome-banner {
+        background: url("../images/hero/ProductBannerPhone.png");
+        background-position: center center;
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .banner-header {
+        padding-top: 0rem;
+        font-size: 1.5rem;
+    }
+}
+
+.dashboard-left-header {
+    align-self: start;
+    margin-left: 1.25rem;
+    
+}
+
+.profile-container {
+    align-self: start;
+    padding-right: 15rem;
+    margin: 2rem 3rem;
+    justify-content: left;
+}
+
+.form-control {
+    border-radius: 46px;
+}
+
+.update-button {
+    background:linear-gradient(93.61deg, #64ADFA 6.48%, #9A2DF7 98.96%);
+    border-radius: 46px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-left-header {
+        margin-left: 0.25rem;
+    }
+    
+    .profile-container {
+        padding-right: 1rem;
+        margin: 1rem 1rem;
+    }
+    
+}
+
 .card-title-container {
-    padding: 0rem;
+    justify-content: center;
+    align-content: center;
 }
 
 .square {
@@ -40,7 +88,7 @@
     font-size: 2rem;
     font-weight: bolder;
     letter-spacing: 0.1px;
-    line-height: 100%;
+
 }
 
 .card-title-text-para {
@@ -78,13 +126,16 @@
     width: 30rem;
     max-width: 100%;
     background-color: lightgray;
-    margin: 0.5rem 0.75rem 0 0.75rem;
 }
 
 .progress {
-    width: 100%;
+    width: 0%;
     background: linear-gradient(90deg, #65A8F9 0.31%, #9731F6 97.83%);
     transition: width 0.5s ease-in;
+}
+
+.progress-text {
+    font-size: 1.25rem;
 }
 
 .trainer-icon-container {
@@ -105,15 +156,40 @@
     line-height: 90%;
 }
 
-@media (max-width: 640px) {
-    .welcome-banner {
-        background: url("../images/hero/ProductBannerPhone.png");
-        background-position: center center;
-        padding: 1.5rem 1rem;
+@media (max-width: 768px) { 
+    .container-max-width {
+        padding: 5vh 0.5rem;
     }
     
-    .banner-header {
-        padding-top: 0.5rem;
-        font-size: 2rem;
+    .card-title-text-container {
+        padding: 0rem;
     }
-  }
+    
+    .card-title-text {
+        font-size: 1.5rem;
+        margin-top: 0.25rem;
+    }
+    
+    .card-title-text-para p {
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-title-text-para {
+        font-size: 0.85rem;
+        padding: 0rem;
+    }
+    
+    .card-subtitle-text {
+        margin: 1rem 0rem;
+        font-size: 1.25rem;
+    }
+    
+    .progress-text {
+        font-size: 0.85rem;
+    }
+    
+    .card-comments-text {
+        font-size: 0.85rem;
+        line-height: 90%;
+    }
+}
