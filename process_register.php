@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/footer.css" type="text/css">
     </head>
 <?php
+ob_start();
 session_start();
 
 
@@ -67,7 +68,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         saveMember();
       
-        echo "<div class='success'>";
+        header("Location: products.php");
+        ob_end_flush();
         echo "<div class='success'>";
         echo "<h1>Your registration is successful</h1>";
         echo "<h3><p>Your registered Email: ", $email;
@@ -76,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "</div>";
       
         
-        
+        exit;
         
     } else {
         displayError();

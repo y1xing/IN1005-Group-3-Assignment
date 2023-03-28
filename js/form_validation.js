@@ -25,6 +25,7 @@ function validateForm() {
   let result = document.getElementById("result");
   if (strength < 5) {
     result.innerText = "Password must be very strong.";
+    result.style.color = "red";
     result.style.display = "block";
     isValid = false;
   } else {

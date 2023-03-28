@@ -5,7 +5,7 @@ session_start();
 
 <html lang = "en">
     <head>
-        <title>Process_register</title>
+        <title>Process_login</title>
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($success) {
         $_SESSION['email'] = $email;
-        header("Location: login.php");
+        header("Location: dashboard.php");
         ob_end_clean(); // Discard output buffer and stop buffering
         exit;
     } else {
