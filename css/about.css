@@ -25,7 +25,7 @@ h1, h2, h3, h4, p {
 
 }
 
-.header {
+.header_about {
     font-family: 'Changa', sans-serif;
     text-align: center;
     font-size: min(6rem, calc(3vw + 3rem));
@@ -81,7 +81,6 @@ h1, h2, h3, h4, p {
 
 
 .text {
-  font-size: 15px;
   font-family: 'Work Sans', sans-serif;
   font-size: min(1.5rem, calc(2vw + 10px));
 }
@@ -112,35 +111,41 @@ figcaption {
     background: linear-gradient(89.97deg, #EF5E86 16.81%, #F39263 83.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: min(1.5rem, calc(2vw + 10px));
 }
 
 #figcaption_jiakai {
     background: linear-gradient(89.97deg, #EFAC5C 16.81%, #F3C75F 83.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: min(1.5rem, calc(2vw + 10px));
 }
 
 #figcaption_jewel {
     background: linear-gradient(89.97deg, #ECEE5C 16.81%, #F3CD5F 83.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: min(1.5rem, calc(2vw + 10px));
 }
 
 #figcaption_yf {
     background: linear-gradient(89.97deg, #56D229 16.81%, #F0E936 83.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: min(1.5rem, calc(2vw + 10px));
 }
 
 #figcaption_yx {
     background: linear-gradient(89.97deg, #8F88F8 16.81%, #6CB5F9 83.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: min(1.5rem, calc(2vw + 10px));
 }
 .text1{
     font-family: 'Work Sans', sans-serif;
     text-align: center;
     padding-bottom: 30px;
+    font-size: min(1.5rem, calc(2vw + 10px));
 }
 
 .section-container {
@@ -166,5 +171,7 @@ figcaption {
 }
 
 .image_width{
-    justify-items: center; 
+    display: flex; 
+    justify-content: center; 
+    align-content: center; 
 }

@@ -40,7 +40,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <main id="main">
         <div class="bordered-container"></div>
         <div class="container-width">
-            <h1 class="header">Our Story</h1>           
+            <h1 class="header_about">Our Story</h1>           
         </div>
         <div class="container">
             <div class="row mt-4">
@@ -69,7 +69,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 
             <div class="container-width">
                 <div class="container-max-width section-container">
-                    <h1 class="header blue-text">The ALL-STAR Team</h1>     
+                    <h1 class="header_about blue-text">The ALL-STAR Team</h1>     
                     <p class="text1">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

@@ -25,12 +25,13 @@ h1, h2, h3, h4, p {
     font-family: 'Work Sans', sans-serif;
     text-align: center; 
     padding-bottom: 30px; 
+    font-size: min(1.5rem, calc(2vw + 10px));
 }
 p {
     font-family: 'Work Sans', sans-serif;
 }
 
-.header {
+.header_contact {
     font-family: 'Changa', sans-serif;
     text-align: center;
     font-size: min(6rem, calc(3vw + 3rem));

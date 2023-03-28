@@ -52,7 +52,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="container-width">
 
 
-            <h1 class="header">Ask Us Anything</h1>
+            <h1 class="header_contact">Ask Us Anything</h1>
         </div>
         <div class="container">
             <form method="POST" action="customer_email.php" id="contact-form">
@@ -81,7 +81,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <div class="container-width">
             <div class="container-max-width alt-section-container">
-                <h1 class="header">Frequently Asked Questions</h1>
+                <h1 class="header_contact">Frequently Asked Questions</h1>
                 <p class="text1">
                     Everything you need to know about the products and services
                 </p>
