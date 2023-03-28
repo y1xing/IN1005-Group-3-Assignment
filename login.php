@@ -41,9 +41,8 @@
 
 
     <?php
-    $color = "blue";
-
-    include "nav.inc.php";
+ 
+    include "navWhite.inc.php";
     ?>
     <?php
 include "head.inc.php";
@@ -95,9 +94,10 @@ include "head.inc.php";
             </div>
         </div>
 </main>
-
+<script src="js/form_validation.js"></script>
 </body>
 
 <?php
     include "footer.inc.php";
 ?>
+</html>

@@ -1,18 +1,27 @@
-
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Process_register</title>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="css/main.css" type="text/css">
+        <link rel="stylesheet" href="css/register.css" type="text/css">
+        <link rel="stylesheet" href="css/footer.css" type="text/css">
+    </head>
 <?php
 $fname = $lname = $email = $errorMsg = "";
 $success = true;
 
-include 'head.inc.php';
+  include "navWhite.inc.php";
+include "head.inc.php";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["fname"])) {
-        $errorMsg .= "First name is required.<br>";
-        $success = false;
-    } else {
-        $fname = sanitize_input($_POST["fname"]);
-    }
 
+    if (!empty($_POST["fname"])) {
+    $fname = sanitize_input($_POST["fname"]);
+}
     if (empty($_POST["lname"])) {
         $errorMsg .= "Last name is required.<br>";
         $success = false;
@@ -49,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    include 'nav.inc.php';
+   
 
     if ($success) {
         saveMember();
@@ -79,7 +88,7 @@ function saveMember()
 {
     global $fname, $lname, $email, $pwd, $errorMsg, $success;
 
-    $config = parse_ini_file('../../private/db-config.ini');
+    $config = parse_ini_file('../private/db-config.ini');
     $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
 
     if ($conn->connect_error) {
