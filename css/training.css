@@ -10,38 +10,34 @@ body {
     text-align: center;
 }
 
-section {
-    margin: 5%;
-    padding: 5%;
-    border-radius: 60px;
+.progress-text {
+    font-size: 1.2rem;
+    padding: 2rem 0rem;
 }
 
-.expect-row {
-    margin: 5%;
+.training-subtitle {
+    line-height: 100%;
+    
 }
 
-.ability-container, .expect-container{
+.ability-row {
+    margin: 0rem 7rem;
+}
+
+.ability-container, .expect-container, .trainer-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    aspect-ratio: 1;
     position: relative;
-}
-
-.ability-container {
-    padding: 5%;
-}
-
-.expect-container {
     padding: 2%;
 }
 
 .ability-text-blue, .ability-text-red, .ability-text-orange, .ability-text-green {
     font-size: 1.5rem;
     line-height: 1.2;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-top: 0.5rem;
 }
 
 .ability-text-blue {
@@ -60,10 +56,6 @@ section {
     color: #1BCF2D;
 }
 
-.container-gradient-biege {
-    background: linear-gradient(89.5deg, rgba(108, 208, 41, 0.05) 0.46%, rgba(176, 222, 48, 0.05) 93.87%);
-}
-
 .square-gradient-blue {
     background: linear-gradient(135.16deg, #9185F8 8.84%, #6AB7F9 95.86%);
 }
@@ -80,8 +72,9 @@ section {
     background: linear-gradient(89.97deg, #8F88F8 16.81%, #6CB5F9 83.06%);
 }
 
-.overlap-padding-top {
-    padding-top: 3rem;
+.expect-row {
+    width: 80%;
+    margin: 4rem 2rem; 
 }
 
 .square {
@@ -124,7 +117,78 @@ section {
     line-height: 100%;
     color: white;
     text-align: center;
+    margin: 1rem 0rem;
 }
 
-/*@media screen and (max-width: 768px)*/
+.trainer-row {
+    margin: 2rem 0rem;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 13rem;
+    height: 19rem;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+
+.flip-card-back {
+    
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    
+    .progress-text {
+        font-size: 1rem;
+    }
+    
+    .ability-row, .expect-row {
+        width: 100%;
+        margin: 1rem 0rem;
+    }
+    
+    .ability-text-blue, .ability-text-red, .ability-text-orange, .ability-text-green {
+        font-size: 85%;
+        width: 100%;
+    }
+   
+    .expect-container {
+        padding: 1.5rem 5rem;
+    }
+    
+    .expect-number {
+        font-size: 3rem;
+    }
+    
+    .expect-text {
+        font-size: 1.5rem;
+    }
+    
+    /*Not in use*/
+    .credential-text {
+        font-size: 1.25rem;
+    }
+}
+
 

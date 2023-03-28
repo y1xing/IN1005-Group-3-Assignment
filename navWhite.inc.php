@@ -11,7 +11,7 @@ echo "<nav class='navbar bg-white navbar-expand-lg fixed-top mx-auto pt-5 pb-5 p
 
 
 <!-- <nav class="navbar navbar-expand-lg fixed-top mx-auto p-5" id="navbar"> -->
-<a class="navbar-brand" href="#">
+<a class="navbar-brand" href="/CubeWorld/index.php">
 
     <img src="/images/logo/logoColored.png" alt="logo" class="logo" />
 </a>
@@ -25,16 +25,16 @@ echo "<nav class='navbar bg-white navbar-expand-lg fixed-top mx-auto pt-5 pb-5 p
 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="gap: 2rem;">
         <li class="nav-item">
-            <a class="nav-link red-text" href="#">About Us <span class="sr-only">(current)</span></a>
+            <a class="nav-link red-text" href="/CubeWorld/about.php">About Us <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link orange-text" href="#">Products</a>
+            <a class="nav-link orange-text" href="/CubeWorld/products.php">Products</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link green-text" href="#">Training</a>
+            <a class="nav-link green-text" href="/CubeWorld/training.php">Training</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link blue-text" href="#">Contact</a>
+            <a class="nav-link blue-text" href="/CubeWorld/contact.php">Contact</a>
         </li>
     </ul>
     <form class="form-inline">
