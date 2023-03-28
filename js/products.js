@@ -26,6 +26,8 @@ function addToCartClicked(event) {
 
     console.log(cartItem);
 
+    var quantity = 1;
+
     // Send AJAX request to server to store product in session
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'add_to_cart.php', true);
@@ -35,7 +37,7 @@ function addToCartClicked(event) {
             console.log(xhr.responseText);
         }
     };
-    xhr.send('product_id=' + productId);
+    xhr.send('product_id=' + productId + '&quantity=' + quantity);
 
 
 }

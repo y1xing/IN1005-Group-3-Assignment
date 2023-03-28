@@ -208,7 +208,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                         <div class="swiper-slide col-xl-3 col-auto">
 
-                            <div class="slide_card <?php echo $color[$i] ?>">
+                            <div class="slide_card <?php echo $color[$i] ?>"
+                            onclick="window.location.href='product_info.php?id=<?php echo $id ?>'"
+
+                            >
 
                                 <img src='./images/products/<?php echo $images[$i] ?>' alt="cube image" class="store-img" />
                             </div>

@@ -1,3 +1,15 @@
+<?php
+
+// Get id from url
+if(isset($_GET['id'])) {
+  $id = $_GET['id'];
+} else {
+    $id = 1;
+}
+
+?>
+
+
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -45,6 +57,8 @@ include "navWhite.inc.php";
 <main id="cart">
     <!-- contain the entire shopping cart -->
     <div class="product-info-container">
+        <h1><?php echo $id; ?></h1>
+
         <!-- contain the left side of the shopping cart -->
         <div class="product-info-container-left">
             <!-- contain the list of products added to the cart -->

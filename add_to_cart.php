@@ -3,6 +3,7 @@ session_start();
 
 // Retrieve the product ID from the AJAX request
 $product_id = $_POST['product_id'];
+$quantity = $_POST['quantity'];
 
 
 
@@ -47,7 +48,8 @@ if ($conn->connect_error) {
             "image" => $row['picture_path'],
             "type" => $row['type'],
             "brand" => $row['brand'],
-            "rating" => $row['rating']
+            "rating" => $row['rating'],
+            "quantity" => $quantity
         );
 
 
