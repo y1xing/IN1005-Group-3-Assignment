@@ -22,6 +22,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <script defer src="js/nav.js"></script>
     <script defer src="js/products.js"></script>
     <script defer src="js/toast.js"></script>
+<!--    <script defer src="js/chatbot.js"></script>-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
@@ -32,6 +33,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <script defer src="js/slider.js"></script>
     <link rel="stylesheet" href="css/footer.css" type="text/css">
     <link rel="stylesheet" href="css/toast.css" type="text/css">
+<!--    <link rel="stylesheet" href="css/chatbot.css" type="text/css">-->
 
 
 
@@ -48,20 +50,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 
+
 </head>
 
 <body>
     <?php
-
+    // test
     include "navWhite.inc.php";
     ?>
 
     <main id="main">
-
-
-
-
-
 
         <div class="container-max-width">
             <?php
@@ -75,7 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
             <div class="product-banner">
-                <h1 class="banner-header">Use promo code CUBEWORLDDD for 20% off!</h1>
+                <h1 class="banner-header">Use promo code CUBEWORLD for 20% off!</h1>
                 <p class="banner-subtitle">Only for first time users</p>
             </div>
         </div>
