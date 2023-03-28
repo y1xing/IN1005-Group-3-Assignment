@@ -19,6 +19,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <script defer src="js/nav.js">
 
     </script>
+    <script defer src="js/product_info.js">
+    </script>
     <title>Cubeworld</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,11 +98,21 @@ include "navWhite.inc.php";
                 <div>
                     <h2 class="payment-header">Choose quantity</h2>
                     <!-- combine the button and input together -->
-                    <form class="quantity-container">
-                        <button class="quantity-btn">-</button>
-                        <input class="quantity-input" type="text" value="1">
-                        <button class="quantity-btn">+</button>
+                    <form class="quantity-container" method="POST" id="qtybtn" action="#">
+                        <input type="button" value="-" class="qtyminus minus" field="quantity" />
+                        <input type="text" name="quantity" value="0" class="qty" />
+                        <input type="button" value="+" class="qtyplus plus" field="quantity" />
                     </form>
+                </div>
+                <div>
+                    <!-- buy now button -->
+                    <button class="button" id="buynow" name="buy now">
+                        <span class="button-content">Buy Now</span>
+                    </button>
+                    <!-- add to cart button -->
+                    <button class="button-white" id="addtocart" name="add to card">
+                        <span class="button-content-white">Add to cart</span>
+                    </button>
                 </div>
 
             </div>
