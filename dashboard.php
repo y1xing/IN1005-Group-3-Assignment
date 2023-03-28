@@ -55,9 +55,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" 
                 crossorigin="anonymous">
         </script>
+        <!<!-- AJAX JS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Custom JS -->
         <script defer src="js/nav.js"></script>
-        <script defer src="js/img.js"></script>
+        <script defer src="js/dashboard.js"></script>
     </head>s
     
     <body>  
@@ -105,11 +107,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     <section id="profile" class="container-max-width">
                                         <h1 class="blue-text dashboard-left-header">Profile</h1>
 
-                                        <form class="row profile-container" action ="process_login.php" method="post"> 
+                                        <form class="row profile-container" action="process_update.php" method="post"> 
                                             <div class="form-group col-md-6 pr-md-4"> 
                                                 <label for="fname">First Name</label>
                                                 <input class="form-control" id="fname" name ="fname" type ="text"
-                                                       placeholder="', $fname, '">
+                                                       placeholder="', $fname, '" disabled>
                                             </div>
                                             <div class="form-group col-md-6 pr-md-4"> 
                                                 <label for ="lname">Last Name</label>
@@ -124,11 +126,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <div class="form-group col-md-6 pr-md-4">
                                                 <label for="pwd">Password</label>
                                                 <input class="form-control" id="pwd" name ="pwd" type="password"
-                                                       placeholder="Type new password here" disabled>
+                                                       placeholder="**********" disabled>
                                             </div>
 
                                             <div class="form-group col-md-6 pt-3">
-                                                <button class="btn btn-block btn-primary update-button" type ="submit"> Update </button>
+                                                <button class="btn btn-block btn-primary update-button" type="button"> Update </button>
                                             </div>
                                         </form>
                                     </section>';
@@ -288,6 +290,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     $stmt->close();              
                                 }
                             }
+                            
+                            $conn->close();
                         ?>
                     </div>
                 </div>
