@@ -1,6 +1,6 @@
 <?php
 session_start();
-unset($_SESSION['user_id']);
+//unset($_SESSION['user_id']);
 ?>
 
 
@@ -45,7 +45,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <body>
     <?php
     $color = "blue";
-
+    // TEST
     include "navWhite.inc.php";
     ?>
 
