@@ -84,6 +84,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             echo '</li>';
                         }
                     }
+
                        ?>
                     </ul>
                 </div>
@@ -103,7 +104,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     </div>
                     <!-- Here goes the form for delivery information -->
                     <!-- add First Name, Last Name, Address, City, State, Zip Code, Phone Number, Email Address -->
-                    <form >
+                    <form action="process_cart.php" method="post">
                         <div class="container-two-forms">
                             <div class="container-form-half">
                                 <label for="fname">First name:*</label>
@@ -271,9 +272,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                         echo '</button>';
                                     }
                                     ?>
-<!--                                    <button class="button" id="pay" name="pay">-->
-<!--                                        <span class="button-content">Pay {Amount}</span>-->
-<!--                                    </button>-->
                                 </div>
                             </form>
                         </div>
