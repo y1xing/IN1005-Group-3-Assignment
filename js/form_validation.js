@@ -1,9 +1,10 @@
-document.getElementById("registrationForm").addEventListener("submit", function (event) {
-  if (!validateForm()) {
-    event.preventDefault();
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("registrationForm").addEventListener("submit", function (event) {
+    if (!validateForm()) {
+      event.preventDefault();
+    }
+  });
 });
-
 
 function validateForm() {
   
