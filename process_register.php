@@ -10,10 +10,12 @@
         <link rel="stylesheet" href="css/footer.css" type="text/css">
     </head>
 <?php
+//session_start();
+
 $fname = $lname = $email = $errorMsg = "";
 $success = true;
 
-  include "navWhite.inc.php";
+include "navWhite.inc.php";
 include "head.inc.php";
 
 
@@ -61,13 +63,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    
 
     if ($success) {
+        
         saveMember();
+         
+
+       
+        echo "<div class='success'>";
         echo "<div class='success'>";
         echo "<h1>Your registration is successful</h1>";
         echo "<h3><p>Your registered Email: ", $email;
         echo "<h4><p>Thank you for signing up: ", $lname;
         echo "<br><button class='btn btn-success'><a href='login.php' alt='Sign in'>Login</a></button>";
         echo "</div>";
+      
+       
+        
+        
     } else {
         displayError();
     }
@@ -105,8 +116,8 @@ function saveMember()
 
         $stmt->close();
     }
-
-    $conn->close();
+  $conn->close();
+  
 }
 
 function displayError()

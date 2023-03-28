@@ -32,7 +32,9 @@
         
         <!-- Custom JS -->
        <!-- Custom CSS -->
-        
+        <script defer wsrc="js/passforms.js"></script>
+        <script defer src="js/form_validation.js"></script>
+
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/register.css" type="text/css">
         <link rel="stylesheet" href="css/footer.css" type="text/css">
@@ -139,8 +141,7 @@ include "head.inc.php";
 <?php
     include "footer.inc.php";
 ?>
-        <script src="js/passforms.js"></script>
-<script src="js/form_validation.js"></script>
+        
 
 </body>
 </html>
