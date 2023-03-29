@@ -35,7 +35,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
           rel="stylesheet">
-        <!<!-- W3 CSS -->
+        <!-- W3 CSS -->
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">        
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/main.css">
@@ -55,13 +55,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" 
                 crossorigin="anonymous">
         </script>
-        <!<!-- AJAX JS -->
+        <!-- AJAX JS -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Custom JS -->
         <script defer src="js/nav.js"></script>
         <script defer wsrc="js/passforms.js"></script>
         <script defer src="js/dashboard.js"></script>
-    </head>s
+    </head>
     
     <body>  
         <?php        
@@ -151,6 +151,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         $stmt->close();
                     }
                 } else {
+//                    header("Location: login.php");
 
                     echo '<header class="d-flex justify-content-center">
                                     <div class="container-max-width">
