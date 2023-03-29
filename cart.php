@@ -203,18 +203,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 </div>
                                 <?php
                                 $shipping = 5.00;
-                                $shipping_noitem = 0.00;
                                 $coupon = 0.00;
                                 $subtotal = 0;
                                 foreach($cart as $item) {
                                     $subtotal += $item['price'] * $item['quantity'];
                                 }
 
-                                if ($subtotal >= 50) {
+                                if ($subtotal >= 50 || empty($cart)) {
                                     $shipping = 0.00;
+                                    $total = $subtotal - $coupon + $shipping;
+                                } else {
+                                    $total = $subtotal - $coupon + $shipping;
                                 }
-
-                                $total = $subtotal - $coupon + $shipping;
                                 ?>
                                 <!-- Sub Total, Coupon Discount, Shipping, Total -->
                                 <div class="container-form-cost cost">
@@ -228,7 +228,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             echo '<li>Coupon Discount</li>' . '<li>' . '$' . $coupon . '</li>';
                                             echo '</div>';
                                             echo '<div class="container-form-price">';
-                                            echo '<li>Shipping Cost</li>' . '<li>' . '$' . $shipping_noitem . '</li>';
+                                            echo '<li>Shipping Cost</li>' . '<li>' . '$' . $shipping . '</li>';
                                             echo '</div>';
                                         } else {
                                             echo '<div class="container-form-price">';
