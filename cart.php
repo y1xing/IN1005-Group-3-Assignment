@@ -38,8 +38,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/footer.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-
 </head>
 
 <body>
@@ -69,8 +67,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     if (empty($cart)) {
                         echo '<h3>Your cart is empty!</h3>';
                     } else {
-
-
                         foreach ($cart as $product) {
                             echo '<li>';
                             echo '<div class="cart-item">';
@@ -88,7 +84,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             echo '</li>';
                         }
                     }
-
 
                        ?>
                     </ul>
@@ -109,7 +104,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     </div>
                     <!-- Here goes the form for delivery information -->
                     <!-- add First Name, Last Name, Address, City, State, Zip Code, Phone Number, Email Address -->
-                    <form >
+                    <form action="process_cart.php" method="post">
                         <div class="container-two-forms">
                             <div class="container-form-half">
                                 <label for="fname">First name:*</label>
@@ -206,24 +201,77 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     <input type="text" id="cvc" required name="cvc" placeholder="CVC"/>
                                 </div>
                                 </div>
+                                <?php
+                                $shipping = 5.00;
+                                $coupon = 0.00;
+                                $subtotal = 0;
+                                foreach($cart as $item) {
+                                    $subtotal += $item['price'] * $item['quantity'];
+                                }
+
+                                if ($subtotal >= 50 || empty($cart)) {
+                                    $shipping = 0.00;
+                                    $total = $subtotal - $coupon + $shipping;
+                                } else {
+                                    $total = $subtotal - $coupon + $shipping;
+                                }
+                                ?>
                                 <!-- Sub Total, Coupon Discount, Shipping, Total -->
-                                <div class="container-form cost">
+                                <div class="container-form-cost cost">
                                     <ul>
-                                        <li>Sub Total</li>
-                                        <li>Coupon Discount</li>
-                                        <li>Shipping Cost</li>
+                                        <?php
+                                        if (empty($cart)) {
+                                            echo '<div class="container-form-price">';
+                                            echo '<li>Sub Total</li>' . '<li>' . '$' . $subtotal . '</li>';
+                                            echo '</div>';
+                                            echo '<div class="container-form-price">';
+                                            echo '<li>Coupon Discount</li>' . '<li>' . '$' . $coupon . '</li>';
+                                            echo '</div>';
+                                            echo '<div class="container-form-price">';
+                                            echo '<li>Shipping Cost</li>' . '<li>' . '$' . $shipping . '</li>';
+                                            echo '</div>';
+                                        } else {
+                                            echo '<div class="container-form-price">';
+                                            echo '<li>Sub Total</li>' . '<li>' . '$' . $subtotal . '</li>';
+                                            echo '</div>';
+                                            echo '<div class="container-form-price">';
+                                            echo '<li>Coupon Discount</li>' . '<li>' . '$' . $coupon . '</li>';
+                                            echo '</div>';
+                                            echo '<div class="container-form-price">';
+                                            echo '<li>Shipping Cost</li>' . '<li>' . '$' . $shipping . '</li>';
+                                            echo '</div>';
+                                        }
+                                        ?>
                                     </ul>
                                 </div>
-                                <div class="container-form">
+                                <div class="container-form-cost">
                                     <ul>
-                                        <li>Total</li>
+                                        <?php
+                                        if (empty($cart)) {
+                                            echo '<div class="container-form-price">';
+                                            echo '<li>Total</li>' . '<li>' . '$' . $total . '</li>';
+                                            echo '</div>';
+                                        } else {
+                                            echo '<div class="container-form-price">';
+                                            echo '<li>Total</li>' . '<li>' . '$' . $total . '</li>';
+                                            echo '</div>';
+                                        }
+                                        ?>
                                     </ul>
                                 </div>
                                 <!-- Payment Button -->
                                 <div class="payment">
-                                    <button class="button" id="pay" name="pay">
-                                        <span class="button-content">Pay {Amount}</span>
-                                    </button>
+                                    <?php
+                                    if (empty($cart)) {
+                                        echo '<button class="button" id="pay" name="pay">';
+                                        echo '<span class="button-content">Pay' . '  $' . $total . '</span>';
+                                        echo '</button>';
+                                    } else {
+                                        echo '<button class="button" id="pay" name="pay">';
+                                        echo '<span class="button-content">Pay' . '  $' . $total . '</span>';
+                                        echo '</button>';
+                                    }
+                                    ?>
                                 </div>
                             </form>
                         </div>
