@@ -63,7 +63,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 include "hero.inc.php";
             ?>
             
-            <button class="button m-5" onclick="window.location.href='dashboard.php';">
+            <button class="button m-5" onclick="window.location.href='profile.php';">
                 <span class="button-content progress-text">Check your progress here!</span>
             </button>
         </header>
