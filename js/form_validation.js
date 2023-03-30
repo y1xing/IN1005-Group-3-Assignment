@@ -1,12 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("registrationForm").addEventListener("submit", function (event) {
-    if (!validateForm()) {
-      event.preventDefault();
-    }
-  });
+    document.getElementById("registrationForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        validateForm(function (isValid) {
+            if (isValid) {
+                document.getElementById("registrationForm").submit();
+            }
+        });
+    });
 });
 
-function validateForm() {
+
+function validateForm(callback) {
   
   let lname = document.getElementById("lname");
   let email = document.getElementById("email");
@@ -74,6 +79,28 @@ function validateForm() {
   } else {
     agreeError.style.display = "none";
   }
+  
+checkEmailExists(email.value, function (emailExists) {
+        if (emailExists) {
+            emailError.innerText = "Email already exists.";
+            emailError.style.display = "block";
+            isValid = false;
+        } else {
+            emailError.style.display = "none";
+        }
 
-  return isValid;
+        // Call the callback function with the final validation result
+        callback(isValid);
+    });
+}
+
+function checkEmailExists(email, callback) {
+    $.ajax({
+        type: "POST",
+        url: "check-emailregister.php", // Change this line to point to the correct file
+        data: {email: email},
+        success: function (response) {
+            callback(response === "Email already exists.");
+        }
+    });
 }
