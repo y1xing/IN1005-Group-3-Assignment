@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Process_update</title>
         
@@ -38,7 +39,6 @@
     $errorMsg = "";
 
     include "./components/navWhite.inc.php";
-    include "./components/head.inc.php";
 
     if (session_status() == PHP_SESSION_ACTIVE) {        
         if (isset($_SESSION["user_id"]) && $_SERVER["REQUEST_METHOD"] == "POST") {          
@@ -105,7 +105,7 @@
             }
         } else {
             header("Location: login.php");
-            ob_end_flush();
+            ob_end_flush(); // Discard output buffer and stop buffering
             exit;
         }
         
@@ -129,7 +129,7 @@
         echo "<h1>Oops!</h1>";
         echo "<h2>The following errors were detected: </h2>";
         echo "<p>", $errorMsg, "</p>";
-        echo "<button class='btn btn-danger'><a href='dashboard.php' alt='retry'>Return to Dashboard</a></button></header>";
+        echo "<button class='btn btn-danger' onclick='window.location.href=\"dashboard.php\";'>Return to Dashboard</button>";
         echo "</div><br>";
         echo "</div>";
         echo "</div>";

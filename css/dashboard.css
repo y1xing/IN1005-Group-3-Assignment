@@ -25,7 +25,8 @@
 }
 
 .dashboard-left-header {
-    margin-left: 1.25rem;
+    margin-left: 0.5rem;
+    font-weight: 600;
 }
 
 .profile-title-container {

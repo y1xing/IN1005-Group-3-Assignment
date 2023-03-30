@@ -57,26 +57,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <?php
             $color = "green";        
             
-            include "nav.inc.php";
+            include "components/nav.inc.php";
         ?>
         
         <header>
             <?php
                 $text = "Learn CUBING from the <u>BEST</u>";
 
-                include "hero.inc.php";
+                include "components/hero.inc.php";
             ?>
-            
-            <button class="button m-5" onclick="window.location.href='profile.php';">
-                <span class="button-content progress-text">Check your progress here!</span>
-            </button>
         </header>
 
         <main>
             <div class="bordered-container"></div>
             <section id="benefits" class="container-max-height">
                 <div class="container-max-width">
-                    <h1 class="header green-text">Why you should learn Cubing</h1>
+                    <h2 class="header green-text">Why you should learn Cubing</h2>
                     <p class="subtitle training-subtitle">Cubing have been around since 1974 and CubeLand is established to boost the multiple benefits of cubig such as:</p>
 
                     <div class="row justify-content-center ability-row">
@@ -85,7 +81,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <img class="w-100 p-0 p-lg-4" src="images/whyCubing/reflexes.png"
                                     alt="Reflexes & Agility" 
                                     title="reflexes">
-                                <p class="ability-text-blue">Reflexes & Agility</p>                            
+                                <h5 class="ability-text-blue">Reflexes & Agility</h5>                            
                             </div>
                         </article>
 
@@ -94,7 +90,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <img class="w-100 p-0 p-lg-4" src="images/whyCubing/concentration.png" 
                                     alt="Concentration & Configuration" 
                                     title="concentration">
-                                    <p class="ability-text-red">Concentration & Configuration</p>
+                                <h5 class="ability-text-red">Concentration & Configuration</h5>
                             </div>
                         </article>
 
@@ -103,7 +99,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <img class="w-100 p-0 p-lg-4" src="images/whyCubing/patience.png" 
                                     alt="Patience" 
                                     title="patience">
-                                <p class="ability-text-orange">Patience</p>
+                                <h5 class="ability-text-orange">Patience</h5>
                             </div>
                         </article>
 
@@ -112,7 +108,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <img class="w-100 p-0 p-lg-4" src="images/whyCubing/problem.png" 
                                     alt="Problem Solving Skills" 
                                     title="problem">
-                                <p class="ability-text-green">Problem Solving Skills</p>
+                                <h5 class="ability-text-green">Problem Solving Skills</h5>
                             </div>
                         </article>
 
@@ -121,7 +117,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <img class="w-100 p-0 p-lg-4" src="images/whyCubing/determination.png" 
                                     alt="Determination & Focus" 
                                     title="determination">
-                                <p class="ability-text-orange">Determination & Focus</p>
+                                <h5 class="ability-text-orange">Determination & Focus</h5>
                             </div>
                         </article>
 
@@ -130,7 +126,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <img class="w-100 p-0 p-lg-4" src="images/whyCubing/memory.png" 
                                     alt="Memory" 
                                     title="memory">
-                                <p class="ability-text-green">Memory</p>
+                                <h5 class="ability-text-green">Memory</h5>
                             </div>
                         </article>
 
@@ -139,7 +135,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <img class="w-100 p-0 p-lg-4" src="images/whyCubing/reduced.png" 
                                     alt="Reduced Screen Time" 
                                     title="reduced">
-                                <p class="ability-text-blue">Reduced Screen Time</p>
+                                <h5 class="ability-text-blue">Reduced Screen Time</h5>
                             </div>
                         </article>
 
@@ -148,7 +144,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <img class="w-100 p-0 p-lg-4" src="images/whyCubing/logical.png" 
                                     alt="Logical Understanding" 
                                     title="logical">
-                                <p class="ability-text-red">Logical Understanding</p>
+                                <h5 class="ability-text-red">Logical Understanding</h5>
                             </div>
                         </article>
                     </div>
@@ -157,7 +153,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
             <section id="expectations" class="container-max-height">
                 <div class="container-max-width alt-section-container">
-                    <h1 class="header blue-text">What You Can Expect</h1>
+                    <h2 class="header blue-text">What You Can Expect</h2>
                     <p class="subtitle training-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
                     <div class="row justify-content-center expect-row">
@@ -167,7 +163,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                      src="images/wrapper/wrapper-hexagon.png"
                                      alt="Hexagon Wrapper">
                                 <p class="expect-number">1</p>
-                                <h2 class="expect-text">Buy a package</h2>
+                                <h5 class="expect-text">Buy a package</h5>
                             </div>
                         </article>
 
@@ -177,7 +173,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                      src="images/wrapper/wrapper-hexagon.png"
                                      alt="Hexagon Wrapper">
                                 <p class="expect-number">2</p>
-                                <h2 class="expect-text">Fill up form in <br>email</h2>
+                                <h5 class="expect-text">Fill up form in <br>email</h5>
                             </div>
                         </article>
 
@@ -186,7 +182,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 <img class="wrapper-hexagon" src="images/wrapper/wrapper-hexagon.png"
                                      alt="Hexagon Wrapper">
                                 <p class="expect-number">3</p>
-                                <h2 class="expect-text">Zoom lesson</h2>
+                                <h5 class="expect-text">Zoom lesson</h5>
                             </div>
                         </article>                  
                     </div>
@@ -201,7 +197,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             
             <section id="trainers" class="container-max-height">
                 <div class="container-max-width">
-                    <h1 class="header red-text">Our Trainers</h1>
+                    <h2 class="header red-text">Our Trainers</h2>
                     <p class="subtitle training-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     
                     <button class="button m-3">
@@ -226,7 +222,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                         </div>
                                     </div>
                                 </div>
-                                <p class="red-text m-2">Dave Bryan</p>
+                                <h5 class="red-text m-2">Dave Bryan</h5>
                             </div>
                         </article>
                         
@@ -247,7 +243,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                         </div>
                                     </div>
                                 </div>
-                                <p class="orange-text m-2">Wu Jia Kai</p>
+                                <h5 class="orange-text m-2">Wu Jia Kai</h5>
                             </div>
                         </article>
                         
@@ -268,7 +264,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                         </div>
                                     </div>
                                 </div>
-                                <p class="orange-text m-2">Jewel Lim</p>
+                                <h5 class="orange-text m-2">Jewel Lim</h5>
                             </div>
                         </article>
                         
@@ -289,7 +285,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                         </div>
                                     </div>
                                 </div>
-                                <p class="green-text m-2">Wong Yu Fei</p>
+                                <h5 class="green-text m-2">Wong Yu Fei</h5>
                             </div>
                         </article>
                         
@@ -310,7 +306,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                         </div>
                                     </div>
                                 </div>
-                                <p class="blue-text m-2">Cheng Yi Xing</p>
+                                <h5 class="blue-text m-2">Cheng Yi Xing</h5>
                             </div>
                         </article>
                     </div>
@@ -319,7 +315,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </main>
         
         <?php
-            include "footer.inc.php";
+            include "components/footer.inc.php";
         ?>
     </body>
 </html>
