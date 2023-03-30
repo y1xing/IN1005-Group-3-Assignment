@@ -13,16 +13,14 @@ if (!isset($_SESSION['cart'])) {
 }
 
 
-// convert cart_item to array
-//$cart_item = json_decode($cart_item);
-
-// Get the product information from the database with the product ID
 // Initialize a all product array
 $products = array();
 
 // Get the products from the database
-$config = parse_ini_file('../private/db-config.ini');
-$conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
+include "helper/crud.php";
+
+// Connect to database
+$conn = db_init();
 
 
 
@@ -64,25 +62,21 @@ if ($conn->connect_error) {
 $conn->close();
 
 
-
-
-
-//$product = array(
-//    'id' => $cart_item->id,
-//    'name' => $cart_item->name,
-//    'price' => $cart_item->price,
-//    'quantity' => $cart_item->quantity,
-//    'image' => $cart_item->image,
-//    'color' => $cart_item->color,
-//    'test' => 'test'
-//);
-
+// Check if the product is already in the cart and update the quantityy
+foreach ($_SESSION['cart'] as &$item) {
+    echo $item['name'];
+    if ($item['id'] == $product_id) {
+        $item['quantity'] += $quantity;
+        echo 'Product quantity updated!';
+        exit;
+    }
+}
 
 
 // Add the product to the cart
 array_push($_SESSION['cart'], $product);
 
 
-echo 'Product added to cart!';
+echo 'Product added to cart!!QQQ';
 
 ?>

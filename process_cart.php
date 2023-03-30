@@ -15,8 +15,8 @@
 $fname = $lname = $email = $address = $city = $postal = $mobile = $errorMsg = "";
 $success = true;
 
-include "navWhite.inc.php";
-include "head.inc.php";
+include "./components/navWhite.inc.php";
+include "./components/head.inc.php";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -130,7 +130,7 @@ function displayError()
     echo "<h1>Oops!</h1>";
     echo "<h2>The following errors were detected: </h2>";
     echo "<p>", $errorMsg, "</p>";
-    echo "<button class='btn btn-danger'><a href='register.php' alt='retry'>Return to Sign up</a></button></header>";
+    echo "<button class='btn btn-danger'><a href='pages/register.php' alt='retry'>Return to Sign up</a></button></header>";
     echo "</div><br>";
 }
 

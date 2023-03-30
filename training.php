@@ -300,7 +300,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                 title="yixing"/>                                
                                         </div>
                                         <div class="flip-card-back">
-                                            <img class="w-100" src="images/products/yx.png"
+                                            <img class="w-100" src="images/backPics/yx.png"
                                                  alt="Yi Xing"
                                                  title="yixing"/>
                                         </div>

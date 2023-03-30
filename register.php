@@ -46,10 +46,11 @@
     <body>
 
         <?php
-        include "navWhite.inc.php";
+        //
+        include "components/navWhite.inc.php";
         ?>
         <?php
-        include "head.inc.php";
+        include "components/head.inc.php";
         ?>
 
         <main class ="reg-container">

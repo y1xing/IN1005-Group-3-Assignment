@@ -10,7 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <html lang="en">
 
 <?php
-include "head.inc.php";
+include "components/head.inc.php";
 ?>
 
 <body>
@@ -20,7 +20,7 @@ include "head.inc.php";
     <?php
     $color = "blue";
 
-    include "nav.inc.php";
+    include "components/nav.inc.php";
     ?>
 
 
@@ -28,7 +28,7 @@ include "head.inc.php";
         <?php
 
         $text = "Discover a world of CUBING";
-        include "hero.inc.php";
+        include "components/hero.inc.php";
         ?>
     </div>
     <main id="main">
@@ -36,7 +36,9 @@ include "head.inc.php";
         <div class="bordered-container"></div>
         <div class="container-max-height ">
 
-            <div class="container-max-width">
+            <div
+
+                    class="container-max-width">
                 <h1 class="header blue-text">Singapore’s FIRST Cubing Training Center</h1>
                 <div class="row mt-4">
                     <div class="col-md-6">

@@ -65,7 +65,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     
     <body>  
         <?php        
-        include "navWhite.inc.php";
+        include "components/navWhite.inc.php";
 
         if (session_status() == PHP_SESSION_ACTIVE) {
             if (isset($_SESSION["user_id"])) {
@@ -105,13 +105,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             </header>';
 
                         echo '<main>
-                                <section id="profile" class="container-max-width">
-                                    <div class="profile-title-container">
-                                        <h1 class="blue-text dashboard-left-header">Profile</h1>
-                                        <div>
-                                            <button class="btn btn-block btn-primary logout-button" type="button" onclick="window.location.href=\'logout.php\';">Logout</button>
+                                    <section id="profile" class="container-max-width">
+                                        <div class="profile-title-container">
+                                            <h1 class="blue-text dashboard-left-header">Profile</h1>
+                                            <div>
+                                                <button class="btn btn-block btn-primary logout-button" type="button" onclick="window.location.href=\'logout.php\';">Logout</button>
+                                            </div>
                                         </div>
-                                    </div>
 
                                     <form class="row profile-container" action="process_update.php" method="post"> 
                                         <div class="form-group col-md-6 pr-md-4"> 

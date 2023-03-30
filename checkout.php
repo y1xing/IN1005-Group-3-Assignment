@@ -44,7 +44,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <?php
 $color = "blue";
 // TEST
-include "navWhite.inc.php";
+include "components/navWhite.inc.php";
 ?>
 
 <main id="cart">
