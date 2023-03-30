@@ -47,7 +47,7 @@
     border-radius: 46px;
 }
 
-.update-button, .logout-button {
+#update-button, .logout-button {
     background:linear-gradient(93.61deg, #64ADFA 6.48%, #9A2DF7 98.96%);
     border-radius: 46px;
 }
@@ -128,18 +128,18 @@
     height: 2.5rem;
 }
 
-.progress-bar, .progress {
+.mastery-progress-bar, .mastery-progress {
     height: 0.75rem;
     border-radius: 1rem 1rem;
 }
 
-.progress-bar {
+.mastery-progress {
     width: 30rem;
     max-width: 100%;
     background-color: lightgray;
 }
 
-.progress {
+.mastery-progress-bar {
     width: 0%;
     background: linear-gradient(90deg, #65A8F9 0.31%, #9731F6 97.83%);
     transition: width 0.5s ease-in;

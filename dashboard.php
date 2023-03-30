@@ -1,10 +1,10 @@
 <?php
-    session_start();
-    
-//    $_SESSION["user_id"] = "1";
-    
-    $success = true;
-    $errorMsg;
+include 'crud.php';
+
+session_start();
+
+$success = true;
+$errorMsg;
 ?>
 
 <!DOCTYPE html>
@@ -55,11 +55,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" 
                 crossorigin="anonymous">
         </script>
-        <!-- AJAX JS -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Custom JS -->
         <script defer src="js/nav.js"></script>
-        <script defer wsrc="js/passforms.js"></script>
+        <script defer src="js/passforms.js"></script>
+        <script defer src="js/login-validation.js"></script>
         <script defer src="js/dashboard.js"></script>
     </head>
     
@@ -73,7 +72,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 // Connect to database
                 $config = parse_ini_file('../private/db-config.ini');
                 $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
-
+                
                 if ($conn->connect_error) {
 
                     $errorMsg = "Connection failed: " . $conn->connect_error;
@@ -113,30 +112,37 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             </div>
                                         </div>
 
-                                    <form class="row profile-container" action="process_update.php" method="post"> 
+                                    <form id="update-form" class="row profile-container" action="process_update.php" method="post"> 
                                         <div class="form-group col-md-6 pr-md-4"> 
                                             <label for="fname">First Name</label>
-                                            <input class="form-control" id="fname" name ="fname" type ="text"
+                                            <input class="form-control" id="fname" name="fname" type="text"
                                                    placeholder="', $fname, '" disabled>
                                         </div>
                                         <div class="form-group col-md-6 pr-md-4"> 
                                             <label for ="lname">Last Name</label>
-                                            <input class="form-control" id="lname" name ="lname" type ="text"
+                                            <input class="form-control" id="lname" name="lname" type="text"
                                                    placeholder="', $lname, '" disabled>
                                         </div>
                                         <div class="form-group col-md-6 pr-md-4"> 
                                             <label for="email">Email</label>
-                                            <input class="form-control" id="email" name ="email" type ="email"
+                                            <input class="form-control" id="email" name="email" type="email"
                                                    placeholder="', $email, '" disabled>
+                                            <span id="emailError" style="display: none; color: red;"></span>
                                         </div>
                                         <div class="form-group col-md-6 pr-md-4">
                                             <label for="pwd">Password</label>
                                             <input class="form-control" id="pwd" name ="pwd" type="password"
                                                    placeholder="**********" disabled>
+                                            <div id="popover-password">
+                                                <p><span id="result"></span></p>
+                                            </div>
+                                            <div class="progress">
+                                                <div id="password-strength" class="progress-bar" role="progress-bar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div>
+                                            </div>
                                         </div>
 
                                         <div class="form-group col-md-6 mt-3">
-                                            <button class="btn btn-block btn-primary update-button" type="button"> Update </button>
+                                            <button id="update-button" class="btn btn-block btn-primary" type="button"> Update </button>
                                         </div>
                                     </form>
                                 </section>';
@@ -259,8 +265,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                             </div>          
                                                             <h2 class="card-title-text blue-text pl-2">', $progressLevel, '</h2>
                                                         </div>
-                                                        <div class="progress-bar">
-                                                            <div class="progress" style="width: ', $percentDone, '%;"></div>
+                                                        <div class="mastery-progress">
+                                                            <div class="mastery-progress-bar" style="width: ', $percentDone, '%;"></div>
                                                         </div>
                                                         <p class="progress-text">', $percentDone, '% Completed</p>
 
