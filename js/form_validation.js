@@ -45,14 +45,22 @@ function validateForm(callback) {
     lnameError.style.display = "none";
   }
 
-  if (email.value.trim() === "") {
-    emailError.innerText = "Email is required.";
-    emailError.style.display = "block";
-    isValid = false;
-  } else {
-    emailError.style.display = "none";
-  }
-
+   if (email.value.trim() === "") {
+        emailError.innerText = "Email is required.";
+        emailError.style.display = "block";
+        isValid = false;
+    } else {
+        emailError.style.display = "none";
+        checkEmailExists(email.value, function (emailExists) {
+            if (emailExists) {
+                emailError.innerText = "Email already exists.";
+                emailError.style.display = "block";
+                isValid = false;
+            } else {
+                emailError.style.display = "none";
+            }
+        }); // <-- Add closing bracket here
+    }
   if (pwd.value.trim() === "") {
     pwdError.innerText = "Password is required.";
     pwdError.style.display = "block";
@@ -80,19 +88,12 @@ function validateForm(callback) {
     agreeError.style.display = "none";
   }
   
-checkEmailExists(email.value, function (emailExists) {
-        if (emailExists) {
-            emailError.innerText = "Email already exists.";
-            emailError.style.display = "block";
-            isValid = false;
-        } else {
-            emailError.style.display = "none";
-        }
+
 
         // Call the callback function with the final validation result
         callback(isValid);
-    });
-}
+    }
+
 
 function checkEmailExists(email, callback) {
     $.ajax({

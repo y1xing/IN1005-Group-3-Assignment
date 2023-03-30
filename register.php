@@ -86,7 +86,7 @@
                                 <div class = "form-group"> 
                                     <label for ="email">Email:</label>
                                     <input class="form-control" id="email" name ="email" type ="email"
-                                           placeholder="Enter email">
+                                           placeholder="Enter email" >
                                     <span id="emailError" class="error-messagereg" style="display: none;"></span>
                                 </div>
 
@@ -138,7 +138,7 @@
 
 
 
-                    </form>
+                    
 
                 </div>
             </div>
