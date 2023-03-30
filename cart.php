@@ -128,6 +128,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         else
                         {
                             echo("<p>Please login to add items to your shopping cart!</P>");
+                            echo '<a href="login.php">Login Here</a>';
                         }
                            ?>
                         </ul>
