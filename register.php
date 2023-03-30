@@ -95,7 +95,7 @@
                                     <label for ="pwd">Password:</label>
                                     <div class ="input-container">
                                         <input class="form-control" id="pwd" name ="pwd" type="password"
-                                               placeholder="must be atleast 8 chars, 1 uppercase, number and special character">
+                                               placeholder="atleast 8 chars, 1 uppercase, number and a special character">
                                         <span class="show-pass">
                                             <i class="far fa-eye" onmousedown="showPassword(); myFunction(this)" onmouseup="hidePassword(); myFunction(this)" onmouseleave="hidePassword()" ></i>
                                         </span>
