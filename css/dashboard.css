@@ -12,7 +12,8 @@
 
 @media (max-width: 768px) {
     .welcome-banner {
-        background: url("../images/hero/ProductBannerPhone.png");
+        background: url("../images/hero/ProductBannerMobile.png");
+        background-size: 110%;
         background-position: center center;
         padding: 1.5rem 0.75rem;
     }

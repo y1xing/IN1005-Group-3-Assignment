@@ -109,7 +109,7 @@
             exit;
         }
         
-        include 'footer.inc.php';
+        include 'components/footer.inc.php';
     }
 
     // Function from process_register to sanitize input before insertion into DB

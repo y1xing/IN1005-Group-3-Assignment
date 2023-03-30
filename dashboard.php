@@ -301,7 +301,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </main>
         
         <?php
-            include "footer.inc.php";
+            include "components/footer.inc.php";
         ?>
     </body>
 </html>
