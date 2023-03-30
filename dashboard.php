@@ -1,6 +1,4 @@
 <?php
-include 'crud.php';
-
 session_start();
 
 $success = true;
