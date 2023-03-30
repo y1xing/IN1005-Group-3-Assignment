@@ -64,11 +64,7 @@ include "components/head.inc.php";
     
         <div class="col-md-6 left-container">
             <h1 class = "blue-text"> Login</h1>
-            <?php
-                        if (isset($_SESSION['user_id'])) {
-                            echo "<h2>User ID: " . $_SESSION['user_id'] . "</h2>";
-                        }
-                        ?>
+          
             
     <form id="loginForm" action ="process_login.php" method="post" >
     
