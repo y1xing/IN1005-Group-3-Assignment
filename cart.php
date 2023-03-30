@@ -78,7 +78,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             echo '</div>';
                             echo '<div class="cart-item-right">';
                             echo '<h2>Quantity: ' . $product['quantity'] . '</h2>';
-                            echo '<p>Price: $' . $product['price'] . '</p>';
+                            echo '<p>Price: $' . $product['price']*$product['quantity'] . '</p>';
                             echo '</div>';
                             echo '</div>';
                             echo '</li>';
@@ -160,18 +160,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <div>
                         <h2 class="payment-header">Payment Details</h2>
                         <!-- selection for payment mode -->
-                        <div class="payment-check">
-                            <input class="big" type="radio" id="cash" name="payment" value="Cash on Delivery"/>
-                            <label class="payment-mode" for="cash">Cash on Delivery</label>
-                        </div>
-                        <div class="payment-check">
-                            <input class="big" type="radio" id="credit/debit" name="payment" value="Credit or Debit Card"/>
-                            <label class="payment-mode" for="credit/debit">Credit or Debit Card</label
-                        </div>
-                        <div class="payment-check">
-                            <input class="big" type="radio" id="paynow" name="payment" value="Paynow"/>
-                            <label class="payment-mode" for="paynow">Paynow</label>
-                        </div>
+                        <form>
+                            <div class="payment-check">
+                                <input class="big" type="radio" id="cash" name="payment" value="Cash on Delivery"/>
+                                <label class="payment-mode" for="cash">Cash on Delivery</label>
+                            </div>
+                            <div class="payment-check">
+                                <input class="big" type="radio" id="credit/debit" name="payment" value="Credit or Debit Card"/>
+                                <label class="payment-mode" for="credit/debit">Credit or Debit Card</label
+                            </div>
+                            <div class="payment-check">
+                                <input class="big" type="radio" id="paynow" name="payment" value="Paynow"/>
+                                <label class="payment-mode" for="paynow">Paynow</label>
+                            </div>
+                        </form>
                         <div class="payment-check">
                             <span class="fa-brands fa-cc-mastercard fa-4x "></span>
                             <span class="fa-brands fa-cc-visa fa-4x"></span>
