@@ -1,4 +1,6 @@
 <head>
+
+    <title>Home</title>
     <!--jQuery scriptTest-->
     <script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
@@ -10,6 +12,8 @@
 
     </script>
     <script defer src="../js/nav.js">
+
+
 
     </script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
