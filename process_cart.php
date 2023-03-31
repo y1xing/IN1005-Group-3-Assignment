@@ -14,8 +14,8 @@
 $fname = $lname = $email = $address = $city = $postal = $mobile = $errorMsg = "";
 $success = true;
 
-include "navWhite.inc.php";
-include "head.inc.php";
+include "./components/navWhite.inc.php";
+include "./components/head.inc.php";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<div class='shopping-cart-container'>";
         echo "<div class='cart-container'>";
         echo "<h1>Your payment is successful</h1>";
-        echo "<br><button class='button' id='pay' name='pay'><a class='button-content' href='cart.php' alt='cart'>Return to Cart</a></button>";
+        echo "<br><button class='button'><a class='button-content' href='cart.php' alt='cart'>Return to Cart</a></button>";
         echo "</div>";
         echo "</div>";
     } else {

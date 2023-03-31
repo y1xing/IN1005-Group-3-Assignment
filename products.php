@@ -37,7 +37,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
 
-    <title>Cube World</title>
+    <title>Products</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -56,7 +56,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <body>
     <?php
     // test
-    include "navWhite.inc.php";
+    include "components/navWhite.inc.php";
     ?>
 
     <main id="main">
@@ -64,112 +64,28 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="container-max-width">
             <?php
             $toastMessage = "Item has been added to cart!";
-
             include "helper/toast.php";
+            //
             ?>
 
-
-
-
-
             <div class="product-banner">
-                <h1 class="banner-header">Use promo code CUBEWORLD for 20% off!</h1>
+                <h1 class="banner-header">Use promo code CUBEWORLD for 10% off!</h1>
                 <p class="banner-subtitle">Only for first time users</p>
             </div>
         </div>
 
-<!--        <div class="sorting-container">-->
-<!--            --><?php
-//
-//            echo "<h1>" . $_SESSION['user_id'] . "</h1>";
-//
-//            // Echo out stuff from session cart
-//            if (isset($_SESSION['user_id'])) {
-//                echo "<h1>Stuff exists in cart!</h1>";
-//            }
-//            else {
-//                echo "<h1>Cart is empty!</h1>";
-//            }
-//            ?>
-<!---->
-<!---->
-<!--            <select class="form-select red" aria-label="Default select example">-->
-<!--                <option selected>Type</option>-->
-<!--                <option value="1">One</option>-->
-<!--                <option value="2">Two</option>-->
-<!--                <option value="3">Three</option>-->
-<!--            </select>-->
-<!--            <select class="form-select orange" aria-label="Default select example">-->
-<!--                <option selected>Product Type</option>-->
-<!--                <option value="1">One</option>-->
-<!--                <option value="2">Two</option>-->
-<!--                <option value="3">Three</option>-->
-<!--            </select>-->
-<!--            <select class="form-select green" aria-label="Default select example">-->
-<!--                <option selected>Brand</option>-->
-<!--                <option value="1">One</option>-->
-<!--                <option value="2">Two</option>-->
-<!--                <option value="3">Three</option>-->
-<!--            </select>-->
-<!--        </div>-->
 
         <div class="products-main-container container-max-width">
             <h1>Cubing For You!</h1>
+            <cite>Images from <a href="https://speedcubeshop.com/">Speed cube shop</a></cite>
             <div class="products-container">
 
                 <?php
 
-                // Initialize a all product array
-                $products = array();
-
                 // Get the products from the database
-                $config = parse_ini_file('../private/db-config.ini');
-                $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
+                include "logic/get_products.php";
 
-
-
-                if ($conn->connect_error) {
-                    $errorMsg = "Connection failed: " . $conn->connect_error;
-                    $success = false;
-                    echo "<h1>Error</h1>";
-                } else {
-                    $stmt = $conn->prepare("SELECT * FROM products");
-
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-
-                    if ($result->num_rows > 0) {
-                        $row = $result->fetch_assoc();
-                        // echo out the products
-                        while ($row = $result->fetch_assoc()) {
-                            // Store the product data in an array
-                            $individual_product = array(
-                                "id" => $row['product_id'],
-                                "name" => $row['name'],
-                                "price" => $row['price'],
-                                "description" => $row['description'],
-                                "image" => $row['picture_path'],
-                                "type" => $row['type'],
-                                "brand" => $row['brand'],
-                                "rating" => $row['rating']
-                            );
-
-                            // Append the product to the products array
-                            array_push($products, $individual_product);
-
-                        }
-
-
-                    } else {
-                        $errorMsg = "Unable to find any products";
-                        $success = false;
-                    }
-
-                    $stmt->close();
-                }
-
-                $conn->close();
-
+                $products = getProducts();
 
                 ?>
 
@@ -185,10 +101,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         $images = array("cube1.png", "cube2.png", "cube3.png", "cube4.png", "cube1.png", "cube2.png", "cube4.png", "cube4.png");
 
                         for ($i = 0; $i < count($products); $i++) {
-
-
-
-
                             $product = $products[$i];
                             $id = $product['id'];
                             $name = $product['name'];
@@ -198,9 +110,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             $type = $product['type'];
                             $brand = $product['brand'];
                             $rating = $product['product_type'];
-
-
-
 
                         ?>
 

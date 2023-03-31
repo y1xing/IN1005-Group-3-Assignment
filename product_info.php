@@ -80,7 +80,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </script>
 
     <script defer src="js/toast.js"></script>
-    <title>Cubeworld</title>
+    <title><?php echo $product['name'] ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -102,7 +102,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <?php
 $color = "blue";
 
-include "navWhite.inc.php";
+include "components/navWhite.inc.php";
 ?>
 
 <main id="cart" >

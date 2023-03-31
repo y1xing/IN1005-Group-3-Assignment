@@ -32,7 +32,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <?php
     $color = "orange";
 
-    include "nav.inc.php";
+    include "components/nav.inc.php";
     ?>
 
 
@@ -44,7 +44,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
         <?php
         $text = "Contact Us";
-        include "hero.inc.php";
+        include "components/hero.inc.php";
         ?>
     </div>
     <main id="main">
@@ -55,7 +55,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <h1 class="header">Ask Us Anything</h1>
         </div>
         <div class="container">
-            <form method="POST" action="customer_email.php" id="contact-form">
+            <form method="POST" action="send_email.php" id="contact-form">
                 <div class="form-row">
                     <div class="form-group col-md-6 fillform">
                         <label for="fname">First Name</label>

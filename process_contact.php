@@ -2,7 +2,7 @@
 $fname = $lname = $email = $errorMsg = "";
 $success = true;
 
-include 'head.inc.php';
+include './components/head.inc.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["fname"])) {
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         saveMember();
         echo "<div class='success'>";
         echo "<h1>Thank you for your contacting us.</h1>";
-        echo "<br><button class='btn btn-success'><a href='contact.php' alt='Contact Us'>Contact Us</a></button>";
+        echo "<br><button class='btn btn-success'><a href='pages/contact.php' alt='Contact Us'>Contact Us</a></button>";
         echo "</div>";
     } else {
         displayError();
@@ -92,7 +92,7 @@ function displayError()
     echo "<h1>Oops!</h1>";
     echo "<h2>The following errors were detected: </h2>";
     echo "<p>", $errorMsg, "</p>";
-    echo "<button class='btn btn-danger'><a href='contact.php' alt='retry'>Return to Contact Us</a></button></header>";
+    echo "<button class='btn btn-danger'><a href='pages/contact.php' alt='retry'>Return to Contact Us</a></button></header>";
     echo "</div><br>";
 }
 

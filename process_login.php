@@ -5,7 +5,7 @@ session_start();
 
 <html lang = "en">
     <head>
-        <title>Process_register</title>
+        <title>Process_login</title>
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,8 +25,8 @@ ob_start(); // Start output buffering
 $email = $errorMsg = "";
 $success = true;
 
-include "navWhite.inc.php";
-include "head.inc.php";
+include "./components/navWhite.inc.php";
+include "./components/head.inc.php";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if ($success) {
         $_SESSION['email'] = $email;
-        header("Location: login.php");
+        header("Location: dashboard.php");
         ob_end_clean(); // Discard output buffer and stop buffering
         exit;
     } else {
@@ -101,9 +101,11 @@ function displayError()
     echo "<h1>NO!</h1>";
     echo "<h2>The following errors were detected: </h2>";
     echo "<p>", $errorMsg, "</p>";
-    echo "<button class='btn btn-danger'><a href='login.php' alt='retry'>Retry Login</a></button></header>";
+    echo "<button class='btn btn-danger'><a href='pages/login.php' alt='retry'>Retry Login</a></button></header>";
     echo "</div><br>";
 }
 
 include 'footer.inc.php';
 ?>
+
+    

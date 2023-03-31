@@ -23,12 +23,18 @@
                 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
                 crossorigin="anonymous">
         </script>
+        
         <!-- Bootstrap JS -->
-
+        <script defer 
+                src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" 
+                integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" 
+                crossorigin="anonymous">
+        </script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
 
         <!-- Custom JS -->
         <!-- Custom CSS -->
+       
         <script defer src="js/passforms.js"></script>
         <script defer src="js/form_validation.js"></script>
 
@@ -40,10 +46,11 @@
     <body>
 
         <?php
-        include "navWhite.inc.php";
+        //
+        include "components/navWhite.inc.php";
         ?>
         <?php
-        include "head.inc.php";
+        include "components/head.inc.php";
         ?>
 
         <main class ="reg-container">
@@ -60,7 +67,7 @@
                             <h1 class = "red-text"> Register</h1>
 
 
-                            <form action="process_register.php" method="post" id="registrationForm">
+                            <form id="registrationForm" action="process_register.php" method="post" >
 
 
                                 <div class ="form-groupnames">
@@ -80,7 +87,7 @@
                                 <div class = "form-group"> 
                                     <label for ="email">Email:</label>
                                     <input class="form-control" id="email" name ="email" type ="email"
-                                           placeholder="Enter email">
+                                           placeholder="Enter email" >
                                     <span id="emailError" class="error-messagereg" style="display: none;"></span>
                                 </div>
 
@@ -89,7 +96,7 @@
                                     <label for ="pwd">Password:</label>
                                     <div class ="input-container">
                                         <input class="form-control" id="pwd" name ="pwd" type="password"
-                                               placeholder="Enter password">
+                                               placeholder="atleast 8 chars, 1 uppercase, number and a special character">
                                         <span class="show-pass">
                                             <i class="far fa-eye" onmousedown="showPassword(); myFunction(this)" onmouseup="hidePassword(); myFunction(this)" onmouseleave="hidePassword()" ></i>
                                         </span>
@@ -110,19 +117,21 @@
                                            placeholder="Confirm password">
                                     <span id="pwdConfirmError" class="error-messagereg" style="display: none;"></span>
                                 </div>
-                                <div class ="form-check">
-                                    <label> 
-                                        <input type="checkbox" name ="agree">
+                                <div class="form-check">
+                                    <label>
+                                        <input type="checkbox" name="agree" id="agree">
                                         Agree to terms and conditions.*
                                     </label>
                                     <span id="agreeError" class="error-message" style="display: none;"></span>
                                 </div>
+
                                 <div class = "form-group"> 
-                                    <button class="btn btn-primary" type = "submit"> Submit </button>
+                                    <button class="btn btn-primary btn-block" type = "submit"> Submit </button>
                                 </div>  
-                                <p1>
-                                    Already have an account?<a href ="/login.php"> Login</a>
-                                </p1>
+                            </form>
+                            <p1>
+                                Already have an account?<a href ="/login.php"> Login</a>
+                            </p1>
 
                         </div>
 
@@ -130,7 +139,7 @@
 
 
 
-                    </form>
+                    
 
                 </div>
             </div>

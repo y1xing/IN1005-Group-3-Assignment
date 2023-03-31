@@ -30,7 +30,7 @@ echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto pt-5 pb-5 px-4'
 <!-- <nav class="navbar navbar-expand-lg fixed-top mx-auto p-5" id="navbar"> -->
 <a class="navbar-brand" href="/index.php">
 
-    <img src="/images/logo/logoWhite.png" alt="logo" class="logo" />
+    <img src="/images/logo/logoWhite.png" alt="logo" class="logo">
 </a>
 
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,12 +58,12 @@ echo "<nav class='navbar navbar-expand-lg fixed-top mx-auto pt-5 pb-5 px-4'
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 my-2 my-lg-0 icon-nav">
             <li class="nav-item">
                 <a class="icon-container" href="/cart.php">
-                    <img src="images/icons/cart.png" alt="Cart" class="icon" />
+                    <img src="../images/icons/cart.png" alt="Cart" class="icon">
                 </a>
             </li>
             <li class="nav-item">
                 <a class="icon-container" href="/profile.php">
-                    <img src="images/icons/profile.png" alt="Profile" class="icon" />
+                    <img src="../images/icons/profile.png" alt="Profile" class="icon">
                 </a>
             </li>
 

@@ -1,31 +1,60 @@
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
- */
-
 $(document).ready(registerEventHandlers);
 
 function registerEventHandlers() {
-    let updateButton = document.getElementsByClassName("update-button");
-        
-    if (updateButton !== null && updateButton.length > 0) {
-        for (let i=0; i < updateButton.length; i++) {
-            
-            updateButton[i].addEventListener("click", updateForm);
-        }
+    let updateForm = document.getElementById("update-form");
+    let updateButton = document.getElementById("update-button");
+
+    updateForm.addEventListener("submit", updateProfile);
+    updateButton.addEventListener("click", enableEditing);
+}
+
+async function updateProfile(e) {
+    e.preventDefault();
+    
+    // Flag to submit form
+    let isValid = true;
+
+    // Get input elements
+    let email = document.getElementById("email");
+    let password = document.getElementById("pwd");
+    let pwdStrength = checkPasswordStrength(password.value);
+    
+    // Get error texts
+    let emailError = document.getElementById("emailError");
+    let pwdResult = document.getElementById("result");
+    
+    // Check if email exists in DB
+    let emailExists = await checkEmailExists(email.value);
+
+    if (emailExists) {
+        emailError.innerText = "Email already in use.";
+        emailError.style.display = "block";
+        isValid = false;
     } else {
-        console.log("No update button");
+        emailError.style.display = "none";
+    }
+    
+    if (pwdStrength < 5 && password.value.length > 0) {
+        pwdResult.innerText = "Password must be very strong.";
+        pwdResult.style.color = "red";
+        pwdResult.style.display = "block";
+        isValid = false;
+    } else {
+        pwdResult.style.display = "none";
+    }
+
+    if (isValid) {
+        e.target.submit();
     }
 }
 
-function updateForm(e) {
-
-    // Get form fields
+function enableEditing(e) {
+    // Get form fields and strength bar
     let lname = document.getElementById("lname");
     let fname = document.getElementById("fname");
     let email = document.getElementById("email");
     let password = document.getElementById("pwd");
-    
+
     // Get button type attr
     let type = e.target.getAttribute("type");
     
@@ -43,20 +72,8 @@ function updateForm(e) {
         fname.setAttribute("placeholder", "Type new first name here");
         email.setAttribute("placeholder", "Type new email here");
         password.setAttribute("placeholder", "Type new password here");
-        
-        e.preventDefault();
                 
-    } else {
-//        e.target.setAttribute("type", "button");
-//        e.target.innerHTML = " Update ";
-//        
-//        lname.setAttribute("disabled", "");
-//        fname.setAttribute("disabled", "");
-//        email.setAttribute("disabled", "");
-//        password.setAttribute("disabled", "");
-//       
-//        
-//        console.log("add disabled");
+        e.preventDefault();
     }
 }
 
