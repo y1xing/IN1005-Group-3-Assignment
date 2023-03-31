@@ -1,10 +1,9 @@
 <?php
-    session_start();
-    
-//    $_SESSION["user_id"] = "1";
-    
-    $success = true;
-    $errorMsg;
+ob_start();
+session_start();
+
+$success = true;
+$errorMsg;
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +11,7 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
+<html lang="en">
     <head>
         <title>Dashboard</title>
         
@@ -55,11 +54,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" 
                 crossorigin="anonymous">
         </script>
-        <!-- AJAX JS -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Custom JS -->
         <script defer src="js/nav.js"></script>
-        <script defer wsrc="js/passforms.js"></script>
+        <script defer src="js/passforms.js"></script>
+        <script defer src="js/login-validation.js"></script>
         <script defer src="js/dashboard.js"></script>
     </head>
     
@@ -73,7 +71,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 // Connect to database
                 $config = parse_ini_file('../private/db-config.ini');
                 $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
-
+                
                 if ($conn->connect_error) {
 
                     $errorMsg = "Connection failed: " . $conn->connect_error;
@@ -107,36 +105,43 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         echo '<main>
                                     <section id="profile" class="container-max-width">
                                         <div class="profile-title-container">
-                                            <h1 class="blue-text dashboard-left-header">Profile</h1>
+                                            <h2 class="blue-text dashboard-left-header">Profile</h2>
                                             <div>
                                                 <button class="btn btn-block btn-primary logout-button" type="button" onclick="window.location.href=\'logout.php\';">Logout</button>
                                             </div>
                                         </div>
 
-                                    <form class="row profile-container" action="process_update.php" method="post"> 
+                                    <form id="update-form" class="row profile-container" action="process_update.php" method="post"> 
                                         <div class="form-group col-md-6 pr-md-4"> 
                                             <label for="fname">First Name</label>
-                                            <input class="form-control" id="fname" name ="fname" type ="text"
+                                            <input class="form-control" id="fname" name="fname" type="text"
                                                    placeholder="', $fname, '" disabled>
                                         </div>
                                         <div class="form-group col-md-6 pr-md-4"> 
                                             <label for ="lname">Last Name</label>
-                                            <input class="form-control" id="lname" name ="lname" type ="text"
+                                            <input class="form-control" id="lname" name="lname" type="text"
                                                    placeholder="', $lname, '" disabled>
                                         </div>
                                         <div class="form-group col-md-6 pr-md-4"> 
                                             <label for="email">Email</label>
-                                            <input class="form-control" id="email" name ="email" type ="email"
+                                            <input class="form-control" id="email" name="email" type="email"
                                                    placeholder="', $email, '" disabled>
+                                            <span id="emailError" style="display: none; color: red;"></span>
                                         </div>
                                         <div class="form-group col-md-6 pr-md-4">
                                             <label for="pwd">Password</label>
                                             <input class="form-control" id="pwd" name ="pwd" type="password"
                                                    placeholder="**********" disabled>
+                                            <div id="popover-password">
+                                                <p><span id="result"></span></p>
+                                            </div>
+                                            <div class="progress">
+                                                <div id="password-strength" class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%;"></div>
+                                            </div>
                                         </div>
 
                                         <div class="form-group col-md-6 mt-3">
-                                            <button class="btn btn-block btn-primary update-button" type="button"> Update </button>
+                                            <button id="update-button" class="btn btn-block btn-primary" type="button"> Update </button>
                                         </div>
                                     </form>
                                 </section>';
@@ -150,20 +155,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     $stmt->close();
                 }
             } else {
-                echo '<header class="d-flex justify-content-center">
-                                <div class="container-max-width">
-                                    <div class="product-banner welcome-banner">
-                                        <h1 class="banner-header">Procced to login to view your progress!</h1>
-                                    </div>
-                                </div>
-                    </header>';
+                header("Location: login.php");
+                ob_end_flush();
+                exit();
             }                       
         }
         ?>                       
             
             <section id="lessons" class="container-max-height justify-content-start">
                 <div class="container-max-width">
-                    <h1 class="blue-text dashboard-left-header align-self-start">Lesson Enrolled</h1>
+                    <h2 class="blue-text dashboard-left-header align-self-start">Lesson Enrolled</h2>
 
                     <div class="row w-100 justify-content-between">
                         <?php
@@ -252,22 +253,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                             </div>
                                                         </div>
 
-                                                        <h3 class="card-subtitle-text"><u><b>Progress</u></b></h3>
+                                                        <h3 class="card-subtitle-text"><u><b>Progress</b></u></h3>
                                                         <div class="card-row-container">
                                                             <div class="badge-icon-container">
-                                                                <img class="icon" src="', $progressBadge, '" alt="', $progressLevel, '"/>
+                                                                <img class="icon" src="', $progressBadge, '" alt="', $progressLevel, '">
                                                             </div>          
                                                             <h2 class="card-title-text blue-text pl-2">', $progressLevel, '</h2>
                                                         </div>
-                                                        <div class="progress-bar">
-                                                            <div class="progress" style="width: ', $percentDone, '%;"></div>
+                                                        <div class="mastery-progress">
+                                                            <div class="mastery-progress-bar" style="width: ', $percentDone, '%;"></div>
                                                         </div>
                                                         <p class="progress-text">', $percentDone, '% Completed</p>
 
-                                                        <h3 class="card-subtitle-text"><u><b>Trainer</u></b></h3>
+                                                        <h3 class="card-subtitle-text"><u><b>Trainer</b></u></h3>
                                                         <div class="card-row-container align-items-start">
                                                             <div class="trainer-icon-container">
-                                                                <img class="trainer-icon" src="', $trainerImagePath, '" alt="Trainer Icon"/>
+                                                                <img class="trainer-icon" src="', $trainerImagePath, '" alt="Trainer Icon">
                                                             </div>        
                                                             <div class="d-inline pl-3 w-75 card-comments-text">
                                                                 <p><b>Mr ', $trainer, '</b></p>
@@ -297,39 +298,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </main>
         
         <?php
-            include "footer.inc.php";
+            include "components/footer.inc.php";
         ?>
     </body>
 </html>
-
-
-//<?php
-//$config = parse_ini_file('../../private/db-config.ini');
-//$conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
-//
-//if ($conn->connect_error) {
-//    $errorMsg = "Connection failed: " . $conn->connect_error;
-//    $success = false;
-//} else {
-//    $stmt = $conn->prepare("SELECT * FROM enquiries");
-//    $stmt->execute();
-//    $result = $stmt->get_result();
-//
-//    if ($result->num_rows > 0) {
-//        $row = $result->fetch_assoc();
-//        $email = $row["email"];
-//        $title = $row["title"];
-//        $msg = $row["message"];
-//
-//        echo "<p>", $email, "</p>";
-//
-//    } else {
-//        $errorMsg = "Invalid email or password.";
-//        $success = false;
-//    }
-//
-//    $stmt->close();
-//}
-//
-//$conn->close();
-//?>

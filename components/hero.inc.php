@@ -32,15 +32,29 @@ if (strlen($text) > 2) {
     $fontSize = "font-size: min(30rem, calc(10vw + 3rem));";
 }
 
-echo "
-    <div class='hero-container $color'>
-        <img class='heroImg' src='$src' alt='Hero Frame'>
-        <div class='heroText'>
-            <h1 class='heroText' style='$fontSize'>$text</h1>
-            
+if ($color == "green") {
+    echo "
+        <div class='hero-container $color'>
+            <img class='heroImg' src='$src' alt='Hero Frame'>
+            <div class='heroText'>
+                <h1 class='heroText' style='$fontSize'>$text</h1>
+
+            </div>
+            <button class='button m-5' onclick='window.location.href=\"profile.php\";'>
+                <span class='button-content progress-text'>Check your progress here!</span>
+            </button>
         </div>
-    
-    ";
+        ";
+} else {
+    echo "
+        <div class='hero-container $color'>
+            <img class='heroImg' src='$src' alt='Hero Frame'>
+            <div class='heroText'>
+                <h1 class='heroText' style='$fontSize'>$text</h1>
+            </div>
+        </div>
+        ";
+}
 ?>
 
 

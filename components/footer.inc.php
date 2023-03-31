@@ -3,7 +3,7 @@
     <div class="footer-container">
         <div class="footer-row">
             <div class="footer-column-logo">
-                <img style="width: 300px;" src ="../images/logo/logoWhite.png" alt "logofooter" />
+                <img style="width: 300px;" src ="../images/logo/logoWhite.png" alt="logofooter">
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odiulum.L,
                     consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulu
