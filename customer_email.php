@@ -1,64 +1,119 @@
-<?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="contact.css">
+    </head>
+    <body>
+        <?php
+
+        use PHPMailer\PHPMailer\PHPMailer;
+        use PHPMailer\PHPMailer\Exception;
 
 require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+        require 'PHPMailer/src/PHPMailer.php';
+        require 'PHPMailer/src/SMTP.php';
 
-if(isset($_POST['send'])){
-    $fname = htmlentities($_POST['fname']);
-    $lname = htmlentities($_POST['lname']);
-    $email = htmlentities($_POST['email']);
-    $subject = htmlentities("customer enquiry");
-    $message = htmlentities($_POST['message']);
+        // Sanitize user input
+        function sanitizeInput($input) {
+            $input = trim($input);
+            $input = stripslashes($input);
+            $input = htmlspecialchars($input);
+            return $input;
+        }
 
-    $mail = new PHPMailer(true);
-    $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
-    $mail->SMTPAuth = true;
-    $mail->Username = 'cubeworld979@gmail.com';
-    $mail->Password = 'wztnlairufpauikl';
-    $mail->Port = 465;
-    $mail->SMTPSecure = 'ssl';
-    $mail->isHTML(true);
-    $mail->setFrom($email, $fname, $lname);
-    $mail->addAddress ($email);
-    $mail->Subject = ("In response to customer enquiry");
-    $mail->Body = "Thank you for your enquiry our administrator will be getting back to you shortly";
+        // Validate email address
+        function validateEmail($email) {
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                return false;
+            }
+            return true;
+        }
+
+        if (isset($_POST['send'])) {
+            $fname = sanitizeInput($_POST['fname']);
+            $lname = sanitizeInput($_POST['lname']);
+            $email = sanitizeInput($_POST['email']);
+            $subject = sanitizeInput("customer enquiry");
+            $message = sanitizeInput($_POST['message']);
+
+            // Validate user input
+            if (empty($fname) || empty($lname) || empty($email) || empty($message)) {
+                echo '<script>alert("Please fill in all required fields!");</script>';
+                exit();
+            }
+            if (!validateEmail($email)) {
+                echo '<script>alert("Invalid email address!");</script>';
+                exit();
+            }
+
+            $mail = new PHPMailer(true);
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Username = 'cubieworldie@gmail.com';
+            $mail->Password = 'dqyqpaxasyjobicg';
+            $mail->Port = 465;
+            $mail->SMTPSecure = 'ssl';
+            $mail->isHTML(true);
+            $mail->setFrom($email, $fname . ' ' . $lname);
+            $mail->addAddress($email);
+            $mail->Subject = ("Thank you for contacting us!");
+            $mail->Body = '
+            <html>
+                <head>
+                </head>
+                <body>
+                    <div class="container container_email">
+                        <h1 class="email_text">Thank you for your enquiry, we will be getting back to you soon!</h1>
+                        <p>Dear ' . $fname . ' ' . $lname . ',</p>
+                        <p>Here is a summary of your message:</p>
+                        <p>' . $message . '</p>
+                        <p>Best regards,</p>
+                        <p>The Customer Service Team</p>
+                    </div>
+                </body>
+            </html>
+            ';
+            $mail->send();
+
+            $mail2 = new PHPMailer(true);
+            $mail2->isSMTP();
+            $mail2->Host = 'smtp.gmail.com';
+            $mail2->SMTPAuth = true;
+            $mail2->Username = 'cubieworldie@gmail.com';
+            $mail2->Password = 'dqyqpaxasyjobicg';
+            $mail2->Port = 465;
+            $mail2->SMTPSecure = 'ssl';
+            $mail2->isHTML(true);
+            $mail2->setFrom($email, $fname . ' ' . $lname);
+            $mail2->addAddress('cubieworldie@gmail.com');
+            $mail2->Subject = ("$email ($subject)");
+            $mail2->Body = '
+
+            <html>
+                <head>
+                </head>
+                <body>
+                    <div class="container container_email">
+                        <h1 class="email_text">Customer Enquiry!</h1>
+                        <p>Here is a summary of the customers message:</p>
+                        <p>' . $message . '</p>
+                    </div>
+                </body>
+            </html>
+            ';
+
+            $mail2->send();
+
+
+        }
+    if ($mail->send()) {
+        //refresh and goes back to the contact page
+        header("Location: ./contact.php", "");
+    }
     
-    $email_to = 'cubeworld979@gmail.com'; 
-    $email_from = 'cubeworld979@gmail.com'; 
-    $mail2 = new PHPMailer(true);
-    $mail2->isSMTP();
-    $mail2->Host = 'smtp.gmail.com';
-    $mail2->SMTPAuth = true;
-    $mail2->Username = 'cubeworld979@gmail.com';
-    $mail2->Password = 'wztnlairufpauikl';
-    $mail2->Port = 465;
-    $mail2->SMTPSecure = 'ssl';
-    $mail2->isHTML(true);
-    $mail2->setFrom('cubeworld979@gmail.com', $fname, $lname);
-    $mail2->addAddress ('cubeworld979@gmail.com');
-    $mail2->Subject = "From: 'cubeworld979@gmail.com', $subject";
-    $mail2->Body = "Message from customer: , $message";
-    
-    if(!$mail->send()) { 
-        die("Message could not be sent: " . $mail->ErrorInfo); 
-    } 
-    
-    header("Location: ./contact.php");
-
-}
-
-
-function displayThankyou()
-{
-    echo "<div class='success'>";
-    echo "<h1>Thank you for sending us your enquiries!</h1>";
-//    echo "<p>", $errorMsg, "</p>";
-    echo "<button class='btn btn-success'><a href='contact.php' alt='retry'>Head back to the main page</a></button></header>";
-    echo "</div><br>";
-}
-
 ?>
+</body>
+</html>
+
+    

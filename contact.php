@@ -59,10 +59,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="form-row">
                     <div class="form-group col-md-6 fillform">
                         <label for="fname">First Name</label>
-                        <input type="text" name="fname" class="form-control" id="firstName" placeholder="First Name" required>                    </div>
+                        <input type="text" name="fname" class="form-control" id="firstName" placeholder="First Name" required>                    
+                    </div>
                     <div class="form-group col-md-6 fillform">
                         <label for="lname">Last Name</label>
-                        <input type="text" name="lname" class="form-control" id="lastName" placeholder="Last Name" required>                    </div>
+                        <input type="text" name="lname" class="form-control" id="lastName" placeholder="Last Name" required>                    
+                    </div>
                 </div>
                 <div class="form-group fillform">
                     <label for="email">Email:</label>
@@ -71,7 +73,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="form-group fillform">
                   <label for="message">Message</label>
                     <textarea type="message" name="message" rows="6" class="form-control box" id="message" placeholder="Let us know your questions!" required></textarea>
-                      </div>
+                </div>
                 <div class="text-center">
                     <button type="submit" class="open button-red mt-5" name="send">
                         <span class="button-content-red">Send Message</span>
@@ -81,16 +83,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
         <div class="container-width">
             <div class="container-max-width alt-section-container">
-                <h1 class="header_contact">Frequently Asked Questions</h1>
+                <h1 class="header">Frequently Asked Questions</h1>
                 <p class="text1">
                     Everything you need to know about the products and services
                 </p>
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <h4 class="header_text">
+                            <h2 class="header_text">
                                 Is there a free trial available
-                            </h4>
+                            </h2>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -99,21 +101,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             </p>
                         </div>
                         <div class="col">
-                            <h4>
+                            <h2>
                                 Is there a free trial available
-                            </h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                        <div class="w-100"></div>
-                        <div class="col">
-                            <h4>
-                                Is there a free trial available
-                            </h4>
+                            </h2>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -122,9 +112,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             </p>
                         </div>
                         <div class="col">
-                            <h4>
+                            <h2>
                                 Is there a free trial available
-                            </h4>
+                            </h2>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -132,6 +122,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </p>
                         </div>
+                        <div class="col">
+                            <h2>
+                                Is there a free trial available
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -142,4 +145,3 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 </html>
 
-<!<!-- hi there -->

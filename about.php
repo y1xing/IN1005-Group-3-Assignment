@@ -78,32 +78,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <div class ="row">
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/dave.png" alt="Dave" id="all_star_img" />
-                                    <figcaption id="figcaption_dave">Dave</figcaption>
+                                    <img src="images/team/dave.png" alt="Dave" class="all_star_img" />
+                                    <figcaption id="figcaption_red">Dave</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/jiakai.png" alt="JiaKai" id="all_star_img" />
-                                    <figcaption id="figcaption_jiakai">Jia Kai</figcaption>
+                                    <img src="images/team/jiakai.png" alt="JiaKai" class="all_star_img" />
+                                    <figcaption id="figcaption_orange">Jia Kai</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/jewel.png" alt="Jewel" id="all_star_img" />
-                                    <figcaption id="figcaption_jewel">Jewel</figcaption>
+                                    <img src="images/team/jewel.png" alt="Jewel" class="all_star_img" />
+                                    <figcaption id="figcaption_yellow">Jewel</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/yf.png" alt="Yu Fei" id="all_star_img" />
-                                    <figcaption id="figcaption_yf">Yu Fei</figcaption>
+                                    <img src="images/team/yf.png" alt="Yu Fei" class="all_star_img" />
+                                    <figcaption id="figcaption_green">Yu Fei</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/yx.png" alt="Yi Xing" id="all_star_img" />
-                                    <figcaption id="figcaption_yx">Yi Xing</figcaption>
+                                    <img src="images/team/yx.png" alt="Yi Xing" class="all_star_img" />
+                                    <figcaption id="figcaption_blue">Yi Xing</figcaption>
                                 </figure>
                             </div>
                     </div>
@@ -116,5 +116,3 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 </body>
 
 </html>
-
-<!<!-- hi there -->

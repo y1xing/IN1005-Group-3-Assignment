@@ -85,7 +85,7 @@ h1, h2, h3, h4, p {
   font-size: min(1.5rem, calc(2vw + 10px));
 }
 
-#all_star_img{
+.all_star_img{
     width: 170px;
 }
 
@@ -107,35 +107,35 @@ figcaption {
     font-weight: 600;
 }
 
-#figcaption_dave {
+#figcaption_red {
     background: linear-gradient(89.97deg, #EF5E86 16.81%, #F39263 83.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: min(1.5rem, calc(2vw + 10px));
 }
 
-#figcaption_jiakai {
+#figcaption_orange {
     background: linear-gradient(89.97deg, #EFAC5C 16.81%, #F3C75F 83.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: min(1.5rem, calc(2vw + 10px));
 }
 
-#figcaption_jewel {
+#figcaption_yellow {
     background: linear-gradient(89.97deg, #ECEE5C 16.81%, #F3CD5F 83.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: min(1.5rem, calc(2vw + 10px));
 }
 
-#figcaption_yf {
+#figcaption_green {
     background: linear-gradient(89.97deg, #56D229 16.81%, #F0E936 83.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: min(1.5rem, calc(2vw + 10px));
 }
 
-#figcaption_yx {
+#figcaption_blue {
     background: linear-gradient(89.97deg, #8F88F8 16.81%, #6CB5F9 83.06%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

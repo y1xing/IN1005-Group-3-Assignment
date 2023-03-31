@@ -130,3 +130,15 @@ h4{
     align-items: flex-start;
 
 }
+
+.container_email {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.email_text {
+    color: #336699;
+}
