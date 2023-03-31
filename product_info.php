@@ -1,4 +1,4 @@
-`<?php
+<?php
 
 // Get id from url
 if(isset($_GET['id'])) {
@@ -120,22 +120,22 @@ include "components/navWhite.inc.php";
             <!-- contain the list of products added to the cart -->
             <div class="info-img">
                 <!-- product info image -->
-                <img src=<?php echo $product['image'] ?> alt="cube image"/>
+                <img src=<?php echo $product['image'] ?> alt="cube image">
             </div>
             <div class="info-img-small-container">
 <!--            <div class="info-img-small-container">-->
                 <!-- 4 small images of the product -->
                 <div class="info-img-small">
-                    <img src=<?php echo $product['image'] ?> alt="cube image"/>
+                    <img src=<?php echo $product['image'] ?> alt="cube image">
                 </div>
                 <div class="info-img-small">
-                    <img src=<?php echo $product['image'] ?> alt="cube image"/>
+                    <img src=<?php echo $product['image'] ?> alt="cube image">
                 </div>
                 <div class="info-img-small">
-                    <img src=<?php echo $product['image'] ?> alt="cube image"/>
+                    <img src=<?php echo $product['image'] ?> alt="cube image">
                 </div>
                 <div class="info-img-small">
-                    <img src=<?php echo $product['image'] ?> alt="cube image"/>
+                    <img src=<?php echo $product['image'] ?> alt="cube image">
                 </div>
             </div>
         </div>
@@ -203,4 +203,4 @@ include "footer.inc.php";
 
 </html>
 
-<!<!-- hi there -->`
+<!-- hi there -->
