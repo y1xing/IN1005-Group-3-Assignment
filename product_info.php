@@ -191,8 +191,6 @@ include "navWhite.inc.php";
                                  data-product-color="<?php echo $product['color'] ?>"
                                  class="open add-to-cart-button" id="add-to-cart">Add to cart</button>
                     </div>
-
-
                     <hr>
                 </div>
             </div>

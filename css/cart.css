@@ -200,37 +200,8 @@ body {
     font-size: 1rem;
 }
 
-/*.button-content-red {*/
-/*    position: relative;*/
-/*    z-index: 1;*/
-/*    font-weight: bold;*/
-/*    background: linear-gradient(90deg, #F06B7C 0.31%, #F39362 97.83%);*/
-/*    -webkit-background-clip: text;*/
-/*    -webkit-text-fill-color: transparent;*/
-/*    background-clip: text;*/
-/*    text-fill-color: transparent;*/
-/*    padding: 2rem 4rem;*/
-/*    font-size: 1.5rem;*/
 
-/*}*/
-
-/*.button-content-green {*/
-/*    position: relative;*/
-/*    z-index: 1;*/
-/*    font-weight: bold;*/
-/*    background: linear-gradient(90deg, #69D028 0.31%, #B1DF30 97.83%);*/
-/*    -webkit-background-clip: text;*/
-/*    -webkit-text-fill-color: transparent;*/
-/*    background-clip: text;*/
-/*    text-fill-color: transparent;*/
-/*    padding: 2rem 4rem;*/
-/*    font-size: 1.5rem;*/
-
-/*}*/
-
-
-
-.button-content:hover, .button-content-red:hover, .button-content-green:hover, .button-coupon:hover {
+.button-content:hover, .button-coupon:hover {
     background: linear-gradient(93.61deg, #64ADFA 6.48%, #9A2DF7 98.96%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -253,38 +224,6 @@ body {
     height: inherit;
     border-radius: inherit;
     background: white;
-    transition: all 0.475s;
-    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
-}
-
-.button-red::before {
-    content: '';
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    width: 100%;
-    height: inherit;
-    border-radius: inherit;
-    background: linear-gradient(90deg, #F06B7C 0.31%, #F39362 97.83%);
-    transition: all 0.475s;
-    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
-}
-
-.button-green::before {
-    content: '';
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    width: 100%;
-    height: inherit;
-    border-radius: inherit;
-    background: linear-gradient(90deg, #69D028 0.31%, #B1DF30 97.83%);
     transition: all 0.475s;
     box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
 }

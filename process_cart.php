@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<div class='shopping-cart-container'>";
         echo "<div class='cart-container'>";
         echo "<h1>Your payment is successful</h1>";
-        echo "<br><button class='button'><a class='button-content' href='cart.php' alt='cart'>Return to Cart</a></button>";
+        echo "<br><button class='button' id='pay' name='pay'><a class='button-content' href='cart.php' alt='cart'>Return to Cart</a></button>";
         echo "</div>";
         echo "</div>";
     } else {
@@ -128,7 +128,7 @@ function displayError()
     echo "<h1>Invalid Information</h1>";
     echo "<h2>The following errors were detected: </h2>";
     echo "<p>", $errorMsg, "</p>";
-    echo "<button class='button-red'><a class='button-content-red' href='cart.php' alt='cart'>Return to Cart</a></button></header>";
+    echo "<button class='button-red'><a class='button-content' href='cart.php' alt='cart'>Return to Cart</a></button></header>";
     echo "</div><br>";
 }
 
