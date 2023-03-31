@@ -92,10 +92,10 @@ include "components/head.inc.php";
         <button class="btn btn-primary btn-block" type = "submit"> Login </button>
     </div>  
     </form>
-            <p1>
+            <p>
         Not registered yet?
         <a href ="/register.php"> Create an Account</a>.
-    </p1>
+    </p>
     </div>
         <div class="col-md-6 hide-on-mobile">
                         <img src="images/hero/loginPic.png" class="register-img" alt="Cubeworld Login pic" />
