@@ -86,7 +86,7 @@ h1, h2, h3, h4, p {
   font-size: min(1.5rem, calc(2vw + 10px));
 }
 
-#all_star_img{
+.all_star_img{
     width: 170px;
 }
 

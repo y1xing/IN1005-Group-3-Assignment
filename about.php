@@ -27,14 +27,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <body>
     <?php
     $color = "red";
-    include "nav.inc.php";
+    include "components/nav.inc.php";
     ?>
 
     <div>
         <?php
         $text = "About Us";
 
-        include "hero.inc.php";
+        include "components/hero.inc.php";
         ?>
     </div>
     <main id="main">
@@ -45,7 +45,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="container">
             <div class="row mt-4">
                 <div class="col-md-6">
-                    <img src="images/team/dave.png" class="kid-img" alt="picture of a kid" />
+                    <img src="images/team/dave.png" class="kid-img" alt="picture of a kid" >
                 </div>
                 <div class="col-md-6 right-container">
                     <h1 class="red-text">Started with Dave</h1>
@@ -78,43 +78,42 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <div class ="row">
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/dave.png" alt="Dave" id="all_star_img" />
+                                    <img src="images/team/dave.png" alt="Dave" class="all_star_img" >
                                     <figcaption id="figcaption_dave">Dave</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/jiakai.png" alt="JiaKai" id="all_star_img" />
+                                    <img src="images/team/jiakai.png" alt="JiaKai" class="all_star_img" >
                                     <figcaption id="figcaption_jiakai">Jia Kai</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/jewel.png" alt="Jewel" id="all_star_img" />
+                                    <img src="images/team/jewel.png" alt="Jewel" class="all_star_img" >
                                     <figcaption id="figcaption_jewel">Jewel</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/yf.png" alt="Yu Fei" id="all_star_img" />
+                                    <img src="images/team/yf.png" alt="Yu Fei" class="all_star_img" >
                                     <figcaption id="figcaption_yf">Yu Fei</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/yx.png" alt="Yi Xing" id="all_star_img" />
+                                    <img src="images/team/yx.png" alt="Yi Xing" class="all_star_img" >
                                     <figcaption id="figcaption_yx">Yi Xing</figcaption>
                                 </figure>
                             </div>
+                        </div>
                     </div>
+                </div>
             </div>
-        </div>
     </main>
     <?php
-    include "footer.inc.php";
+    include "components/footer.inc.php";
     ?>
 </body>
 
 </html>
-
-<!<!-- hi there -->
