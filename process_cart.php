@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+
 <head>
-    <title>Process_register</title>
+    <title>Process cart</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" href="css/register.css" type="text/css">
+    <link rel="stylesheet" href="css/cart.css" type="text/css">
     <link rel="stylesheet" href="css/footer.css" type="text/css">
 </head>
 <?php
@@ -60,32 +60,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["postal"])) {
         $errorMsg .= "Postal code is required.<br>";
         $success = false;
+    } else {
+        $postal = $_POST["postal"];
     }
     if (empty($_POST["mobile"])) {
         $errorMsg .= "Mobile number is required.<br>";
         $success = false;
+    } else {
+        $mobile = $_POST["mobile"];
     }
 
 
     if ($success) {
-
         saveDelivery();
-
-
-
-        echo "<div class='success'>";
+        echo "<div class='shopping-cart-container'>";
+        echo "<div class='cart-container'>";
         echo "<h1>Your payment is successful</h1>";
-        echo "<br><button class='btn btn-success'><a href='index.php' alt='home'>Return to Home</a></button>";
+        echo "<br><button class='button'><a class='button-content' href='cart.php' alt='cart'>Return to Cart</a></button>";
         echo "</div>";
-
-
-
-
+        echo "</div>";
     } else {
         displayError();
     }
 } else {
     header("Location: cart.php");
+    echo "<h1>Oops! Something went wrong.</h1>";
     exit;
 }
 
@@ -108,8 +107,8 @@ function saveDelivery()
         $errorMsg = "Connection failed: " . $conn->connect_error;
         $success = false;
     } else {
-        $stmt = $conn->prepare("INSERT INTO user_delivery_info(address, postal, city, mobile, email, fname, lname) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssss", $address, $postal, $city, $mobile, $email, $fname, $lname);
+        $stmt = $conn->prepare("INSERT INTO cube_world.user_delivery_info(address, zip_code, city, mobile, email, fname, lname) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssisss", $address, $postal, $city, $mobile, $email, $fname, $lname);
 
         if (!$stmt->execute()) {
             $errorMsg = "Execute failed: (" . $stmt->errno . ") " . $stmt->error;
@@ -119,18 +118,17 @@ function saveDelivery()
         $stmt->close();
     }
     $conn->close();
-
 }
 
 function displayError()
 {
     global $errorMsg;
 
-    echo "<div class='failed'>";
-    echo "<h1>Oops!</h1>";
+    echo "<div class='shopping-cart-container'>";
+    echo "<h1>Invalid Information</h1>";
     echo "<h2>The following errors were detected: </h2>";
     echo "<p>", $errorMsg, "</p>";
-    echo "<button class='btn btn-danger'><a href='pages/register.php' alt='retry'>Return to Sign up</a></button></header>";
+    echo "<button class='btn btn-danger'><a href='/register.php' alt='retry'>Return to Sign up</a></button></header>";
     echo "</div><br>";
 }
 

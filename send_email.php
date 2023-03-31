@@ -21,12 +21,14 @@ if (isset($_POST['send'])) {
     $subject = htmlentities("customer enquiry");
     $message = htmlentities($_POST['message']);
 
+    $config = parse_ini_file('../private/email-config.ini');
+
     $mail = new PHPMailer(true);
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'cubieworldie@gmail.com';
-    $mail->Password = 'dyhrcojwzifyifsu';
+    $mail->Username = $config['email'];
+    $mail->Password = $config['password'];
     $mail->Port = 465;
     $mail->SMTPSecure = 'ssl';
     $mail->isHTML(true);
@@ -55,13 +57,13 @@ if (isset($_POST['send'])) {
     $mail2->isSMTP();
     $mail2->Host = 'smtp.gmail.com';
     $mail2->SMTPAuth = true;
-    $mail2->Username = 'cubieworldie@gmail.com';
-    $mail2->Password = 'dyhrcojwzifyifsu';
+    $mail2->Username = $config['email'];
+    $mail2->Password = $config['password'];
     $mail2->Port = 465;
     $mail2->SMTPSecure = 'ssl';
     $mail2->isHTML(true);
     $mail2->setFrom($email, $name);
-    $mail2->addAddress('cubieworldie@gmail.com');
+    $mail2->addAddress($config['email']);
     $mail2->Subject = ("$email ($subject)");
     $mail2->Body = '
             <html>
