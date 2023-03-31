@@ -140,6 +140,7 @@ include "components/head.inc.php";
             <div class="container-max-width ">
                 <h1 class="header green-text">Our Products</h1>
                 <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <cite>Images from <a href="https://speedcubeshop.com/">Speed cube shop</a></cite>
                 <div class="row">
                     <div class="col-lg-3 col-sm-6">
                         <div class="product-container blue">
