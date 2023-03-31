@@ -128,9 +128,9 @@
                                     <button class="btn btn-primary btn-block" type = "submit"> Submit </button>
                                 </div>  
                             </form>
-                            <p1>
+                            <p>
                                 Already have an account?<a href ="/login.php"> Login</a>
-                            </p1>
+                            </p>
 
                         </div>
 
@@ -142,7 +142,7 @@
 
                 </div>
             </div>
-        </div>
+        
 
     </main>
 
