@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this templateasdasdasd
--->
-<html lang="en">
+
+<html lang="zxx">
 
 <head>
     <!--jQuery script test-->
@@ -40,9 +37,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <?php
         $toastMessage = "Enquiry sent successfully!";
         include "helper/toast.php";
-        ?>
 
-        <?php
         $text = "Contact Us";
         include "hero.inc.php";
         ?>
@@ -59,11 +54,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <div class="form-row">
                     <div class="form-group col-md-6 fillform">
                         <label for="fname">First Name</label>
-                        <input type="text" name="fname" class="form-control" id="firstName" placeholder="First Name" required>                    
+                        <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name" required>                    
                     </div>
                     <div class="form-group col-md-6 fillform">
                         <label for="lname">Last Name</label>
-                        <input type="text" name="lname" class="form-control" id="lastName" placeholder="Last Name" required>                    
+                        <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name" required>                    
                     </div>
                 </div>
                 <div class="form-group fillform">
@@ -72,7 +67,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
                 <div class="form-group fillform">
                   <label for="message">Message</label>
-                    <textarea type="message" name="message" rows="6" class="form-control box" id="message" placeholder="Let us know your questions!" required></textarea>
+                    <textarea name="message" rows="6" class="form-control box" id="message" placeholder="Let us know your questions!" required></textarea>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="open button-red mt-5" name="send">

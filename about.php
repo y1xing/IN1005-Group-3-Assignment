@@ -45,7 +45,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <div class="container">
             <div class="row mt-4">
                 <div class="col-md-6">
-                    <img src="images/team/dave.png" class="kid-img" alt="picture of a kid" />
+                    <img src="images/team/dave.png" class="kid-img" alt="picture of a kid">
                 </div>
                 <div class="col-md-6 right-container">
                     <h1 class="red-text">Started with Dave</h1>
@@ -78,37 +78,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <div class ="row">
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/dave.png" alt="Dave" class="all_star_img" />
+                                    <img src="images/team/dave.png" alt="Dave" class="all_star_img_red">
                                     <figcaption id="figcaption_red">Dave</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/jiakai.png" alt="JiaKai" class="all_star_img" />
+                                    <img src="images/team/jiakai.png" alt="JiaKai" class="all_star_img_orange">
                                     <figcaption id="figcaption_orange">Jia Kai</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/jewel.png" alt="Jewel" class="all_star_img" />
+                                    <img src="images/team/jewel.png" alt="Jewel" class="all_star_img_yellow">
                                     <figcaption id="figcaption_yellow">Jewel</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/yf.png" alt="Yu Fei" class="all_star_img" />
+                                    <img src="images/team/yf.png" alt="Yu Fei" class="all_star_img_green">
                                     <figcaption id="figcaption_green">Yu Fei</figcaption>
                                 </figure>
                             </div>
                             <div class="col image_width">
                                 <figure>
-                                    <img src="images/team/yx.png" alt="Yi Xing" class="all_star_img" />
+                                    <img src="images/team/yx.png" alt="Yi Xing" class="all_star_img_blue">
                                     <figcaption id="figcaption_blue">Yi Xing</figcaption>
                                 </figure>
                             </div>
+                        </div>
                     </div>
+                </div>
             </div>
-        </div>
     </main>
     <?php
     include "footer.inc.php";

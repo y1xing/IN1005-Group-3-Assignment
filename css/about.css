@@ -85,7 +85,19 @@ h1, h2, h3, h4, p {
   font-size: min(1.5rem, calc(2vw + 10px));
 }
 
-.all_star_img{
+.all_star_img_red{
+    width: 170px;
+}
+.all_star_img_orange{
+    width: 170px;
+}
+.all_star_img_yellow{
+    width: 170px;
+}
+.all_star_img_green{
+    width: 170px;
+}
+.all_star_img_blue{
     width: 170px;
 }
 
