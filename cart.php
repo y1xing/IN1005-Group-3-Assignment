@@ -1,6 +1,5 @@
 <?php
 session_start();
-//unset($_SESSION['user_id']);
 ?>
 
 
@@ -39,253 +38,241 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 </head>
 
 <body>
-    <?php
-    $color = "blue";
-    // TEST
-    include "components/navWhite.inc.php";
-    ?>
+<?php
+$color = "blue";
+// TEST
+include "./components/navWhite.inc.php";
+?>
 
-    <main id="cart">
+<main id="cart">
 
-        <form action="process_cart.php" method="POST">
-            <!-- contain the entire shopping cart -->
-            <div class="shopping-cart-container">
-                <!-- contain the left side of the shopping cart -->
-                <div class="shopping-cart-container-left">
-                    <!-- contain the list of products added to the cart -->
-                    <div class="cart-container">
-                        <h1>Review Item and Shipping</h1>
-                        <!-- Here goes the list of products added to the cart -->
-                        <ul>
-                        <?php
-                        //Make sure user is logged in first
-                        $cart = $_SESSION['cart'];
-                        if( isset($_SESSION['user_id']))
+    <form action="process_cart.php" method="POST">
+        <!-- contain the entire shopping cart -->
+        <div class="shopping-cart-container">
+            <!-- contain the left side of the shopping cart -->
+            <div class="shopping-cart-container-left">
+                <!-- contain the list of products added to the cart -->
+                <div class="cart-container">
+                    <h1>Review Item and Shipping</h1>
+                    <!-- Here goes the list of products added to the cart -->
+                    <?php
+                    //Make sure user is logged in first
+                    $cart = $_SESSION['cart'];
+                    if( isset($_SESSION['user_id']))
+                    {
+                        // set the cart to an empty array if it is not set
+                        if( empty($cart))
                         {
-                            // set the cart to an empty array if it is not set
-                            if( empty($cart))
-                            {
-                                $cart = array();
-                                echo("Your cart is empty!");
-                            } else {
-                                foreach ($cart as $product) {
-                                    echo '<li>';
-                                    echo '<div class="cart-item">';
-                                    echo '<div class="cart-item-left">';
-                                    echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
-                                    echo '</div>';
-                                    echo '<div class="cart-item-middle">';
-                                    echo '<h2>' . $product['name'] . '</h2>';
-                                    echo '</div>';
-                                    echo '<div class="cart-item-right">';
-                                    echo '<h2>Quantity: ' . $product['quantity'] . '</h2>';
-                                    echo '<p>Price: $' . $product['price'] * $product['quantity'] . '</p>';
-                                    echo '</div>';
-                                    echo '</div>';
-                                    echo '</li>';
-                                }
+                            $cart = array();
+                            echo("Your cart is empty!");
+                        } else {
+                            foreach ($cart as $product) {
+                                echo '<div class="cart-item">';
+                                echo '<div class="cart-item-left">';
+                                echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
+                                echo '</div>';
+                                echo '<div class="cart-item-middle">';
+                                echo '<h2>' . $product['name'] . '</h2>';
+                                echo '</div>';
+                                echo '<div class="cart-item-right">';
+                                echo '<h2>Quantity: ' . $product['quantity'] . '</h2>';
+                                echo '<p>Price: $' . $product['price'] * $product['quantity'] . '</p>';
+                                echo '</div>';
+                                echo '</div>';
                             }
+                        }
 
-                            $id = $_GET['id'];
-                            $quantitytoadd = $_GET['quantity'];
+                        $id = $_GET['id'];
+                        $quantitytoadd = $_GET['quantity'];
 
-                            if( isset( $cart[$id]))
-                            {
-                                // adding quantity of products to the cart
-                                $cart[$id]++;
-                            }
-                            else
-                            {
-                                $cart[$id] = 1;
-                            }
+                        if( isset( $cart[$id]))
+                        {
+                            // adding quantity of products to the cart
+                            $cart[$id]++;
                         }
                         else
                         {
-                            echo("<p>Please login to add items to your shopping cart!</P>");
-                            echo '<a href="login.php">Login Here</a>';
+                            $cart[$id] = 1;
                         }
-                           ?>
-                        </ul>
-                    </div>
-                    <!-- contain the checkbox for returning customer -->
-
-                    <!-- contain the delivery information -->
-                    <div class="delivery-container">
-                        <div class="saveinfo-container">
-                            <div class="saveinfo-container-left">
-                                <h1>Delivery Information</h1>
-                            </div>
-                        </div>
-                        <!-- Here goes the form for delivery information -->
-                        <!-- add First Name, Last Name, Address, City, State, Zip Code, Phone Number, Email Address -->
-                        <form>
-                            <div class="container-two-forms">
-                                <div class="container-form-half">
-                                    <label for="fname">First name:*</label>
-                                    <input type="text" id="fname" required name="fname" placeholder="First Name"/>
-                                </div>
-                                <div class="container-form-half">
-                                    <label for="lname">Last name:*</label>
-                                    <input type="text" id="lname" required name="lname" placeholder="Last Name"/>
-                                </div>
-                            </div>
-                            <div class="container-form">
-                                <label for="address">Address:*</label>
-                                <input type="text" id="address" required name="address" placeholder="Address"/>
-                            </div>
-                            <div class="container-two-forms">
-                            <div class="container-form-half">
-                                <label for="city">City/State:*</label>
-                                <input type="text" id="city" required name="city" placeholder="City/State"/>
-                            </div>
-                            <div class="container-form-half">
-                                <label for="state">Postal Code:*</label>
-                                <input type="text" id="postal" required maxlength="6" name="postal" placeholder="Postal Code"/>
-                            </div>
-                            </div>
-                            <div class="container-two-forms">
-                            <div class="container-form-half">
-                                <label for="phone">Mobile:*</label>
-                                <input type="text" id="mobile" required name="mobile" placeholder="Mobile"/>
-                            </div>
-                            <div class="container-form-half">
-                                <label for="email">Email:*</label>
-                                <input type="email" id="email" required name="email" placeholder="Email"/>
-                            </div>
-                            </div>
-                        </form>
-                    </div>
+                    }
+                    else
+                    {
+                        echo("<p>Please login to add items to your shopping cart!</p>");
+                        echo '<a href="login.php">Login Here</a>';
+                    }
+                    ?>
                 </div>
-                <!-- contain the right side of the shopping cart -->
-                <div class="shopping-cart-container-right">
-                    <div class="summary-container">
-                        <h1>Order Summary</h1>
-                        <div>
-                            <h2 class="payment-header">Payment Details</h2>
-                            <!-- selection for payment mode -->
-                            <form>
-                                <div class="payment-check">
-                                    <input class="big" type="radio" id="cash" name="payment" value="Cash on Delivery"/>
-                                    <label class="payment-mode" id="cash" for="cash">Cash on Delivery</label>
-                                </div>
-                                <div class="payment-check">
-                                    <input class="big" type="radio" id="credit" name="payment" value="Credit or Debit Card"/>
-                                    <label class="payment-mode" id="credit" for="credit">Credit or Debit Card</label
-                                </div>
-                                <div class="payment-check">
-                                    <input class="big" type="radio" id="paynow" name="payment" value="Paynow"/>
-                                    <label class="payment-mode" id="paynow" for="paynow">Paynow</label>
-                                </div>
-                            </form>
-                            <div class="payment-check">
-                                <span class="fa-brands fa-cc-mastercard fa-4x "></span>
-                                <span class="fa-brands fa-cc-visa fa-4x"></span>
-                            </div>
-                            <div class="payment-check">
-                                <!-- payment details form -->
-                                <form>
-                                    <div class="container-form">
-                                        <label for="cardname">Name on Card:*</label>
-                                        <input type="text" id="cardname" required name="cardname" placeholder="Name on Card"/>
-                                    </div>
-                                    <div class="container-form">
-                                        <label for="cardnumber">Card Number:*</label>
-                                        <input class="fontAwesome" type="text" id="cardnumber" required name="cardnumber" placeholder="&#xf09d; **** **** **** ****"/>
-                                    </div>
-                                    <div class="container-two-forms">
-                                        <div class="container-form-half">
-                                            <label for="expdate">Expiry:*</label>
-                                            <input type="text" id="expdate" required name="expdate" placeholder="MM/YY"/>
-                                        </div>
-                                        <div class="container-form-half">
-                                            <label for="cvc">CVC:*</label>
-                                            <input type="text" id="cvc" required name="cvc" placeholder="CVC"/>
-                                        </div>
-                                    </div>
-                                    <?php
-                                    $shipping = 5.00;
-                                    $coupon = 0.00;
-                                    $subtotal = 0;
-                                    foreach($cart as $item) {
-                                        $subtotal += $item['price'] * $item['quantity'];
-                                    }
+                <!-- contain the checkbox for returning customer -->
 
-                                    if ($subtotal >= 50 || empty($cart)) {
-                                        $shipping = 0.00;
-                                        $total = $subtotal - $coupon + $shipping;
-                                    } else {
-                                        $total = $subtotal - $coupon + $shipping;
-                                    }
-                                    ?>
-                                    <!-- Sub Total, Coupon Discount, Shipping, Total -->
-                                    <div class="container-form-cost cost">
-                                        <ul>
-                                            <?php
-                                            if (empty($cart)) {
-                                                echo '<div class="container-form-price">';
-                                                echo '<li>Sub Total</li>' . '<li>' . '$' . $subtotal . '</li>';
-                                                echo '</div>';
-                                                echo '<div class="container-form-price">';
-                                                echo '<li>Coupon Discount</li>' . '<li>' . '$' . $coupon . '</li>';
-                                                echo '</div>';
-                                                echo '<div class="container-form-price">';
-                                                echo '<li>Shipping Cost</li>' . '<li>' . '$' . $shipping . '</li>';
-                                                echo '</div>';
-                                            } else {
-                                                echo '<div class="container-form-price">';
-                                                echo '<li>Sub Total</li>' . '<li>' . '$' . $subtotal . '</li>';
-                                                echo '</div>';
-                                                echo '<div class="container-form-price">';
-                                                echo '<li>Coupon Discount</li>' . '<li>' . '$' . $coupon . '</li>';
-                                                echo '</div>';
-                                                echo '<div class="container-form-price">';
-                                                echo '<li>Shipping Cost</li>' . '<li>' . '$' . $shipping . '</li>';
-                                                echo '</div>';
-                                            }
-                                            ?>
-                                        </ul>
-                                    </div>
-                                    <div class="container-form-cost">
-                                        <ul>
-                                            <?php
-                                            if (empty($cart)) {
-                                                echo '<div class="container-form-price">';
-                                                echo '<li>Total</li>' . '<li>' . '$' . $total . '</li>';
-                                                echo '</div>';
-                                            } else {
-                                                echo '<div class="container-form-price">';
-                                                echo '<li>Total</li>' . '<li>' . '$' . $total . '</li>';
-                                                echo '</div>';
-                                            }
-                                            ?>
-                                        </ul>
-                                    </div>
-                                </form>
-                            </div>
+                <!-- contain the delivery information -->
+                <div class="delivery-container">
+                    <div class="saveinfo-container">
+                        <div class="saveinfo-container-left">
+                            <h1>Delivery Information</h1>
                         </div>
-                        <div class="payment">
-                            <?php
-                            if (empty($cart)) {
-                                echo '<button class="button" id="pay" name="pay">';
-                                echo '<span class="button-content">Pay' . '  $' . $total . '</span>';
-                                echo '</button>';
-                            } else {
-                                echo '<button class="button" id="pay" name="pay">';
-                                echo '<span class="button-content">Pay' . '  $' . $total . '</span>';
-                                echo '</button>';
-                            }
-                            ?>
+                    </div>
+                    <!-- Here goes the form for delivery information -->
+                    <!-- add First Name, Last Name, Address, City, State, Zip Code, Phone Number, Email Address -->
+                    <div class="container-two-forms">
+                        <div class="container-form-half">
+                            <label for="fname">First name:*</label>
+                            <input type="text" id="fname" required name="fname" placeholder="First Name">
+                        </div>
+                        <div class="container-form-half">
+                            <label for="lname">Last name:*</label>
+                            <input type="text" id="lname" required name="lname" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="container-form">
+                        <label for="address">Address:*</label>
+                        <input type="text" id="address" required name="address" placeholder="Address">
+                    </div>
+                    <div class="container-two-forms">
+                        <div class="container-form-half">
+                            <label for="city">City/State:*</label>
+                            <input type="text" id="city" required name="city" placeholder="City/State">
+                        </div>
+                        <div class="container-form-half">
+                            <label for="postal">Postal Code:*</label>
+                            <input type="text" id="postal" required maxlength="6" name="postal" placeholder="Postal Code">
+                        </div>
+                    </div>
+                    <div class="container-two-forms">
+                        <div class="container-form-half">
+                            <label for="mobile">Mobile:*</label>
+                            <input type="text" id="mobile" required name="mobile" placeholder="Mobile">
+                        </div>
+                        <div class="container-form-half">
+                            <label for="email">Email:*</label>
+                            <input type="email" id="email" required name="email" placeholder="Email">
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
-    </main>
-    <?php
-    include "footer.inc.php";
-    ?>
+            <!-- contain the right side of the shopping cart -->
+            <div class="shopping-cart-container-right">
+                <div class="summary-container">
+                    <h1>Order Summary</h1>
+                    <div>
+                        <h2 class="payment-header">Payment Details</h2>
+                        <!-- selection for payment mode -->
+                        <div class="payment-check">
+                            <input class="big" type="radio" id="cash" name="payment" value="Cash on Delivery">
+                            <label class="payment-mode" for="cash">Cash on Delivery</label>
+                        </div>
+                        <div class="payment-check">
+                            <input class="big" type="radio" id="credit" name="payment" value="Credit or Debit Card">
+                            <label class="payment-mode" for="credit">Credit or Debit Card</label>
+                        </div>
+                        <div class="payment-check">
+                            <input class="big" type="radio" id="paynow" name="payment" value="Paynow">
+                            <label class="payment-mode" for="paynow">Paynow</label>
+                        </div>
+                        <div class="payment-check">
+                            <span class="fa-brands fa-cc-mastercard fa-4x"></span>
+                            <span class="fa-brands fa-cc-visa fa-4x"></span>
+                        </div>
+                        <div class="payment-check">
+                            <!-- payment details form -->
+                            <form>
+                                <div class="container-form">
+                                    <label for="cardname">Name on Card:*</label>
+                                    <input type="text" id="cardname" required name="cardname" placeholder="Name on Card">
+                                </div>
+                                <div class="container-form">
+                                    <label for="cardnumber">Card Number:*</label>
+                                    <input class="fontAwesome" type="text" id="cardnumber" required name="cardnumber" placeholder="&#xf09d; **** **** **** ****">
+                                </div>
+                                <div class="container-two-forms">
+                                    <div class="container-form-half">
+                                        <label for="expdate">Expiry:*</label>
+                                        <input type="text" id="expdate" required name="expdate" placeholder="MM/YY">
+                                    </div>
+                                    <div class="container-form-half">
+                                        <label for="cvc">CVC:*</label>
+                                        <input type="text" id="cvc" required name="cvc" placeholder="CVC">
+                                    </div>
+                                </div>
+                                <?php
+                                $shipping = 5.00;
+                                $coupon = 0.00;
+                                $subtotal = 0;
+                                foreach($cart as $item) {
+                                    $subtotal += $item['price'] * $item['quantity'];
+                                }
+
+                                if ($subtotal >= 50 || empty($cart)) {
+                                    $shipping = 0.00;
+                                    $total = $subtotal - $coupon + $shipping;
+                                } else {
+                                    $total = $subtotal - $coupon + $shipping;
+                                }
+                                ?>
+                                <!-- Sub Total, Coupon Discount, Shipping, Total -->
+                                <div class="container-form-cost cost">
+                                    <?php
+                                    if (empty($cart)) {
+                                        echo '<div class="container-form-price">';
+                                        echo '<p>Sub Total</p>' . '<p>' . '$' . $subtotal . '</p>';
+                                        echo '</div>';
+                                        echo '<div class="container-form-price">';
+                                        echo '<p>Coupon Discount</p>' . '<p>' . '$' . $coupon . '</p>';
+                                        echo '</div>';
+                                        echo '<div class="container-form-price">';
+                                        echo '<p>Shipping Cost</p>' . '<p>' . '$' . $shipping . '</p>';
+                                        echo '</div>';
+                                    } else {
+                                        echo '<div class="container-form-price">';
+                                        echo '<p>Sub Total</p>' . '<p>' . '$' . $subtotal . '</p>';
+                                        echo '</div>';
+                                        echo '<div class="container-form-price">';
+                                        echo '<p>Coupon Discount</p>' . '<p>' . '$' . $coupon . '</p>';
+                                        echo '</div>';
+                                        echo '<div class="container-form-price">';
+                                        echo '<p>Shipping Cost</p>' . '<p>' . '$' . $shipping . '</p>';
+                                        echo '</div>';
+                                    }
+                                    ?>
+                                </div>
+                                <div class="container-form-cost">
+                                    <?php
+                                    if (empty($cart)) {
+                                        echo '<div class="container-form-price">';
+                                        echo '<p>Total</p>' . '<p>' . '$' . $total . '</p>';
+                                        echo '</div>';
+                                    } else {
+                                        echo '<div class="container-form-price">';
+                                        echo '<p>Total</p>' . '<p>' . '$' . $total . '</p>';
+                                        echo '</div>';
+                                    }
+                                    ?>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="payment">
+                        <?php
+                        if (empty($cart)) {
+                            echo '<button class="button" id="pay" name="pay">';
+                            echo '<span class="button-content">Pay' . '  $' . $total . '</span>';
+                            echo '</button>';
+                        } else {
+                            echo '<button class="button" id="pay" name="pay">';
+                            echo '<span class="button-content">Pay' . '  $' . $total . '</span>';
+                            echo '</button>';
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</main>
+<?php
+include "./components/footer.inc.php";
+?>
 </body>
 
 </html>
 
-<!<!-- hi there -->
+<!-- hi there -->
