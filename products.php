@@ -69,8 +69,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             ?>
 
             <div class="product-banner">
-                <h1 class="banner-header">Use promo code CUBEWORLD for 10% off!</h1>
-                <p class="banner-subtitle">Only for first time users</p>
+                <h1 class="banner-header">Spend $50 or more for free shipping!</h1>
+<!--                <p class="banner-subtitle">Only for first time users</p>-->
             </div>
         </div>
 
