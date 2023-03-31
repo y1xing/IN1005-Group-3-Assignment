@@ -58,37 +58,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <!-- Here goes the list of products added to the cart -->
                         <ul>
                         <?php
-
-                        // Get the cart from the session
-//                        $cart = $_SESSION['cart'];
-//
-//                        if (empty($cart)) {
-//                            echo '<h3>Your cart is empty!</h3>';
-//                        } else {
-//                            foreach ($cart as $product) {
-//                                echo '<li>';
-//                                echo '<div class="cart-item">';
-//                                echo '<div class="cart-item-left">';
-//                                echo '<img src="' . $product['image'] . '" alt="' . $product['name'] . '">';
-//                                echo '</div>';
-//                                echo '<div class="cart-item-middle">';
-//                                echo '<h2>' . $product['name'] . '</h2>';
-//                                echo '</div>';
-//                                echo '<div class="cart-item-right">';
-//                                echo '<h2>Quantity: ' . $product['quantity'] . '</h2>';
-//                                echo '<p>Price: $' . $product['price']*$product['quantity'] . '</p>';
-//                                echo '</div>';
-//                                echo '</div>';
-//                                echo '</li>';
-//                            }
-//                        }
-
                         //Make sure user is logged in first
                         $cart = $_SESSION['cart'];
                         if( isset($_SESSION['user_id']))
                         {
-
-                            //Setup our shopping cart if it isnt already setup into an array table to hold item info
+                            // set the cart to an empty array if it is not set
                             if( empty($cart))
                             {
                                 $cart = array();
@@ -117,7 +91,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                             if( isset( $cart[$id]))
                             {
-                                //CODE TO ADD TO QUANTITY????
+                                // adding quantity of products to the cart
                                 $cart[$id]++;
                             }
                             else
@@ -141,11 +115,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <div class="saveinfo-container-left">
                                 <h1>Delivery Information</h1>
                             </div>
-    <!--                        <div class="saveinfo-container-right">-->
-    <!--                            <button class="button" id="save information" name="save information">-->
-    <!--                                <span class="button-content">Save Information</span>-->
-    <!--                            </button>-->
-    <!--                        </div>-->
                         </div>
                         <!-- Here goes the form for delivery information -->
                         <!-- add First Name, Last Name, Address, City, State, Zip Code, Phone Number, Email Address -->
@@ -190,31 +159,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <!-- contain the right side of the shopping cart -->
                 <div class="shopping-cart-container-right">
                     <div class="summary-container">
-                        <h1 class="summary-header">Order Summary</h1>
-                        <form class="coupon">
-                                <input type="text" id="coupon" name="coupon" placeholder="Enter Coupon Code"/>
-
-    <!--                                <button class="button-coupon" id="coupon" name="coupon">-->
-    <!--                                    <span class="button-content">Apply Coupon</span>-->
-    <!--                                </button>-->
-
-                        </form>
-                        <!-- payment details and payment type -->
+                        <h1>Order Summary</h1>
                         <div>
                             <h2 class="payment-header">Payment Details</h2>
                             <!-- selection for payment mode -->
                             <form>
                                 <div class="payment-check">
                                     <input class="big" type="radio" id="cash" name="payment" value="Cash on Delivery"/>
-                                    <label class="payment-mode" for="cash">Cash on Delivery</label>
+                                    <label class="payment-mode" id="cash" for="cash">Cash on Delivery</label>
                                 </div>
                                 <div class="payment-check">
-                                    <input class="big" type="radio" id="credit/debit" name="payment" value="Credit or Debit Card"/>
-                                    <label class="payment-mode" for="credit/debit">Credit or Debit Card</label
+                                    <input class="big" type="radio" id="credit" name="payment" value="Credit or Debit Card"/>
+                                    <label class="payment-mode" id="credit" for="credit">Credit or Debit Card</label
                                 </div>
                                 <div class="payment-check">
                                     <input class="big" type="radio" id="paynow" name="payment" value="Paynow"/>
-                                    <label class="payment-mode" for="paynow">Paynow</label>
+                                    <label class="payment-mode" id="paynow" for="paynow">Paynow</label>
                                 </div>
                             </form>
                             <div class="payment-check">
@@ -306,11 +266,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <div class="payment">
                             <?php
                             if (empty($cart)) {
-                                echo '<button class="button mt-5" id="pay" name="pay">';
+                                echo '<button class="button" id="pay" name="pay">';
                                 echo '<span class="button-content">Pay' . '  $' . $total . '</span>';
                                 echo '</button>';
                             } else {
-                                echo '<button class="button mt-5" id="pay" name="pay">';
+                                echo '<button class="button" id="pay" name="pay">';
                                 echo '<span class="button-content">Pay' . '  $' . $total . '</span>';
                                 echo '</button>';
                             }
