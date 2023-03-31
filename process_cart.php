@@ -71,7 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     if ($success) {
-        saveDelivery();
         echo "<div class='shopping-cart-container'>";
         echo "<div class='cart-container'>";
         echo "<h1>Your payment is successful</h1>";
@@ -80,6 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<br><button class='button'><a class='button-content' href='cart.php' alt='cart'>Return to Cart</a></button>";
         echo "</div>";
         echo "</div>";
+        saveDelivery();
     } else {
         displayError();
     }
@@ -134,4 +134,4 @@ function displayError()
     echo "</div><br>";
 }
 
-include 'footer.inc.php';
+include './components/footer.inc.php';

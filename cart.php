@@ -41,7 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <?php
 $color = "blue";
 // TEST
-include "components/navWhite.inc.php";
+include "./components/navWhite.inc.php";
 ?>
 
 <main id="cart">
@@ -269,7 +269,7 @@ include "components/navWhite.inc.php";
     </form>
 </main>
 <?php
-include "footer.inc.php";
+include "./components/footer.inc.php";
 ?>
 </body>
 
