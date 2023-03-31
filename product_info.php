@@ -1,4 +1,4 @@
-<?php
+`<?php
 
 // Get id from url
 if(isset($_GET['id'])) {
@@ -138,7 +138,6 @@ include "components/navWhite.inc.php";
                     <img src=<?php echo $product['image'] ?> alt="cube image"/>
                 </div>
             </div>
-<!--            </div>-->
         </div>
         <!-- contain the right side of the shopping cart -->
         <div class="product-info-container-right">
@@ -204,4 +203,4 @@ include "footer.inc.php";
 
 </html>
 
-<!<!-- hi there -->
+<!<!-- hi there -->`
