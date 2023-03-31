@@ -75,6 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<div class='shopping-cart-container'>";
         echo "<div class='cart-container'>";
         echo "<h1>Your payment is successful</h1>";
+        echo "<h2>Thank you for your purchase!</h2>";
+        echo "<p>Allow 3 to 5 working days for the items to be delivered.</p>";
         echo "<br><button class='button'><a class='button-content' href='cart.php' alt='cart'>Return to Cart</a></button>";
         echo "</div>";
         echo "</div>";
@@ -82,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         displayError();
     }
 } else {
-    header("Location: cart.php");
+    header("Location: ./cart.php");
     echo "<h1>Oops! Something went wrong.</h1>";
     exit;
 }
