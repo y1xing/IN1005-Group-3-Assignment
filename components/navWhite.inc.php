@@ -25,7 +25,9 @@ echo "<nav class='navbar bg-white navbar-expand-lg fixed-top mx-auto pt-5 pb-5 p
 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="gap: 2rem;">
         <li class="nav-item">
-            <a class="nav-link red-text" href="about.php">About Us <span class="sr-only">(current)</span></a>
+
+            <a class="nav-link red-text" href="/about.php">About Us <span class="sr-only">(current)</span></a>
+
         </li>
         <li class="nav-item">
             <a class="nav-link orange-text" href="/products.php">Products</a>
