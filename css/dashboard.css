@@ -13,26 +13,35 @@
 @media (max-width: 768px) {
     .welcome-banner {
         background: url("../images/hero/ProductBannerPhone.png");
+        background-size: 110%;
         background-position: center center;
         padding: 1.5rem 0.75rem;
     }
     
     .banner-header {
         padding-top: 0rem;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 }
 
 .dashboard-left-header {
-    align-self: start;
-    margin-left: 1.25rem;
-    
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+.profile-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: flex-start;
+    width: 100%;
+    gap: 2rem;
 }
 
 .profile-container {
     align-self: start;
     padding-right: 15rem;
-    margin: 2rem 3rem;
+    margin: 2rem 0rem;
     justify-content: left;
 }
 
@@ -40,7 +49,7 @@
     border-radius: 46px;
 }
 
-.update-button {
+#update-button, .logout-button {
     background:linear-gradient(93.61deg, #64ADFA 6.48%, #9A2DF7 98.96%);
     border-radius: 46px;
 }
@@ -55,6 +64,10 @@
         margin: 1rem 1rem;
     }
     
+    .logout-button-container {
+        margin-left: 1rem;
+    }
+
 }
 
 .card-title-container {
@@ -117,18 +130,18 @@
     height: 2.5rem;
 }
 
-.progress-bar, .progress {
+.mastery-progress-bar, .mastery-progress {
     height: 0.75rem;
     border-radius: 1rem 1rem;
 }
 
-.progress-bar {
+.mastery-progress {
     width: 30rem;
     max-width: 100%;
     background-color: lightgray;
 }
 
-.progress {
+.mastery-progress-bar {
     width: 0%;
     background: linear-gradient(90deg, #65A8F9 0.31%, #9731F6 97.83%);
     transition: width 0.5s ease-in;

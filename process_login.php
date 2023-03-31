@@ -25,8 +25,8 @@ ob_start(); // Start output buffering
 $email = $errorMsg = "";
 $success = true;
 
-include "navWhite.inc.php";
-include "head.inc.php";
+include "./components/navWhite.inc.php";
+include "./components/head.inc.php";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -101,7 +101,7 @@ function displayError()
     echo "<h1>NO!</h1>";
     echo "<h2>The following errors were detected: </h2>";
     echo "<p>", $errorMsg, "</p>";
-    echo "<button class='btn btn-danger'><a href='login.php' alt='retry'>Retry Login</a></button></header>";
+    echo "<button class='btn btn-danger'><a href='pages/login.php' alt='retry'>Retry Login</a></button></header>";
     echo "</div><br>";
 }
 

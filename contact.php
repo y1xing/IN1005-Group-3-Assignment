@@ -32,7 +32,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <?php
     $color = "orange";
 
-    include "nav.inc.php";
+    include "components/nav.inc.php";
     ?>
 
 
@@ -44,7 +44,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
         <?php
         $text = "Contact Us";
-        include "hero.inc.php";
+        include "components/hero.inc.php";
         ?>
     </div>
     <main id="main">
@@ -55,14 +55,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <h1 class="header">Ask Us Anything</h1>
         </div>
         <div class="container">
-            <form method="POST" action="customer_email.php" id="contact-form">
+            <form method="POST" action="send_email.php" id="contact-form">
                 <div class="form-row">
                     <div class="form-group col-md-6 fillform">
                         <label for="fname">First Name</label>
-                        <input type="text" name="fname" class="form-control" id="firstName" placeholder="First Name" required>                    </div>
+                        <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name" required>                    </div>
                     <div class="form-group col-md-6 fillform">
                         <label for="lname">Last Name</label>
-                        <input type="text" name="lname" class="form-control" id="lastName" placeholder="Last Name" required>                    </div>
+                        <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name" required>                    </div>
                 </div>
                 <div class="form-group fillform">
                     <label for="email">Email:</label>
@@ -70,7 +70,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
                 <div class="form-group fillform">
                   <label for="message">Message</label>
-                    <textarea type="message" name="message" rows="6" class="form-control box" id="message" placeholder="Let us know your questions!" required></textarea>
+                    <textarea name="message" rows="6" class="form-control box" id="message" placeholder="Let us know your questions!" required></textarea>
                       </div>
                 <div class="text-center">
                     <button type="submit" class="open button-red mt-5" name="send">
@@ -89,57 +89,48 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <div class="row">
                         <div class="col">
                             <h4>
-                                Is there a free trial available
+                                Q: What is a Rubik's cube?
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                A: A Rubik's cube is a 3D puzzle that consists of six faces with nine colored stickers each. The goal is to twist and turn the cube until each face has only one color.
                             </p>
                         </div>
                         <div class="col">
                             <h4>
-                                Is there a free trial available
+                                Q: How can I buy a Rubik's cube from your website?
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                A: You can browse our catalog of different types and sizes of Rubik's cubes and add the ones you like to your cart. Then you can proceed to checkout and pay with your preferred method. We offer free shipping worldwide.
+
                             </p>
                         </div>
                         <div class="w-100"></div>
                         <div class="col">
                             <h4>
-                                Is there a free trial available
+                                Q: How can I learn to solve a Rubik's cube?
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                A: You can enroll in our online training courses that will teach you the basic and advanced techniques of solving a Rubik's cube. You can also watch our video tutorials and read our blog posts for tips and tricks.
+
                             </p>
                         </div>
                         <div class="col">
                             <h4>
-                                Is there a free trial available
+                                Q: How can I contact you if I have any questions or issues?
                             </h4>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                               A: You can reach us by email, phone, or chat. Our customer service team is available 24/7 to assist you with any queries or problems you may have. We value your feedback and satisfaction.
                             </p>
                         </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     <?php
-    include "footer.inc.php";
+    include "components/footer.inc.php";
     ?>
 </body>
 
 </html>
 
-<!<!-- hi there -->

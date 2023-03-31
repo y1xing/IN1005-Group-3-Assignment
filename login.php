@@ -48,10 +48,10 @@ session_start();
 
     <?php
  
-    include "navWhite.inc.php";
+    include "components/navWhite.inc.php";
     ?>
     <?php
-include "head.inc.php";
+include "components/head.inc.php";
 ?>
 
 <main class ="reg-container">
@@ -66,7 +66,7 @@ include "head.inc.php";
             <h1 class = "blue-text"> Login</h1>
           
             
-    <form id="loginForm" action ="process_login.php" method="post" > 
+    <form id="loginForm" action ="process_login.php" method="post" >
     
     <div class = "form-group"> 
         <label for ="email">Email:</label>

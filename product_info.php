@@ -1,4 +1,4 @@
-<?php
+`<?php
 
 // Get id from url
 if(isset($_GET['id'])) {
@@ -80,7 +80,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </script>
 
     <script defer src="js/toast.js"></script>
-    <title>Cubeworld</title>
+    <title><?php echo $product['name'] ?></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -102,7 +102,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <?php
 $color = "blue";
 
-include "navWhite.inc.php";
+include "components/navWhite.inc.php";
 ?>
 
 <main id="cart" >
@@ -138,7 +138,6 @@ include "navWhite.inc.php";
                     <img src=<?php echo $product['image'] ?> alt="cube image"/>
                 </div>
             </div>
-<!--            </div>-->
         </div>
         <!-- contain the right side of the shopping cart -->
         <div class="product-info-container-right">
@@ -170,9 +169,9 @@ include "navWhite.inc.php";
                     <h2 class="payment-header">Choose quantity</h2>
                     <!-- quantity add minus, havent add design -->
                     <div class="input-group">
-                        <button class="input-button" id="decrement"><i class="fas fa-minus"></i></button>
+                        <button class="input-button" id="decrement"><i style="color: black;" class="fas fa-minus"></i></button>
                         <input  type="number" id="input" readonly value="1" min="1" max="100">
-                        <button class="input-button" id="increment"><i class="fas fa-plus"></i></button>
+                        <button class="input-button" id="increment"><i style="color: black;" class="fas fa-plus"></i></button>
                     </div>
 
                     <div class="button-container">
@@ -191,8 +190,6 @@ include "navWhite.inc.php";
                                  data-product-color="<?php echo $product['color'] ?>"
                                  class="open add-to-cart-button" id="add-to-cart">Add to cart</button>
                     </div>
-
-
                     <hr>
                 </div>
             </div>
@@ -206,4 +203,4 @@ include "footer.inc.php";
 
 </html>
 
-<!<!-- hi there -->
+<!<!-- hi there -->`

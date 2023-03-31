@@ -12,6 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <!--jQuery script test-->
     <script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
@@ -22,8 +23,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <script defer src="js/nav.js"></script>
     <script defer src="js/products.js"></script>
     <script defer src="js/toast.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+<!--    <script defer src="js/chatbot.js"></script>-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" >
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" >
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js">
 
@@ -32,11 +34,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <script defer src="js/slider.js"></script>
     <link rel="stylesheet" href="css/footer.css" type="text/css">
     <link rel="stylesheet" href="css/toast.css" type="text/css">
+<!--    <link rel="stylesheet" href="css/chatbot.css" type="text/css">-->
 
 
 
-    <title>Cube World</title>
-    <meta charset="UTF-8">
+    <title>Products</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Changa' rel='stylesheet'>
@@ -48,130 +51,42 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
 
+
 </head>
 
 <body>
     <?php
-
-    include "navWhite.inc.php";
+    // test
+    include "components/navWhite.inc.php";
     ?>
 
     <main id="main">
 
-
-
-
-
-
         <div class="container-max-width">
             <?php
             $toastMessage = "Item has been added to cart!";
-
             include "helper/toast.php";
+            //
             ?>
 
-
-
-
-
             <div class="product-banner">
-                <h1 class="banner-header">Use promo code CUBEWORLDDD for 20% off!</h1>
-                <p class="banner-subtitle">Only for first time users</p>
+                <h1 class="banner-header">Spend $50 or more for free shipping!</h1>
+<!--                <p class="banner-subtitle">Only for first time users</p>-->
             </div>
         </div>
 
-<!--        <div class="sorting-container">-->
-<!--            --><?php
-//
-//            echo "<h1>" . $_SESSION['user_id'] . "</h1>";
-//
-//            // Echo out stuff from session cart
-//            if (isset($_SESSION['user_id'])) {
-//                echo "<h1>Stuff exists in cart!</h1>";
-//            }
-//            else {
-//                echo "<h1>Cart is empty!</h1>";
-//            }
-//            ?>
-<!---->
-<!---->
-<!--            <select class="form-select red" aria-label="Default select example">-->
-<!--                <option selected>Type</option>-->
-<!--                <option value="1">One</option>-->
-<!--                <option value="2">Two</option>-->
-<!--                <option value="3">Three</option>-->
-<!--            </select>-->
-<!--            <select class="form-select orange" aria-label="Default select example">-->
-<!--                <option selected>Product Type</option>-->
-<!--                <option value="1">One</option>-->
-<!--                <option value="2">Two</option>-->
-<!--                <option value="3">Three</option>-->
-<!--            </select>-->
-<!--            <select class="form-select green" aria-label="Default select example">-->
-<!--                <option selected>Brand</option>-->
-<!--                <option value="1">One</option>-->
-<!--                <option value="2">Two</option>-->
-<!--                <option value="3">Three</option>-->
-<!--            </select>-->
-<!--        </div>-->
 
         <div class="products-main-container container-max-width">
             <h1>Cubing For You!</h1>
+            <cite>Images from <a href="https://speedcubeshop.com/">Speed cube shop</a></cite>
             <div class="products-container">
 
                 <?php
 
-                // Initialize a all product array
-                $products = array();
-
                 // Get the products from the database
-                $config = parse_ini_file('../private/db-config.ini');
-                $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
+                include "logic/get_products.php";
 
-
-
-                if ($conn->connect_error) {
-                    $errorMsg = "Connection failed: " . $conn->connect_error;
-                    $success = false;
-                    echo "<h1>Error</h1>";
-                } else {
-                    $stmt = $conn->prepare("SELECT * FROM products");
-
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-
-                    if ($result->num_rows > 0) {
-                        $row = $result->fetch_assoc();
-                        // echo out the products
-                        while ($row = $result->fetch_assoc()) {
-                            // Store the product data in an array
-                            $individual_product = array(
-                                "id" => $row['product_id'],
-                                "name" => $row['name'],
-                                "price" => $row['price'],
-                                "description" => $row['description'],
-                                "image" => $row['picture_path'],
-                                "type" => $row['type'],
-                                "brand" => $row['brand'],
-                                "rating" => $row['rating']
-                            );
-
-                            // Append the product to the products array
-                            array_push($products, $individual_product);
-
-                        }
-
-
-                    } else {
-                        $errorMsg = "Unable to find any products";
-                        $success = false;
-                    }
-
-                    $stmt->close();
-                }
-
-                $conn->close();
-
+                $products = getProducts();
 
                 ?>
 
@@ -187,10 +102,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         $images = array("cube1.png", "cube2.png", "cube3.png", "cube4.png", "cube1.png", "cube2.png", "cube4.png", "cube4.png");
 
                         for ($i = 0; $i < count($products); $i++) {
-
-
-
-
                             $product = $products[$i];
                             $id = $product['id'];
                             $name = $product['name'];
@@ -201,9 +112,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             $brand = $product['brand'];
                             $rating = $product['product_type'];
 
-
-
-
                         ?>
 
                         <div class="swiper-slide col-xl-3 col-auto">
@@ -213,7 +121,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                             >
 
-                                <img src='<?php echo $image ?>' alt="cube image" class="store-img" />
+                                <img src='<?php echo $image ?>' alt="cube image" class="store-img" >
                             </div>
                             <div class="product-info-container">
                                 <div class="product-info">
@@ -272,10 +180,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
 
     </main>
-
+    <?php include 'components/footer.inc.php'; ?>
 </body>
 
-<?php include 'footer.inc.php'; ?>
+
 
 
 </html>
@@ -284,4 +192,3 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
 
-<!<!-- hi there -->

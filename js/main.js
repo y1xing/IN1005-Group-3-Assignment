@@ -8,8 +8,8 @@ const left2 = document.getElementById("left2");
 const right2 = document.getElementById("right2");
 const separator2 = document.getElementById("separator2");
 
-let target = 5420;
-let target2 = 6000;
+let target = 2080;
+let target2 = 179;
 
 let current = 1000;
 let current2 = 1000;
@@ -109,7 +109,7 @@ const update2 = () => {
 const number3 = document.getElementById("number3");
 const left3 = document.getElementById("left3");
 const right3 = document.getElementById("right3");
-let target3 = 1880;
+let target3 = 1870;
 let current3 = 0;
 const step3 = 42;
 
