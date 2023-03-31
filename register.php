@@ -61,7 +61,7 @@
 
                     <div class="row mt-4">
                         <div class="col-md-6 hide-on-mobile">
-                            <img src="images/hero/registerPic.png" class="register-img" alt="Cubeworld Register pic" />
+                            <img src="images/hero/registerPic.png" class="register-img" alt="Cubeworld Register pic">
                         </div>
                         <div class="col-md-6 right-containerreg">
                             <h1 class = "red-text"> Register</h1>
