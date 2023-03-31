@@ -35,7 +35,7 @@ if (strlen($text) > 2) {
 if ($color == "green") {
     echo "
         <div class='hero-container $color'>
-            <img class='heroImg' src='$src' alt='Hero Frame'>
+            <img class='heroImg' src='$src' alt='Hero Frame'  loading='eager'>
             <div class='heroText'>
                 <h1 class='heroText' style='$fontSize'>$text</h1>
 
