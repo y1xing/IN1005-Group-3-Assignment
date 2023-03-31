@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+
 <head>
     <title>Process cart</title>
 
@@ -14,8 +15,8 @@
 $fname = $lname = $email = $address = $city = $postal = $mobile = $errorMsg = "";
 $success = true;
 
-include "navWhite.inc.php";
-include "head.inc.php";
+include "./components/navWhite.inc.php";
+include "./components/head.inc.php";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -117,7 +118,6 @@ function saveDelivery()
         $stmt->close();
     }
     $conn->close();
-
 }
 
 function displayError()
@@ -128,7 +128,7 @@ function displayError()
     echo "<h1>Invalid Information</h1>";
     echo "<h2>The following errors were detected: </h2>";
     echo "<p>", $errorMsg, "</p>";
-    echo "<button class='button-red'><a class='button-content-red' href='cart.php' alt='cart'>Return to Cart</a></button></header>";
+    echo "<button class='btn btn-danger'><a href='/register.php' alt='retry'>Return to Sign up</a></button></header>";
     echo "</div><br>";
 }
 

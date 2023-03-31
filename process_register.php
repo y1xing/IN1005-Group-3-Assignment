@@ -10,14 +10,15 @@
         <link rel="stylesheet" href="css/footer.css" type="text/css">
     </head>
 <?php
+ob_start();
 session_start();
 
 
 $fname = $lname = $email = $errorMsg = "";
 $success = true;
 
-include "navWhite.inc.php";
-include "head.inc.php";
+include "./components/navWhite.inc.php";
+include "./components/head.inc.php";
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -67,16 +68,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         saveMember();
       
-        echo "<div class='success'>";
+        header("Location: products.php");
+        ob_end_flush();
         echo "<div class='success'>";
         echo "<h1>Your registration is successful</h1>";
         echo "<h3><p>Your registered Email: ", $email;
         echo "<h4><p>Thank you for signing up: ", $lname;
-        echo "<br><button class='btn btn-success'><a href='login.php' alt='Sign in'>Login</a></button>";
+        echo "<br><button class='btn btn-success'><a href='pages/login.php' alt='Sign in'>Login</a></button>";
         echo "</div>";
       
         
-        
+        exit;
         
     } else {
         displayError();
@@ -138,7 +140,7 @@ function checkAndDisplaySuccess()
             echo "<h1>Your registration is successful</h1>";
             echo "<h3><p>Your registered Email: ", $this->email;
             echo "<h4><p>Thank you for signing up: ", $this->lname;
-            echo "<br><button class='btn btn-success'><a href='login.php' alt='Sign in'>Login</a></button>";
+            echo "<br><button class='btn btn-success'><a href='pages/login.php' alt='Sign in'>Login</a></button>";
             echo "</div>";
         }
 
@@ -153,9 +155,9 @@ function displayError()
     echo "<h1>Oops!</h1>";
     echo "<h2>The following errors were detected: </h2>";
     echo "<p>", $errorMsg, "</p>";
-    echo "<button class='btn btn-danger'><a href='register.php' alt='retry'>Return to Sign up</a></button></header>";
+    echo "<button class='btn btn-danger'><a href='pages/register.php' alt='retry'>Return to Sign up</a></button></header>";
     echo "</div><br>";
 }
 
 
-include 'footer.inc.php';
+include './components/footer.inc.php';

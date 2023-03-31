@@ -6,8 +6,8 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['fname']) || !isset($_SESSION
     exit;
 }
 
-include 'head.inc.php';
-include 'nav.inc.php';
+include 'componentshead.inc.php';
+include 'components/nav.inc.php';
 ?>
 
 <div class="container">
